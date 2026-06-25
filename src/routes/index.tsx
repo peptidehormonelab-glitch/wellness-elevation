@@ -5,6 +5,11 @@ import longevityImg from "@/assets/longevity.jpg";
 import skincareImg from "@/assets/skincare.jpg";
 import performanceImg from "@/assets/performance.jpg";
 import coachingImg from "@/assets/coaching.jpg";
+import cardPerformance from "@/assets/card-performance.jpg";
+import cardLongevity from "@/assets/card-longevity.jpg";
+import cardNutrition from "@/assets/card-nutrition.jpg";
+import cardWellness from "@/assets/card-wellness.jpg";
+import cardCosmetic from "@/assets/card-cosmetic.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,17 +47,17 @@ function Home() {
         </div>
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 0%, oklch(0.10 0.01 240 / 0.5) 60%, oklch(0.10 0.01 240) 100%)" }} />
         <div className="container-page relative pt-24 pb-32 lg:pt-36 lg:pb-44 min-h-[88vh] flex flex-col justify-center">
-          <span className="eyebrow">PLC Optimization · Established U.S.</span>
+          <span className="eyebrow">PLC Optimization · U.S. Registered LLC</span>
           <h1 className="mt-6 max-w-4xl text-5xl md:text-7xl lg:text-8xl leading-[1.02]">
             Optimize Your <em className="not-italic text-gradient-electric">Body.</em><br />
             Elevate Your <span className="text-gradient-silver">Life.</span>
           </h1>
-          <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            A premium wellness house engineered for performance, healthy aging and longevity. Coaching, nutrition guidance, authorized supplements and elevated cosmetic care — under one disciplined standard.
+          <p className="mt-8 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
+            PLC Optimization delivers premium wellness solutions focused on sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization. Our mission is to help people achieve long-term vitality, confidence, and overall well-being through education, coaching, and carefully selected wellness products.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/services" className="btn-electric">Explore Services</Link>
-            <Link to="/coaching" className="btn-ghost-light">Begin Coaching</Link>
+            <Link to="/about" className="btn-ghost-light">Learn More</Link>
           </div>
 
           <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden surface-glass">
@@ -63,6 +68,39 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* VALUE CARDS */}
+      <section className="container-page py-24">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+          <div className="max-w-2xl">
+            <span className="eyebrow">What We Deliver</span>
+            <h2 className="mt-5 text-4xl md:text-5xl">Five disciplines. One elevated standard.</h2>
+          </div>
+          <p className="text-muted-foreground max-w-sm">Every solution we offer is built around five interlocking areas of premium wellness.</p>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+          {[
+            { t: "Performance", d: "Train and recover like a serious athlete.", img: cardPerformance },
+            { t: "Longevity", d: "Age with strength, energy and clarity.", img: cardLongevity },
+            { t: "Nutrition", d: "Eat with intention and precision.", img: cardNutrition },
+            { t: "Wellness", d: "A vibrant life, for you and your family.", img: cardWellness },
+            { t: "Cosmetic Care", d: "Skincare rituals, elevated daily.", img: cardCosmetic },
+          ].map((c, i) => (
+            <article
+              key={c.t}
+              className={`group relative overflow-hidden rounded-2xl border border-white/5 aspect-[3/4] ${i === 4 ? "col-span-2 lg:col-span-1" : ""}`}
+            >
+              <img src={c.img} alt={c.t} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.10 0.01 240 / 0.1) 0%, oklch(0.10 0.01 240 / 0.55) 55%, oklch(0.08 0.01 240 / 0.95) 100%)" }} />
+              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                <p className="text-[10px] uppercase tracking-[0.32em] text-electric-glow">0{i + 1}</p>
+                <h3 className="mt-2 text-xl md:text-2xl">{c.t}</h3>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-relaxed line-clamp-2">{c.d}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
