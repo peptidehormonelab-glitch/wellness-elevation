@@ -182,7 +182,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="mt-32 border-t border-white/5 bg-[oklch(0.10_0.01_240)]">
+    <footer className="mt-32 border-t border-border bg-background">
       <div className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
@@ -195,66 +195,68 @@ function Footer() {
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-sm">
               Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization.
             </p>
-            <div className="mt-6 flex items-center gap-6">
+            <div className="mt-6 flex items-center gap-4">
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-muted-foreground hover:text-electric transition-colors"
+                className="grid place-items-center w-10 h-10 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 transition-all"
               >
-                <Linkedin size={18} strokeWidth={1.5} />
+                <Linkedin size={16} strokeWidth={1.5} />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-muted-foreground hover:text-electric transition-colors"
+                className="grid place-items-center w-10 h-10 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 transition-all"
               >
-                <Instagram size={18} strokeWidth={1.5} />
+                <Instagram size={16} strokeWidth={1.5} />
               </a>
               <a
                 href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X"
-                className="text-muted-foreground hover:text-electric transition-colors"
+                className="grid place-items-center w-10 h-10 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 transition-all"
               >
-                <Twitter size={18} strokeWidth={1.5} />
+                <Twitter size={16} strokeWidth={1.5} />
               </a>
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Company</p>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link to="/" className="hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
-              <li><Link to="/services" className="hover:text-foreground transition-colors">Services</Link></li>
-              <li><Link to="/products" className="hover:text-foreground transition-colors">Products</Link></li>
-              <li><Link to="/coaching" className="hover:text-foreground transition-colors">Coaching</Link></li>
-              <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+              {NAV.map(n => (
+                <li key={n.to}>
+                  <Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="lg:col-span-4">
-            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Contact</p>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <span className="text-silver">Location</span>
-                <span>United States</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-silver">Email</span>
-                <a href="mailto:contact@plcoptimization.com" className="hover:text-foreground transition-colors">contact@plcoptimization.com</a>
-              </li>
-            </ul>
-            <p className="mt-8 text-xs uppercase tracking-[0.28em] text-silver mb-5">Legal</p>
+          <div className="lg:col-span-2">
+            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Legal</p>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link></li>
-              <li><Link to="/terms" className="hover:text-foreground transition-colors">Disclaimer</Link></li>
+              <li><Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3">
+            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Contact</p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>
+                <span className="text-muted-foreground/60 block text-xs uppercase tracking-[0.2em] mb-1">Location</span>
+                <span className="text-foreground">United States</span>
+              </li>
+              <li>
+                <span className="text-muted-foreground/60 block text-xs uppercase tracking-[0.2em] mb-1">Email</span>
+                <a href="mailto:contact@plcoptimization.com" className="text-foreground hover:text-electric transition-colors">contact@plcoptimization.com</a>
+              </li>
             </ul>
           </div>
         </div>
