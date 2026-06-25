@@ -1,3 +1,4 @@
+import { Linkedin, Instagram, Twitter } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -11,6 +12,7 @@ import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -181,36 +183,91 @@ function Header() {
 function Footer() {
   return (
     <footer className="mt-32 border-t border-white/5 bg-[oklch(0.10_0.01_240)]">
-      <div className="container-page py-20 grid gap-12 lg:grid-cols-4">
-        <div className="lg:col-span-2 max-w-md">
-          <div className="flex items-center gap-3">
-            <span className="grid place-items-center w-9 h-9 rounded-full" style={{ background: "var(--gradient-accent)" }}>
-              <span className="font-display text-base font-semibold text-primary-foreground">P</span>
-            </span>
-            <span className="font-display text-lg">PLC Optimization LLC</span>
+      <div className="container-page py-20">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-3">
+              <span className="grid place-items-center w-9 h-9 rounded-full" style={{ background: "var(--gradient-accent)" }}>
+                <span className="font-display text-base font-semibold text-primary-foreground">P</span>
+              </span>
+              <span className="font-display text-xl tracking-wide">PLC Optimization LLC</span>
+            </div>
+            <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-sm">
+              Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization.
+            </p>
+            <div className="mt-6 flex items-center gap-6">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-muted-foreground hover:text-electric transition-colors"
+              >
+                <Linkedin size={18} strokeWidth={1.5} />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-muted-foreground hover:text-electric transition-colors"
+              >
+                <Instagram size={18} strokeWidth={1.5} />
+              </a>
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="text-muted-foreground hover:text-electric transition-colors"
+              >
+                <Twitter size={18} strokeWidth={1.5} />
+              </a>
+            </div>
           </div>
-          <p className="mt-5 text-sm text-muted-foreground leading-relaxed">
-            A premium U.S.-based wellness brand dedicated to performance, healthy aging, and lifestyle optimization through coaching, nutrition guidance, and authorized supplementation.
-          </p>
-          <p className="mt-6 text-xs text-muted-foreground/80 leading-relaxed">
-            <span className="text-silver">Disclaimer.</span> Products and services are intended for general wellness and lifestyle support only. They are not intended to diagnose, treat, cure, or prevent any disease.
-          </p>
+
+          <div className="lg:col-span-3">
+            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Company</p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li><Link to="/" className="hover:text-foreground transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
+              <li><Link to="/services" className="hover:text-foreground transition-colors">Services</Link></li>
+              <li><Link to="/products" className="hover:text-foreground transition-colors">Products</Link></li>
+              <li><Link to="/coaching" className="hover:text-foreground transition-colors">Coaching</Link></li>
+              <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-4">
+            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Contact</p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex items-start gap-3">
+                <span className="text-silver">Location</span>
+                <span>United States</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-silver">Email</span>
+                <a href="mailto:contact@plcoptimization.com" className="hover:text-foreground transition-colors">contact@plcoptimization.com</a>
+              </li>
+            </ul>
+            <p className="mt-8 text-xs uppercase tracking-[0.28em] text-silver mb-5">Legal</p>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li><Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/terms" className="hover:text-foreground transition-colors">Disclaimer</Link></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Explore</p>
-          <ul className="space-y-3 text-sm text-muted-foreground">
-            {NAV.map(n => (
-              <li key={n.to}><Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link></li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Legal</p>
-          <ul className="space-y-3 text-sm text-muted-foreground">
-            <li><Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link></li>
-          </ul>
-          <p className="mt-8 text-xs text-muted-foreground/70">© {new Date().getFullYear()} PLC Optimization LLC.<br />All rights reserved.</p>
+
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <div className="grid gap-6 lg:grid-cols-2 items-start">
+            <p className="text-xs text-muted-foreground/70 leading-relaxed max-w-xl">
+              <span className="text-silver">Disclaimer.</span> Products and services are intended for general wellness and lifestyle support only. They are not intended to diagnose, treat, cure, or prevent any disease.
+            </p>
+            <p className="text-xs text-muted-foreground/70 lg:text-right">
+              © 2026 PLC Optimization LLC. All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
