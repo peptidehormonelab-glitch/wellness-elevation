@@ -12,7 +12,7 @@ import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import plcLogo from "../assets/plc-logo.png.asset.json";
+import plcLogo from "../assets/plc-logo-official.png.asset.json";
 
 
 function NotFoundComponent() {
