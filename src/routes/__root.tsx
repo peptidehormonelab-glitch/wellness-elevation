@@ -12,6 +12,7 @@ import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import plcLogo from "../assets/plc-logo.png.asset.json";
 
 
 function NotFoundComponent() {
@@ -76,6 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: plcLogo.url },
+      { rel: "apple-touch-icon", href: plcLogo.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" },
@@ -122,14 +125,8 @@ function Header() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "backdrop-blur-xl bg-background/70 border-b border-white/5" : ""}`}>
       <div className="container-page flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid place-items-center w-9 h-9 rounded-full" style={{ background: "var(--gradient-accent)" }}>
-            <span className="font-display text-base font-semibold text-primary-foreground">P</span>
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-lg tracking-wide">PLC Optimization</span>
-            <span className="text-[10px] tracking-[0.32em] uppercase text-muted-foreground mt-1">Body · Performance · Longevity</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="PLC Optimization">
+          <img src={plcLogo.url} alt="PLC Optimization" className="h-12 md:h-14 w-auto object-contain" />
         </Link>
         <nav className="hidden lg:flex items-center gap-9">
           {NAV.map(n => (
@@ -186,12 +183,7 @@ function Footer() {
       <div className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3">
-              <span className="grid place-items-center w-9 h-9 rounded-full" style={{ background: "var(--gradient-accent)" }}>
-                <span className="font-display text-base font-semibold text-primary-foreground">P</span>
-              </span>
-              <span className="font-display text-xl tracking-wide">PLC Optimization LLC</span>
-            </div>
+            <img src={plcLogo.url} alt="PLC Optimization LLC" className="h-16 w-auto object-contain" />
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-sm">
               Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization.
             </p>
