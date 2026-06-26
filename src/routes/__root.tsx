@@ -183,7 +183,7 @@ function Footer() {
       <div className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <img src={plcLogo.url} alt="PLC Optimization LLC" className="h-16 w-auto object-contain" />
+            <img src={plcLogo.url} alt="PLC Optimization LLC" className="w-56 sm:w-60 md:w-64 h-auto object-contain" />
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-sm">
               Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization.
             </p>
