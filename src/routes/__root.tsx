@@ -126,7 +126,7 @@ function Header() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "backdrop-blur-xl bg-background/70 border-b border-white/5" : ""}`}>
       <div className="container-page flex items-center justify-between h-20">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="PLC Optimization">
-          <img src={plcLogo.url} alt="PLC Optimization" className="h-12 md:h-14 w-auto object-contain" />
+          <img src={plcLogo.url} alt="PLC Optimization" className="w-56 sm:w-60 md:w-64 h-auto max-h-14 md:max-h-16 object-contain" />
         </Link>
         <nav className="hidden lg:flex items-center gap-9">
           {NAV.map(n => (
