@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, Zap, Shield, Clock, Users, Star, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
 import productsImg from "@/assets/products.jpg";
@@ -18,28 +18,51 @@ import { FadeUp, FadeIn, SlideLeft, SlideRight, StaggerContainer, StaggerItem, S
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PLC Optimization — Optimize Your Body. Elevate Your Life." },
-      { name: "description", content: "Luxury wellness optimization, sports performance, healthy aging, nutrition coaching, premium skincare, and authorized supplements." },
-      { property: "og:title", content: "PLC Optimization — Optimize Your Body. Elevate Your Life." },
-      { property: "og:description", content: "Luxury wellness optimization, sports performance, healthy aging, nutrition coaching, premium skincare, and authorized supplements." },
+      { title: "PLC Optimization — Premium Wellness. Elite Performance. Lasting Results." },
+      {
+        name: "description",
+        content:
+          "PLC Optimization LLC delivers premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care and lifestyle optimization. U.S. registered, science-based, built for the long term.",
+      },
+      { property: "og:title", content: "PLC Optimization — Premium Wellness. Elite Performance. Lasting Results." },
+      {
+        property: "og:description",
+        content: "Premium wellness brand for individuals who take the long view on their health. Sports performance, longevity, nutrition and authorized supplementation.",
+      },
     ],
   }),
   component: Home,
 });
 
 const DISCIPLINES = [
-  { num: "01", t: "Performance", d: "Train and recover like a serious athlete.", img: cardPerformance },
-  { num: "02", t: "Longevity", d: "Age with strength, energy and clarity.", img: cardLongevity },
-  { num: "03", t: "Nutrition", d: "Eat with intention and precision.", img: cardNutrition },
-  { num: "04", t: "Wellness", d: "A vibrant life, for you and your family.", img: cardWellness },
-  { num: "05", t: "Cosmetic Care", d: "Skincare rituals, elevated daily.", img: cardCosmetic },
+  { num: "01", t: "Performance", d: "Train and recover with the precision of a serious athlete.", img: cardPerformance },
+  { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
+  { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
+  { num: "04", t: "Wellness", d: "A vibrant life, designed for you and the people you love.", img: cardWellness },
+  { num: "05", t: "Cosmetic Care", d: "Premium skincare rituals that reflect your standard.", img: cardCosmetic },
 ];
 
 const PILLARS = [
-  { title: "Sports Performance", desc: "Programming, nutrition guidance and recovery protocols designed for athletes who train with purpose.", img: performanceImg },
-  { title: "Healthy Aging", desc: "A measured, lifestyle-driven approach to mobility, strength and energy through every decade.", img: longevityImg },
-  { title: "Premium Cosmetic Care", desc: "Clean, science-led skincare formulations that elevate your daily ritual.", img: skincareImg },
-  { title: "Coaching & Lifestyle", desc: "1:1 coaching that aligns nutrition, training and habit design with your real life.", img: coachingImg },
+  {
+    title: "Sports Performance",
+    desc: "Periodized programming, recovery science and performance nutrition for athletes who train with purpose — not just frequency.",
+    img: performanceImg,
+  },
+  {
+    title: "Healthy Aging",
+    desc: "A measured, evidence-led approach to mobility, strength and sustained energy through every decade of life.",
+    img: longevityImg,
+  },
+  {
+    title: "Premium Cosmetic Care",
+    desc: "Clean, thoughtfully formulated skincare that elevates your daily ritual without compromise.",
+    img: skincareImg,
+  },
+  {
+    title: "Coaching & Lifestyle",
+    desc: "Private 1:1 coaching that aligns training, nutrition and habit design with the life you actually live.",
+    img: coachingImg,
+  },
 ];
 
 const STATS = [
@@ -51,52 +74,93 @@ const STATS = [
 
 const TESTIMONIALS = [
   {
-    quote: "The coaching program transformed how I approach training and nutrition. My performance metrics improved significantly within three months.",
-    author: "Michael R.",
-    role: "Competitive Triathlete",
+    quote:
+      "After three months of working with PLC, my lifts improved, my sleep quality went up noticeably, and I actually understand what I'm eating and why. It's the first program that's felt sustainable.",
+    author: "M.R.",
+    role: "Competitive Triathlete · Southwest U.S.",
     rating: 5,
   },
   {
-    quote: "PLC Optimization brought a level of discipline and clarity to my wellness routine I'd never experienced. The personalized approach is exceptional.",
-    author: "Sarah K.",
-    role: "Executive & Wellness Enthusiast",
+    quote:
+      "I came in looking for structure. What I got was a complete shift in how I think about my health. The attention to detail — from nutrition timing to recovery windows — is on another level.",
+    author: "S.K.",
+    role: "Senior Executive · New York",
     rating: 5,
   },
   {
-    quote: "The longevity program is unlike anything else available. It's science-led, practical, and built for the long term — not a quick fix.",
-    author: "James T.",
-    role: "Healthcare Professional",
+    quote:
+      "As someone in healthcare, I'm critical of wellness claims. PLC operates differently. Everything is referenced, explained and built around what the evidence actually supports. That's rare.",
+    author: "J.T.",
+    role: "Healthcare Professional · California",
+    rating: 5,
+  },
+  {
+    quote:
+      "The longevity program changed my relationship with training entirely. I stopped chasing short-term metrics and started building systems that work for where I want to be in 15 years.",
+    author: "A.L.",
+    role: "Longevity Enthusiast · Florida",
     rating: 5,
   },
 ];
 
 const SCIENTIFIC = [
-  { icon: Zap, title: "Evidence-Led Protocols", desc: "Every program and product recommendation is grounded in established research on exercise physiology, nutrition science and lifestyle medicine." },
-  { icon: Shield, title: "Authorized & Transparent", desc: "All supplements in our portfolio are authorized for retail sale, clearly formulated and selected for purity, bioavailability and real-world effectiveness." },
-  { icon: Clock, title: "Long-Horizon Thinking", desc: "We optimize for the body you'll inhabit in 20 years — not just the next 12 weeks. Compounding results require compounding systems." },
-  { icon: Users, title: "Personalized Systems", desc: "No cookie-cutter programs. Every coaching blueprint is built around your unique physiology, schedule, history and goals." },
+  {
+    icon: Zap,
+    title: "Evidence-Led Protocols",
+    desc: "Every program and product recommendation is grounded in established exercise physiology, nutrition science and lifestyle medicine research — not trends.",
+  },
+  {
+    icon: Shield,
+    title: "Authorized & Transparent",
+    desc: "All supplements in our portfolio are authorized for retail, clearly formulated and selected for purity, bioavailability and real-world effectiveness.",
+  },
+  {
+    icon: Clock,
+    title: "Long-Horizon Thinking",
+    desc: "We optimize for the body you'll inhabit in 20 years — not just the next 12 weeks. Compounding results require compounding systems, built patiently.",
+  },
+  {
+    icon: Users,
+    title: "Personalized Systems",
+    desc: "No pre-built templates. Every coaching blueprint is designed around your physiology, schedule, history and goals — then refined continuously.",
+  },
+];
+
+const TRUST = [
+  { icon: Award, label: "U.S. Registered LLC", desc: "Formally incorporated in the United States — a verifiable, accountable business entity." },
+  { icon: BookOpen, label: "Science-Based Approach", desc: "Every recommendation traces back to peer-reviewed research, not marketing language." },
+  { icon: Shield, label: "100% Authorized Products", desc: "Our entire supplement portfolio is authorized for general wellness retail sale." },
+  { icon: HeartPulse, label: "Educational Philosophy", desc: "We explain the why behind everything — so you can make informed decisions independently." },
+  { icon: Zap, label: "Full Transparency", desc: "Clear formulations, clear coaching, clear sourcing. We do not use proprietary blends or inflated claims." },
+  { icon: Clock, label: "Responsive Support", desc: "All inquiries are answered within one business day. Coaching clients have direct access during hours." },
+  { icon: Globe, label: "International Vision", desc: "Built in the U.S., serving clients with a global wellness perspective and evidence-based outlook." },
+  { icon: Users, label: "Long-Term Commitment", desc: "We measure our success by your progress over years — not the number of programs sold." },
 ];
 
 const FAQ = [
   {
     q: "What makes PLC Optimization different from other wellness brands?",
-    a: "We combine private 1:1 coaching, nutrition guidance, authorized supplementation and premium cosmetic care under one disciplined standard. Our approach is long-horizon — built to compound over years, not weeks."
+    a: "We combine private 1:1 coaching, nutrition guidance, authorized supplementation and premium cosmetic care under one disciplined standard. Our approach is long-horizon — built to compound over years, not weeks. We also explain everything: the science, the sourcing, the reasoning.",
   },
   {
-    q: "Are your supplements safe and tested?",
-    a: "All products in our portfolio are authorized for general wellness retail use and selected for purity, transparency and effectiveness. We do not carry any products making unauthorized health claims."
+    q: "Are your supplements safe and properly authorized?",
+    a: "All products in our portfolio are authorized for general wellness retail use and selected for purity, transparency and effectiveness. We do not carry any products making unauthorized health claims or using undisclosed proprietary blends.",
   },
   {
-    q: "Do I need to be an elite athlete to work with PLC Optimization?",
-    a: "Absolutely not. Our programs serve everyone from serious athletes to busy professionals pursuing healthy aging, from individuals optimizing nutrition to those seeking a structured longevity lifestyle."
+    q: "Do I need to be an elite athlete to benefit from PLC Optimization?",
+    a: "Not at all. Our programs serve a wide range of individuals — from competitive athletes to executives pursuing healthy aging, from those optimizing nutrition to those seeking a structured longevity lifestyle. The common thread is a commitment to doing things properly.",
   },
   {
-    q: "How does the coaching process work?",
-    a: "It begins with a private intake consultation to understand your goals, history and lifestyle. From there we architect a custom training, nutrition and recovery blueprint — then refine it continuously as you progress."
+    q: "How does the coaching intake process work?",
+    a: "It begins with a private intake consultation to understand your goals, training history, lifestyle and starting point. From there, we design a custom training, nutrition and recovery blueprint — then refine it continuously as you progress and your priorities evolve.",
   },
   {
-    q: "What is your response time for inquiries?",
-    a: "All inquiries submitted through our contact form are answered within one business day. Existing coaching clients have direct messaging access during business hours."
+    q: "What is your wellness compliance position?",
+    a: "PLC Optimization operates strictly within wellness and educational positioning. We make no medical claims, do not advertise prescription substances and always recommend consulting a qualified healthcare provider before beginning any new program.",
+  },
+  {
+    q: "How quickly can I expect a response to my inquiry?",
+    a: "All inquiries submitted through our contact form receive a response within one business day. Existing coaching clients have direct messaging access during business hours.",
   },
 ];
 
@@ -110,22 +174,27 @@ const MARQUEE_ITEMS = [
 function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-white/[0.08]">
+    <div className="border-b border-white/[0.07]">
       <button
         onClick={() => setOpen(v => !v)}
-        className="flex items-start justify-between w-full py-6 text-left gap-6 group"
+        className="flex items-start justify-between w-full py-6 text-left gap-6 group cursor-pointer"
         aria-expanded={open}
       >
         <div className="flex items-start gap-4">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-electric-glow shrink-0 mt-1">{String(index + 1).padStart(2, "0")}</span>
-          <span className="text-base md:text-lg font-display font-medium text-foreground group-hover:text-electric-glow transition-colors duration-300">{q}</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-electric-glow shrink-0 mt-1 font-medium">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <span className="text-base md:text-lg font-display font-medium text-foreground group-hover:text-electric-glow transition-colors duration-300 leading-snug">
+            {q}
+          </span>
         </div>
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="shrink-0 mt-1"
+          aria-hidden="true"
         >
-          <ChevronDown size={18} className="text-muted-foreground" />
+          <ChevronDown size={17} className="text-muted-foreground" />
         </motion.div>
       </button>
       <AnimatePresence initial={false}>
@@ -145,6 +214,21 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   );
 }
 
+function StarRating({ count }: { count: number }) {
+  return (
+    <div className="flex items-center gap-0.5" aria-label={`${count} out of 5 stars`}>
+      {Array.from({ length: count }).map((_, i) => (
+        <svg key={i} width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path
+            d="M6 1l1.236 2.506L10 3.882l-2 1.944.472 2.744L6 7.25l-2.472 1.32L4 5.826 2 3.882l2.764-.376L6 1z"
+            fill="oklch(0.72 0.20 245)"
+          />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 function Home() {
   return (
     <div>
@@ -152,38 +236,46 @@ function Home() {
       <section
         className="relative overflow-hidden min-h-[95vh] flex flex-col justify-center"
         style={{ background: "var(--gradient-hero)" }}
+        aria-label="Hero"
       >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" aria-hidden="true">
           <img
             src={heroImg}
-            alt="Premium athletic wellness photography"
+            alt=""
             width={1600}
             height={1104}
             className="w-full h-full object-cover object-center"
-            style={{ opacity: 0.22, mixBlendMode: "luminosity" }}
+            style={{ opacity: 0.2, mixBlendMode: "luminosity" }}
+            fetchPriority="high"
           />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.10 0.012 240 / 0) 0%, oklch(0.10 0.012 240 / 0.6) 70%, oklch(0.10 0.012 240) 100%)" }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, oklch(0.10 0.012 240 / 0) 0%, oklch(0.10 0.012 240 / 0.55) 65%, oklch(0.10 0.012 240) 100%)",
+            }}
+          />
         </div>
 
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full bg-electric/[0.06] blur-[100px]" />
-          <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-electric-dim/[0.08] blur-[80px]" />
+        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full bg-electric/[0.05] blur-[120px]" />
+          <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-electric-dim/[0.07] blur-[100px]" />
         </div>
 
-        <div className="container-page relative pt-16 pb-24 lg:pt-20 lg:pb-32">
+        <div className="container-page relative pt-16 pb-28 lg:pt-20 lg:pb-36">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.55, delay: 0.1 }}
           >
             <span className="eyebrow">PLC Optimization · U.S. Registered LLC</span>
           </motion.div>
 
           <motion.h1
-            className="mt-7 max-w-5xl text-5xl md:text-7xl lg:text-[88px] leading-[1.02] tracking-[-0.03em]"
-            initial={{ opacity: 0, y: 30 }}
+            className="mt-7 max-w-5xl text-5xl md:text-7xl lg:text-[90px] leading-[1.02] tracking-[-0.03em]"
+            initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
             Optimize Your{" "}
             <em className="not-italic text-gradient-electric">Body.</em>
@@ -193,38 +285,39 @@ function Home() {
           </motion.h1>
 
           <motion.p
-            className="mt-8 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
+            className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.42 }}
           >
-            PLC Optimization delivers premium wellness solutions focused on sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization — built for individuals who refuse to settle.
+            PLC Optimization delivers premium wellness solutions for sports performance, healthy aging, nutrition and lifestyle optimization — built for individuals who refuse to settle for less than their best.
           </motion.p>
 
           <motion.div
             className="mt-10 flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.55 }}
+            transition={{ duration: 0.6, delay: 0.58 }}
           >
             <Link to="/services" className="btn-electric">Explore Services</Link>
             <Link to="/about" className="btn-ghost-light">Our Philosophy</Link>
           </motion.div>
 
           <motion.div
-            className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/[0.07]"
-            style={{ background: "oklch(1 0 0 / 0.04)" }}
+            className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/[0.06]"
+            style={{ background: "oklch(1 0 0 / 0.03)" }}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.72 }}
+            aria-label="Key stats"
           >
             {STATS.map(s => (
               <div
                 key={s.label}
-                className="bg-background/60 backdrop-blur-sm px-6 py-7 hover:bg-white/[0.04] transition-colors duration-300"
+                className="bg-background/55 backdrop-blur-sm px-6 py-7 hover:bg-white/[0.03] transition-colors duration-300"
               >
                 <p className="text-2xl md:text-3xl font-display text-gradient-silver">{s.value}</p>
-                <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground mt-2">{s.label}</p>
+                <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/70 mt-2">{s.label}</p>
               </div>
             ))}
           </motion.div>
@@ -232,27 +325,27 @@ function Home() {
       </section>
 
       {/* ── MARQUEE TICKER ── */}
-      <div className="py-5 border-y border-white/[0.06] overflow-hidden bg-background/40">
-        <div className="flex gap-0 whitespace-nowrap animate-marquee will-change-transform">
+      <div className="py-5 border-y border-white/[0.05] overflow-hidden bg-background/50" aria-hidden="true">
+        <div className="flex gap-0 whitespace-nowrap animate-marquee">
           {MARQUEE_ITEMS.map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-5 px-5 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/60">
+            <span key={i} className="inline-flex items-center gap-5 px-5 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/50">
               {item}
-              <span className="inline-block w-1 h-1 rounded-full bg-electric/60 shrink-0" />
+              <span className="inline-block w-1 h-1 rounded-full bg-electric/50 shrink-0" />
             </span>
           ))}
         </div>
       </div>
 
       {/* ── DISCIPLINES ── */}
-      <section className="container-page py-28">
+      <section className="container-page py-28" aria-labelledby="disciplines-heading">
         <FadeUp>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
             <div className="max-w-2xl">
               <span className="eyebrow">Five Disciplines</span>
-              <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl">One elevated standard.</h2>
+              <h2 id="disciplines-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">One elevated standard.</h2>
             </div>
             <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-              Every solution is built around five interlocking areas of premium wellness — designed to integrate, not compete.
+              Five interconnected areas of premium wellness, designed to integrate seamlessly into a single, disciplined way of living.
             </p>
           </div>
         </FadeUp>
@@ -267,12 +360,12 @@ function Home() {
                   src={c.img}
                   alt={c.t}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ transition: "transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)" }}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ background: "linear-gradient(180deg, transparent 20%, oklch(0.08 0.012 240 / 0.6) 60%, oklch(0.08 0.012 240 / 0.97) 100%)" }}
+                  style={{ background: "linear-gradient(180deg, transparent 25%, oklch(0.08 0.012 240 / 0.65) 60%, oklch(0.08 0.012 240 / 0.97) 100%)" }}
+                  aria-hidden="true"
                 />
                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                   <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow font-medium">{c.num}</p>
@@ -286,34 +379,33 @@ function Home() {
       </section>
 
       {/* ── ABOUT BAND ── */}
-      <section className="relative py-28 overflow-hidden border-y border-white/[0.06]">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-electric/[0.05] blur-[80px]" />
+      <section className="relative py-28 overflow-hidden border-y border-white/[0.06]" aria-labelledby="about-band-heading">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-electric/[0.04] blur-[90px]" />
         </div>
         <div className="container-page relative grid lg:grid-cols-2 gap-16 items-center">
           <SlideLeft>
             <span className="eyebrow">About PLC Optimization</span>
-            <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl">A premium standard for body, performance and longevity.</h2>
+            <h2 id="about-band-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
+              A premium standard for body, performance and longevity.
+            </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              PLC Optimization LLC is a U.S.-registered wellness brand created for individuals who want measured, lifelong results — not trends. We combine coaching, nutrition guidance, authorized supplementation and premium cosmetic care into one disciplined standard.
+              PLC Optimization LLC is a U.S.-registered wellness brand created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium cosmetic care into one disciplined, evidence-based standard.
             </p>
             <Link to="/about" className="mt-8 inline-flex btn-ghost-light items-center gap-2">
-              Our Story <ArrowRight size={14} />
+              Our Story <ArrowRight size={14} aria-hidden="true" />
             </Link>
           </SlideLeft>
 
           <SlideRight>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { title: "Discipline", desc: "Premium outcomes come from systems, not shortcuts." },
-                { title: "Transparency", desc: "Clear sourcing, clear formulations, no inflated claims." },
-                { title: "Longevity", desc: "Optimizing for the body you'll inhabit in 20 years." },
-                { title: "Elevation", desc: "From product to coaching, the experience matters." },
+                { title: "Discipline", desc: "Sustainable outcomes come from compounding systems, not shortcuts or trends." },
+                { title: "Transparency", desc: "Clear sourcing, clear formulations, clear coaching. No noise, no inflated claims." },
+                { title: "Longevity", desc: "We optimize for the body you'll inhabit in 20 years — not just the next season." },
+                { title: "Elevation", desc: "From product quality to the coaching experience, every detail reflects a premium standard." },
               ].map((v, i) => (
-                <div
-                  key={v.title}
-                  className="surface-glass rounded-xl p-6 card-hover"
-                >
+                <div key={v.title} className="surface-glass rounded-xl p-6 card-hover">
                   <p className="text-[9px] uppercase tracking-[0.3em] text-electric-glow">0{i + 1}</p>
                   <h3 className="mt-3 text-lg font-display">{v.title}</h3>
                   <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
@@ -325,15 +417,15 @@ function Home() {
       </section>
 
       {/* ── PILLARS ── */}
-      <section className="container-page py-28">
+      <section className="container-page py-28" aria-labelledby="pillars-heading">
         <FadeUp>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
             <div className="max-w-2xl">
               <span className="eyebrow">The Four Pillars</span>
-              <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl">A complete system for the optimized life.</h2>
+              <h2 id="pillars-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">A complete system for the optimized life.</h2>
             </div>
             <p className="text-muted-foreground max-w-md text-sm leading-relaxed">
-              Every program and protocol is built around four interlocking pillars — designed to compound over years, not weeks.
+              Four interlocking disciplines designed to compound over time — each reinforcing the others, all working toward the same outcome.
             </p>
           </div>
         </FadeUp>
@@ -346,12 +438,13 @@ function Home() {
                   src={p.img}
                   alt={p.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-75 transition-all duration-700"
-                  style={{ transform: "scale(1)", transition: "transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s ease" }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.06)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
+                  className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 25%, oklch(0.08 0.012 240 / 0.97) 100%)" }} />
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(180deg, transparent 20%, oklch(0.08 0.012 240 / 0.97) 100%)" }}
+                  aria-hidden="true"
+                />
                 <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
                   <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">0{i + 1}</p>
                   <h3 className="mt-3 text-2xl md:text-3xl font-display">{p.title}</h3>
@@ -364,17 +457,17 @@ function Home() {
       </section>
 
       {/* ── SCIENTIFIC APPROACH ── */}
-      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-electric/[0.04] blur-[80px]" />
+      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden" aria-labelledby="science-heading">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-electric/[0.04] blur-[90px]" />
         </div>
         <div className="container-page relative">
           <FadeUp>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="eyebrow justify-center">Scientific Approach</span>
-              <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl">Built on evidence. Refined by experience.</h2>
+              <h2 id="science-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">Built on evidence. Refined by experience.</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Our methodology is grounded in established science — not trends. Every program, product and protocol reflects a disciplined, evidence-led standard.
+                Our methodology is grounded in established science — not trends or marketing. Every program, product and protocol reflects a disciplined, evidence-led standard that we can explain and defend.
               </p>
             </div>
           </FadeUp>
@@ -383,7 +476,10 @@ function Home() {
             {SCIENTIFIC.map((s, i) => (
               <StaggerItem key={s.title}>
                 <div className="surface-glass rounded-2xl p-7 h-full card-hover">
-                  <div className="w-10 h-10 rounded-xl bg-electric/[0.12] border border-electric/20 flex items-center justify-center mb-5">
+                  <div
+                    className="w-10 h-10 rounded-xl bg-electric/[0.10] border border-electric/[0.18] flex items-center justify-center mb-5"
+                    aria-hidden="true"
+                  >
                     <s.icon size={18} className="text-electric-glow" strokeWidth={1.5} />
                   </div>
                   <p className="text-[9px] uppercase tracking-[0.3em] text-electric-glow mb-3">0{i + 1}</p>
@@ -397,17 +493,25 @@ function Home() {
       </section>
 
       {/* ── LONGEVITY BAND ── */}
-      <section className="relative py-28 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={longevityImg} alt="" className="w-full h-full object-cover" style={{ opacity: 0.18 }} loading="lazy" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, oklch(0.10 0.012 240) 0%, oklch(0.10 0.012 240 / 0.7) 55%, oklch(0.10 0.012 240 / 0.3) 100%)" }} />
+      <section className="relative py-28 overflow-hidden" aria-labelledby="longevity-heading">
+        <div className="absolute inset-0" aria-hidden="true">
+          <img src={longevityImg} alt="" className="w-full h-full object-cover" style={{ opacity: 0.16 }} loading="lazy" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, oklch(0.10 0.012 240) 0%, oklch(0.10 0.012 240 / 0.75) 55%, oklch(0.10 0.012 240 / 0.25) 100%)",
+            }}
+          />
         </div>
         <div className="container-page relative grid lg:grid-cols-2 gap-12 items-center">
           <SlideLeft>
             <span className="eyebrow">Longevity Lifestyle</span>
-            <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl">Engineered to age with strength, clarity and grace.</h2>
+            <h2 id="longevity-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
+              Engineered to age with strength, clarity and grace.
+            </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              We design lifestyle systems that compound: intelligent training, intentional recovery, clean nutrition and considered supplementation. The result is sustained vitality — across every decade of life.
+              True longevity is not a supplement stack or a biohacking protocol. It is a lifestyle architecture — intelligent training, intentional recovery, clean nutrition and considered supplementation, compounding quietly across decades.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/about" className="btn-ghost-light">Our Philosophy</Link>
@@ -418,119 +522,160 @@ function Home() {
       </section>
 
       {/* ── PRODUCTS PREVIEW ── */}
-      <section className="container-page py-28">
+      <section className="container-page py-28" aria-labelledby="products-heading">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScaleIn>
             <div className="rounded-2xl overflow-hidden border border-white/[0.07] aspect-[4/3] relative">
               <img
                 src={productsImg}
-                alt="Premium supplement line on dark surface"
+                alt="Premium supplement portfolio on dark surface"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.10 0.012 240 / 0.1), transparent)" }} />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(135deg, oklch(0.10 0.012 240 / 0.08), transparent)" }}
+                aria-hidden="true"
+              />
             </div>
           </ScaleIn>
 
           <SlideRight>
             <span className="eyebrow">Authorized Supplements</span>
-            <h2 className="mt-6 text-4xl md:text-5xl lg:text-6xl">Clean ingredients. Disciplined formulations.</h2>
+            <h2 id="products-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
+              Clean ingredients. Disciplined formulations.
+            </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              A curated portfolio of premium proteins, creatine, vitamins, minerals, hydration and recovery essentials — all authorized for retail sale and selected for purity, transparency and effectiveness.
+              A curated portfolio of authorized proteins, creatine, vitamins, minerals, hydration and recovery essentials — every product selected for purity, transparency and real-world effectiveness. No proprietary blends. No noise.
             </p>
-            <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3">
+            <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3" aria-label="Product categories">
               {["Whey & Plant Proteins", "Creatine Monohydrate", "Daily Multivitamins", "Essential Minerals", "Hydration Formulas", "Recovery Blends"].map(x => (
                 <li key={x} className="flex items-center gap-2.5 text-sm text-muted-foreground">
-                  <span className="glow-dot" />
+                  <span className="glow-dot" aria-hidden="true" />
                   {x}
                 </li>
               ))}
             </ul>
             <Link to="/products" className="mt-10 inline-flex btn-electric items-center gap-2">
-              View Portfolio <ArrowRight size={14} />
+              View Portfolio <ArrowRight size={14} aria-hidden="true" />
             </Link>
           </SlideRight>
         </div>
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
+      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden" aria-labelledby="testimonials-heading">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-electric/[0.04] blur-[80px]" />
         </div>
         <div className="container-page relative">
           <FadeUp>
-            <div className="text-center max-w-2xl mx-auto mb-14">
-              <span className="eyebrow justify-center">Client Outcomes</span>
-              <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl">Real people. Measurable results.</h2>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+              <div>
+                <span className="eyebrow">Client Experiences</span>
+                <h2 id="testimonials-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl max-w-xl">
+                  What our clients experience.
+                </h2>
+              </div>
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
+                Testimonials shared voluntarily by clients. Individual results vary based on adherence, lifestyle and individual physiology.
+              </p>
             </div>
           </FadeUp>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <StaggerItem key={i}>
-                <div className="surface-glass rounded-2xl p-8 h-full flex flex-col card-hover">
-                  <div className="flex gap-1 mb-5">
-                    {Array.from({ length: t.rating }).map((_, j) => (
-                      <Star key={j} size={13} className="text-electric fill-electric" />
-                    ))}
-                  </div>
-                  <blockquote className="text-sm md:text-base text-foreground/90 leading-relaxed font-display italic flex-1">
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {TESTIMONIALS.map((t) => (
+              <StaggerItem key={t.author}>
+                <figure className="surface-glass rounded-2xl p-7 h-full flex flex-col card-hover">
+                  <StarRating count={t.rating} />
+                  <blockquote className="mt-5 text-sm text-muted-foreground leading-relaxed flex-1">
                     "{t.quote}"
                   </blockquote>
-                  <div className="mt-6 pt-6 border-t border-white/[0.07]">
-                    <p className="text-sm font-medium text-foreground">{t.author}</p>
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-electric-glow mt-1">{t.role}</p>
-                  </div>
-                </div>
+                  <figcaption className="mt-6 pt-5 border-t border-white/[0.07]">
+                    <p className="text-sm font-display text-foreground">{t.author}</p>
+                    <p className="text-[11px] text-muted-foreground/70 mt-1 leading-relaxed">{t.role}</p>
+                  </figcaption>
+                </figure>
               </StaggerItem>
             ))}
           </StaggerContainer>
         </div>
       </section>
 
-      {/* ── FAQ ── */}
-      <section className="container-page py-28">
-        <div className="grid lg:grid-cols-12 gap-12">
-          <FadeUp className="lg:col-span-4">
-            <span className="eyebrow">FAQ</span>
-            <h2 className="mt-5 text-4xl md:text-5xl lg:text-6xl">Common questions.</h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed text-sm">
-              Everything you need to know about our approach, products, and coaching programs.
+      {/* ── TRUST SECTION ── */}
+      <section className="container-page py-28" aria-labelledby="trust-heading">
+        <FadeUp>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="eyebrow justify-center">Why PLC Optimization</span>
+            <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
+              Built on accountability. Designed for trust.
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              We hold ourselves to a verifiable standard in everything we do — from legal registration to product sourcing to the way we communicate with clients.
             </p>
-            <Link to="/contact" className="mt-8 inline-flex btn-electric items-center gap-2">
-              Ask Us Directly <ArrowRight size={14} />
-            </Link>
+          </div>
+        </FadeUp>
+
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {TRUST.map((t, i) => (
+            <StaggerItem key={t.label}>
+              <div className="surface-glass rounded-2xl p-6 h-full card-hover group">
+                <div
+                  className="w-9 h-9 rounded-lg bg-electric/[0.08] border border-electric/[0.15] flex items-center justify-center mb-4 group-hover:bg-electric/[0.14] transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <t.icon size={16} className="text-electric-glow" strokeWidth={1.5} />
+                </div>
+                <p className="text-[9px] uppercase tracking-[0.3em] text-electric-glow mb-2">0{i + 1}</p>
+                <h3 className="text-base font-display text-foreground mb-2">{t.label}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{t.desc}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-28 border-y border-white/[0.06]" aria-labelledby="faq-heading">
+        <div className="container-page">
+          <FadeUp>
+            <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-12">
+              <div className="max-w-2xl">
+                <span className="eyebrow">Common Questions</span>
+                <h2 id="faq-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">Everything you need to know.</h2>
+              </div>
+              <Link to="/contact" className="shrink-0 btn-ghost-light self-start lg:mt-14">
+                Ask a Question
+              </Link>
+            </div>
           </FadeUp>
 
-          <div className="lg:col-span-8">
+          <div className="max-w-4xl" role="list" aria-label="Frequently asked questions">
             {FAQ.map((item, i) => (
-              <FAQItem key={i} q={item.q} a={item.a} index={i} />
+              <FAQItem key={item.q} q={item.q} a={item.a} index={i} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="container-page pb-20 pt-4">
+      {/* ── CTA BAND ── */}
+      <section className="container-page py-28" aria-labelledby="cta-heading">
         <FadeUp>
           <div
-            className="surface-glass rounded-3xl p-10 md:p-16 lg:p-20 text-center relative overflow-hidden"
-            style={{ background: "radial-gradient(ellipse 80% 60% at center, oklch(0.66 0.22 250 / 0.12), transparent 70%)" }}
+            className="surface-glass rounded-3xl border border-white/[0.09] p-10 md:p-16 text-center relative overflow-hidden"
+            style={{ background: "radial-gradient(ellipse 80% 60% at center, oklch(0.66 0.22 250 / 0.08), transparent 70%)" }}
           >
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute inset-0 border border-electric/[0.12] rounded-3xl" />
-            </div>
-            <span className="eyebrow justify-center">Begin the Standard</span>
-            <h2 className="mt-7 text-4xl md:text-6xl lg:text-7xl max-w-3xl mx-auto leading-[1.04]">
-              Your optimized life starts with one disciplined decision.
+            <div className="absolute inset-0 border border-electric/[0.08] rounded-3xl pointer-events-none" aria-hidden="true" />
+            <span className="eyebrow justify-center mb-6">Begin Your Journey</span>
+            <h2 id="cta-heading" className="text-3xl md:text-5xl max-w-3xl mx-auto">
+              Ready to live at a higher standard?
             </h2>
-            <p className="mt-7 text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Book a private consultation to design your performance, longevity and lifestyle blueprint.
+            <p className="mt-6 text-muted-foreground max-w-xl mx-auto leading-relaxed">
+              Speak with our team about private coaching, product guidance or any of our wellness disciplines. We respond within one business day.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link to="/contact" className="btn-electric">Book a Consultation</Link>
-              <Link to="/coaching" className="btn-ghost-light">Coaching Programs</Link>
+              <Link to="/services" className="btn-ghost-light">View All Services</Link>
             </div>
           </div>
         </FadeUp>
