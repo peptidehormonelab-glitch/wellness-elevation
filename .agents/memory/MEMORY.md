@@ -1,0 +1,2 @@
+- [PLC Optimization Logo](plc-logo.md) — Logo is an SVG wordmark component (src/components/Logo.tsx), not a hosted image. Lovable CDN URLs (/__l5e/assets-v1/...) don't resolve in Replit.
+- [Framer Motion SSR](framer-motion-ssr.md) — Framer Motion is installed (v12). useInView with once:true used for all scroll animations to avoid SSR hydration issues.

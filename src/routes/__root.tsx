@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Instagram, Twitter, ArrowUpRight } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -9,22 +9,22 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import plcLogo from "../assets/plc-logo-official.png.asset.json";
-
+import { PLCLogo } from "../components/Logo";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="text-xs uppercase tracking-[0.32em] text-electric-glow mb-4">404</p>
+        <h1 className="text-5xl md:text-7xl font-display text-foreground">Not Found</h1>
+        <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-6">
+        <div className="mt-8">
           <Link to="/" className="btn-electric">Return Home</Link>
         </div>
       </div>
@@ -42,13 +42,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+        <h1 className="text-xl font-display font-semibold tracking-tight text-foreground">
+          Something went wrong
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+        <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+          An unexpected error occurred. You can try refreshing or head back home.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
           <button
             onClick={() => { router.invalidate(); reset(); }}
             className="btn-electric"
@@ -70,6 +70,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "PLC Optimization — Optimize Your Body. Elevate Your Life." },
       { name: "description", content: "Premium wellness optimization, healthy aging, sports performance, nutrition coaching, cosmetic care, and authorized supplements." },
       { name: "author", content: "PLC Optimization LLC" },
+      { name: "theme-color", content: "#0a0c14" },
       { property: "og:title", content: "PLC Optimization — Optimize Your Body. Elevate Your Life." },
       { property: "og:description", content: "Luxury wellness brand for performance, longevity and lifestyle optimization." },
       { property: "og:type", content: "website" },
@@ -77,11 +78,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: plcLogo.url },
-      { rel: "apple-touch-icon", href: plcLogo.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -116,150 +115,221 @@ const NAV = [
 function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "backdrop-blur-xl bg-background/70 border-b border-white/5" : ""}`}>
-      <div className="container-page flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="PLC Optimization">
-          <img src={plcLogo.url} alt="PLC Optimization" className="w-32 md:w-36 h-auto max-h-16 md:max-h-[72px] object-contain" />
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "backdrop-blur-2xl bg-background/80 border-b border-white/[0.07] shadow-[0_1px_32px_oklch(0_0_0/0.3)]"
+          : ""
+      }`}
+    >
+      <div className="container-page flex items-center justify-between h-[72px]">
+        <Link
+          to="/"
+          className="flex items-center shrink-0"
+          onClick={() => setOpen(false)}
+          aria-label="PLC Optimization — Home"
+        >
+          <PLCLogo className="w-[140px] md:w-[160px] h-auto" />
         </Link>
-        <nav className="hidden lg:flex items-center gap-9">
+
+        <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main">
           {NAV.map(n => (
             <Link
               key={n.to}
               to={n.to}
-              className="text-xs uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors"
-              activeProps={{ className: "text-xs uppercase tracking-[0.22em] text-foreground" }}
+              className="relative text-[11px] uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors duration-300 py-1 group"
+              activeProps={{ className: "relative text-[11px] uppercase tracking-[0.22em] text-foreground py-1 group" }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
+              <span className="absolute inset-x-0 -bottom-0.5 h-px bg-gradient-to-r from-transparent via-electric to-transparent opacity-0 group-[.active]:opacity-100 transition-opacity" />
             </Link>
           ))}
         </nav>
-        <Link to="/contact" className="hidden lg:inline-flex btn-electric !py-2.5 !px-5 !text-[10px]">Book Consult</Link>
+
+        <div className="hidden lg:flex items-center gap-4">
+          <Link to="/contact" className="btn-electric !py-2.5 !px-5 !text-[10px]">
+            Book Consult
+          </Link>
+        </div>
+
         <button
-          aria-label="Menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
           onClick={() => setOpen(v => !v)}
-          className="lg:hidden grid place-items-center w-10 h-10 rounded-full border border-white/15"
+          className="lg:hidden grid place-items-center w-10 h-10 rounded-full border border-white/15 hover:border-white/30 transition-colors"
         >
-          <span className="flex flex-col gap-1.5">
-            <span className={`block h-px w-5 bg-foreground transition-transform ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-            <span className={`block h-px w-5 bg-foreground transition-opacity ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-px w-5 bg-foreground transition-transform ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+          <span className="flex flex-col gap-[5px] w-5" aria-hidden>
+            <span className={`block h-px bg-foreground origin-center transition-all duration-300 ${open ? "translate-y-[8px] rotate-45" : ""}`} />
+            <span className={`block h-px bg-foreground transition-all duration-300 ${open ? "opacity-0 scale-x-0" : ""}`} />
+            <span className={`block h-px bg-foreground origin-center transition-all duration-300 ${open ? "-translate-y-[8px] -rotate-45" : ""}`} />
           </span>
         </button>
       </div>
-      {open && (
-        <div className="lg:hidden border-t border-white/5 bg-background/95 backdrop-blur-xl">
-          <div className="container-page py-6 flex flex-col gap-4">
-            {NAV.map(n => (
-              <Link
-                key={n.to}
-                to={n.to}
-                onClick={() => setOpen(false)}
-                className="text-sm uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground py-1"
-                activeProps={{ className: "text-sm uppercase tracking-[0.22em] text-foreground py-1" }}
-                activeOptions={{ exact: n.to === "/" }}
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="lg:hidden overflow-hidden border-t border-white/[0.07] bg-background/95 backdrop-blur-2xl"
+          >
+            <div className="container-page py-8 flex flex-col gap-1">
+              {NAV.map((n, i) => (
+                <motion.div
+                  key={n.to}
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.06, duration: 0.3 }}
+                >
+                  <Link
+                    to={n.to}
+                    onClick={() => setOpen(false)}
+                    className="block text-sm uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground py-3 border-b border-white/[0.05] transition-colors"
+                    activeProps={{ className: "block text-sm uppercase tracking-[0.22em] text-foreground py-3 border-b border-white/[0.05]" }}
+                    activeOptions={{ exact: n.to === "/" }}
+                  >
+                    {n.label}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.38, duration: 0.3 }}
+                className="pt-6"
               >
-                {n.label}
-              </Link>
-            ))}
-            <Link to="/contact" onClick={() => setOpen(false)} className="btn-electric mt-2 self-start">Book Consult</Link>
-          </div>
-        </div>
-      )}
+                <Link to="/contact" onClick={() => setOpen(false)} className="btn-electric w-full justify-center">
+                  Book Consultation
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
 
 function Footer() {
   return (
-    <footer className="mt-32 border-t border-border bg-background">
-      <div className="container-page py-20">
+    <footer className="mt-32 border-t border-white/[0.07] bg-background relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-electric/[0.04] blur-3xl" />
+      </div>
+
+      <div className="container-page py-20 relative">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <img src={plcLogo.url} alt="PLC Optimization LLC" className="w-60 md:w-60 h-auto object-contain" />
-            <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization.
+            <PLCLogo className="w-[180px] h-auto" />
+            <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xs">
+              Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization. U.S. registered LLC.
             </p>
-            <div className="mt-6 flex items-center gap-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="grid place-items-center w-10 h-10 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 transition-all"
-              >
-                <Linkedin size={16} strokeWidth={1.5} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="grid place-items-center w-10 h-10 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 transition-all"
-              >
-                <Instagram size={16} strokeWidth={1.5} />
-              </a>
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X"
-                className="grid place-items-center w-10 h-10 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 transition-all"
-              >
-                <Twitter size={16} strokeWidth={1.5} />
-              </a>
+            <div className="mt-8 flex items-center gap-3">
+              {[
+                { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
+                { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
+                { href: "https://x.com", icon: Twitter, label: "X (Twitter)" },
+              ].map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid place-items-center w-9 h-9 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/50 hover:bg-electric/[0.06] transition-all duration-300"
+                >
+                  <Icon size={14} strokeWidth={1.5} />
+                </a>
+              ))}
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Company</p>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-6">Company</p>
+            <ul className="space-y-3">
               {NAV.map(n => (
                 <li key={n.to}>
-                  <Link to={n.to} className="hover:text-foreground transition-colors">{n.label}</Link>
+                  <Link
+                    to={n.to}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-1.5 group"
+                  >
+                    {n.label}
+                    <ArrowUpRight size={11} className="opacity-0 group-hover:opacity-60 transition-opacity -mt-0.5" />
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Legal</p>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link></li>
-              <li><Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link></li>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-6">Legal</p>
+            <ul className="space-y-3">
+              {[
+                { to: "/privacy", label: "Privacy Policy" },
+                { to: "/terms", label: "Terms & Conditions" },
+                { to: "/disclaimer", label: "Disclaimer" },
+              ].map(l => (
+                <li key={l.to}>
+                  <Link to={l.to as "/privacy"} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <p className="text-xs uppercase tracking-[0.28em] text-silver mb-5">Contact</p>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-6">Contact</p>
+            <ul className="space-y-5">
               <li>
-                <span className="text-muted-foreground/60 block text-xs uppercase tracking-[0.2em] mb-1">Location</span>
-                <span className="text-foreground">United States</span>
+                <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Location</span>
+                <span className="text-sm text-foreground">United States</span>
               </li>
               <li>
-                <span className="text-muted-foreground/60 block text-xs uppercase tracking-[0.2em] mb-1">Email</span>
-                <a href="mailto:contact@plcoptimization.com" className="text-foreground hover:text-electric transition-colors">contact@plcoptimization.com</a>
+                <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Email</span>
+                <a
+                  href="mailto:contact@plcoptimization.com"
+                  className="text-sm text-foreground hover:text-electric transition-colors duration-200"
+                >
+                  contact@plcoptimization.com
+                </a>
+              </li>
+              <li>
+                <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Hours</span>
+                <span className="text-sm text-foreground">Mon – Fri · 9:00 – 18:00 ET</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <div className="grid gap-6 lg:grid-cols-2 items-start">
-            <p className="text-xs text-muted-foreground/70 leading-relaxed max-w-xl">
-              <span className="text-silver">Disclaimer.</span> Products and services are intended for general wellness and lifestyle support only. They are not intended to diagnose, treat, cure, or prevent any disease.
+        <div className="mt-16 pt-8 border-t border-white/[0.07]">
+          <div className="flex flex-col lg:flex-row gap-4 lg:items-center justify-between">
+            <p className="text-xs text-muted-foreground/60 leading-relaxed max-w-xl">
+              <span className="text-silver/80">Disclaimer.</span> Products and services are intended for general wellness and lifestyle support only. They are not intended to diagnose, treat, cure, or prevent any disease.
             </p>
-            <p className="text-xs text-muted-foreground/70 lg:text-right">
-              © 2026 PLC Optimization LLC. All Rights Reserved.
+            <p className="text-xs text-muted-foreground/50 shrink-0">
+              © {new Date().getFullYear()} PLC Optimization LLC. All Rights Reserved.
             </p>
           </div>
         </div>
@@ -273,7 +343,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main className="pt-20">
+      <main className="pt-[72px]">
         <Outlet />
       </main>
       <Footer />
