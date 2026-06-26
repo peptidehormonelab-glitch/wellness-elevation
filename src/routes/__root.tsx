@@ -126,7 +126,7 @@ function Header() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "backdrop-blur-xl bg-background/70 border-b border-white/5" : ""}`}>
       <div className="container-page flex items-center justify-between h-20">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="PLC Optimization">
-          <img src={plcLogo.url} alt="PLC Optimization" className="h-12 md:h-14 w-auto object-contain" />
+          <img src={plcLogo.url} alt="PLC Optimization" className="w-32 md:w-36 h-auto max-h-16 md:max-h-[72px] object-contain" />
         </Link>
         <nav className="hidden lg:flex items-center gap-9">
           {NAV.map(n => (
@@ -183,7 +183,7 @@ function Footer() {
       <div className="container-page py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <img src={plcLogo.url} alt="PLC Optimization LLC" className="h-16 w-auto object-contain" />
+            <img src={plcLogo.url} alt="PLC Optimization LLC" className="w-60 md:w-60 h-auto object-contain" />
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-sm">
               Premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care, and lifestyle optimization.
             </p>
