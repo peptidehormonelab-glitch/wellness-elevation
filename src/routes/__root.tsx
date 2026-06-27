@@ -182,15 +182,16 @@ function Header() {
           : ""
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[84px] md:h-20">
+      <div className="container-page flex items-center justify-between h-[72px] md:h-[76px]">
         <Link
           to="/"
-          className="flex items-center shrink-0"
+          className="flex items-center shrink-0 -my-2"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[68px] md:h-14 w-auto" />
+          <PLCLogo className="h-[84px] md:h-[88px] w-auto" />
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Primary navigation">
           {NAV.map(n => (
