@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
-import { PLCLogo } from "../components/Logo";
+import { PLCLogo, PLC_LOGO_URL } from "../components/Logo";
 
 const STRUCTURED_DATA = {
   "@context": "https://schema.org",
@@ -94,12 +94,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "PLC Optimization" },
+      { property: "og:image", content: PLC_LOGO_URL },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "PLC Optimization — Premium Wellness. Elite Performance. Lasting Results." },
       {
         name: "twitter:description",
         content: "Premium wellness brand for sports performance, longevity and lifestyle optimization. U.S. Registered LLC.",
       },
+      { name: "twitter:image", content: PLC_LOGO_URL },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -109,11 +111,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap",
       },
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        href: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0c14'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Georgia%2Cserif' font-size='20' font-weight='600' fill='%234d8eff'%3EP%3C/text%3E%3C/svg%3E",
-      },
+      { rel: "icon", type: "image/png", href: PLC_LOGO_URL },
+      { rel: "apple-touch-icon", href: PLC_LOGO_URL },
     ],
     scripts: [
       {
@@ -190,7 +189,7 @@ function Header() {
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="w-[148px] md:w-[168px] h-auto" />
+          <PLCLogo className="h-10 md:h-12 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Primary navigation">
@@ -288,7 +287,7 @@ function Footer() {
       <div className="container-page py-20 relative">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <PLCLogo className="w-[180px] h-auto" />
+            <PLCLogo className="w-[260px] md:w-[300px] h-auto" />
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xs">
               A U.S.-registered premium wellness brand built for individuals who take the long view on their health, performance and longevity.
             </p>
