@@ -189,7 +189,7 @@ function Header() {
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="w-[148px] md:w-[168px] h-auto" />
+          <PLCLogo className="h-10 md:h-12 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Primary navigation">
@@ -287,7 +287,7 @@ function Footer() {
       <div className="container-page py-20 relative">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <PLCLogo className="w-[180px] h-auto" />
+            <PLCLogo className="w-[260px] md:w-[300px] h-auto" />
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xs">
               A U.S.-registered premium wellness brand built for individuals who take the long view on their health, performance and longevity.
             </p>
