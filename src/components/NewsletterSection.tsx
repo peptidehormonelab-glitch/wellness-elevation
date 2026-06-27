@@ -94,33 +94,21 @@ export function NewsletterSection() {
 
           {/* ── LEFT: copy ── */}
           <FadeUp>
-            <span className="eyebrow">PLC Optimization Insights</span>
+            <span className="eyebrow">Insights</span>
             <h2
               id="newsletter-heading"
-              className="mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[1.04] tracking-[-0.02em]"
+              className="mt-5 text-2xl md:text-3xl lg:text-4xl leading-[1.1] tracking-[-0.02em]"
             >
               Join the PLC Optimization{" "}
               <span className="text-gradient-electric">Insights</span>.
             </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed max-w-lg">
-              Periodic dispatches covering evidence-based wellness education, performance strategies, longevity research and nutrition science — written without marketing language.
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-md">
+              Periodic dispatches on evidence-based wellness, performance, longevity and nutrition — written without marketing language.
             </p>
 
-            <ul className="mt-8 space-y-3" aria-label="What you receive">
-              {BENEFITS.map(b => (
-                <li key={b} className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <span className="glow-dot shrink-0" aria-hidden="true" />
-                  {b}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-10 pt-8 border-t border-white/[0.06]">
-              <p className="text-[10px] uppercase tracking-[0.28em] text-electric-glow mb-2">Privacy Commitment</p>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed max-w-sm">
-                We never sell or share subscriber data. You will receive a confirmation email to verify your address before any content is sent. You may unsubscribe at any time with a single click.
-              </p>
-            </div>
+            <p className="mt-6 text-[11px] text-muted-foreground/60 leading-relaxed max-w-md">
+              Double opt-in. No spam. Unsubscribe in one click. Your data is never sold or shared.
+            </p>
           </FadeUp>
 
           {/* ── RIGHT: form ── */}
