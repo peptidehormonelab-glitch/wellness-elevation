@@ -178,19 +178,29 @@ function Header() {
       role="banner"
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-2xl bg-background/55 border-b border-white/[0.08] shadow-[0_2px_60px_oklch(0_0_0/0.45)]"
-          : "bg-background/20 backdrop-blur-md"
+          ? "backdrop-blur-xl bg-background/40 border-b border-white/[0.06]"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[176px] md:h-[196px]">
+      <div
+        className={`container-page flex items-center justify-between transition-all duration-500 ${
+          scrolled ? "h-[84px] md:h-[96px]" : "h-[140px] md:h-[168px]"
+        }`}
+      >
         <Link
           to="/"
           className="flex items-center shrink-0"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[160px] md:h-[180px] w-auto" />
+          <PLCLogo
+            className={`w-auto transition-all duration-500 ${
+              scrolled ? "h-[64px] md:h-[76px]" : "h-[120px] md:h-[148px]"
+            }`}
+          />
         </Link>
+
+
 
 
 
@@ -422,7 +432,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[176px] md:pt-[196px]">
+      <main id="main-content" className="pt-[140px] md:pt-[168px]">
         <Outlet />
       </main>
       <Footer />
