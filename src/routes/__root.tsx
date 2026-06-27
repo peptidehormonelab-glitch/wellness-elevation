@@ -178,18 +178,18 @@ function Header() {
       role="banner"
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-2xl bg-background/88 border-b border-white/[0.06] shadow-[0_1px_40px_oklch(0_0_0/0.3)]"
-          : ""
+          ? "backdrop-blur-2xl bg-background/70 border-b border-white/[0.06] shadow-[0_1px_40px_oklch(0_0_0/0.3)]"
+          : "bg-background/35 backdrop-blur-xl"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[72px] md:h-[76px]">
+      <div className="container-page flex items-center justify-between h-[68px] md:h-[72px]">
         <Link
           to="/"
-          className="flex items-center shrink-0 -my-2"
+          className="flex items-center shrink-0 -my-3"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[84px] md:h-[88px] w-auto" />
+          <PLCLogo className="h-[112px] md:h-[120px] w-auto" />
         </Link>
 
 
@@ -366,7 +366,24 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/[0.06]">
+        <div className="mt-14 pt-8 border-t border-white/[0.06]">
+          <ul className="flex flex-wrap items-center gap-x-7 gap-y-3 text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground/75" aria-label="Trust indicators">
+            {[
+              { i: "🇺🇸", l: "U.S. Registered LLC" },
+              { i: "🌍", l: "International Operations" },
+              { i: "🤝", l: "European Partner Network" },
+              { i: "🔒", l: "Secure Payments" },
+              { i: "📦", l: "Worldwide Distribution" },
+            ].map((b, idx) => (
+              <li key={b.l} className="inline-flex items-center gap-3">
+                {idx > 0 && <span className="hidden md:inline-block w-1 h-1 rounded-full bg-electric/50" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-2 text-foreground/85"><span aria-hidden="true" className="text-sm leading-none">{b.i}</span>{b.l}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-10 pt-8 border-t border-white/[0.06]">
           <div className="flex flex-col lg:flex-row gap-4 lg:items-center justify-between">
             <p className="text-xs text-muted-foreground/50 leading-relaxed max-w-xl">
               <span className="text-silver/70">Wellness Notice.</span>{" "}
@@ -387,7 +404,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[72px] md:pt-[76px]">
+      <main id="main-content" className="pt-[68px] md:pt-[72px]">
         <Outlet />
       </main>
       <Footer />

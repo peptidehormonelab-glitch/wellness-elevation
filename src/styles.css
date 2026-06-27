@@ -56,7 +56,7 @@
   --secondary: oklch(0.20 0.013 240);
   --secondary-foreground: oklch(0.97 0.005 240);
   --muted: oklch(0.18 0.011 240);
-  --muted-foreground: oklch(0.67 0.014 240);
+  --muted-foreground: oklch(0.74 0.014 240);
   --accent: oklch(0.66 0.22 250);
   --accent-foreground: oklch(0.06 0.008 240);
   --destructive: oklch(0.62 0.22 25);
@@ -75,8 +75,8 @@
                    linear-gradient(180deg, oklch(0.10 0.012 240), oklch(0.12 0.013 240));
   --gradient-accent: linear-gradient(135deg, oklch(0.72 0.22 248), oklch(0.60 0.22 254));
   --gradient-silver: linear-gradient(135deg, oklch(0.94 0.004 240), oklch(0.58 0.008 240));
-  --shadow-glow: 0 8px 32px -8px oklch(0.66 0.22 250 / 0.5);
-  --shadow-glow-lg: 0 20px 60px -12px oklch(0.66 0.22 250 / 0.48);
+  --shadow-glow: 0 6px 24px -10px oklch(0.66 0.22 250 / 0.32);
+  --shadow-glow-lg: 0 14px 44px -14px oklch(0.66 0.22 250 / 0.34);
   --shadow-elevated: 0 32px 80px -20px oklch(0 0 0 / 0.75);
   --shadow-card: 0 4px 24px -4px oklch(0 0 0 / 0.4);
 }

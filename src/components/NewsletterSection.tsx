@@ -81,7 +81,7 @@ export function NewsletterSection() {
 
   return (
     <section
-      className="py-28 border-y border-white/[0.06] relative overflow-hidden"
+      className="py-16 md:py-20 border-y border-white/[0.06] relative overflow-hidden"
       aria-labelledby="newsletter-heading"
     >
       {/* Ambient glow */}
