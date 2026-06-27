@@ -280,17 +280,21 @@ function Home() {
             aria-label="Brand identity"
           >
             {[
-              <><span aria-hidden="true" className="mr-1.5">🇺🇸</span>U.S. Registered LLC</>,
-              "Global Wellness Brand",
-              "European Partner Network",
-              "Transparency First",
-              "Long-Term Performance",
-            ].map((label, i) => (
+              { label: "U.S. Registered LLC", icon: true },
+              { label: "Global Wellness Brand" },
+              { label: "European Partner Network" },
+              { label: "Transparency First" },
+              { label: "Long-Term Performance" },
+            ].map((item, i) => (
               <span key={i} className="inline-flex items-center gap-2">
-                {i > 0 && <span className="w-1 h-1 rounded-full bg-electric/60" aria-hidden="true" />}
-                <span className="text-foreground/75">{label}</span>
+                {i > 0 && <span className="w-px h-2.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-1.5 text-foreground/75">
+                  {item.icon && <Flag size={10} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />}
+                  {item.label}
+                </span>
               </span>
             ))}
+
           </motion.div>
 
 
