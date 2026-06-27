@@ -13,7 +13,7 @@ import cardPerformance from "@/assets/card-performance.jpg";
 import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
-import cardSkin Care from "@/assets/card-skin care.jpg";
+import cardCosmetic from "@/assets/card-skin care.jpg";
 import { FadeUp, FadeIn, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
@@ -40,7 +40,7 @@ const DISCIPLINES = [
   { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
   { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
   { num: "04", t: "Wellness", d: "A vibrant life, designed for you and the people you love.", img: cardWellness },
-  { num: "05", t: "Skin Care", d: "Premium skincare rituals that reflect your standard.", img: cardSkin Care },
+  { num: "05", t: "Skin Care", d: "Premium skincare rituals that reflect your standard.", img: cardCosmetic },
 ];
 
 const PILLARS = [
