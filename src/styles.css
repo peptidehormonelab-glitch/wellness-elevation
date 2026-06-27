@@ -56,7 +56,7 @@
   --secondary: oklch(0.20 0.013 240);
   --secondary-foreground: oklch(0.97 0.005 240);
   --muted: oklch(0.18 0.011 240);
-  --muted-foreground: oklch(0.74 0.014 240);
+  --muted-foreground: oklch(0.82 0.012 240);
   --accent: oklch(0.66 0.22 250);
   --accent-foreground: oklch(0.06 0.008 240);
   --destructive: oklch(0.62 0.22 25);
@@ -166,14 +166,12 @@
   background: linear-gradient(145deg, oklch(1 0 0 / 0.05), oklch(1 0 0 / 0.02));
   border: 1px solid oklch(1 0 0 / 0.08);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 
 @utility surface-glass-strong {
   background: linear-gradient(145deg, oklch(1 0 0 / 0.08), oklch(1 0 0 / 0.03));
   border: 1px solid oklch(1 0 0 / 0.12);
   backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
 }
 
 @utility btn-electric {
