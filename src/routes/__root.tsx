@@ -392,7 +392,7 @@ function Footer() {
               { Icon: Globe, l: "International Operations", emoji: "🌍" },
               { Icon: Handshake, l: "European Partner Network", emoji: "🇪🇺" },
               { Icon: Lock, l: "Secure Payments" },
-              { Icon: Package, l: "Worldwide Distribution" },
+              { Icon: Package, l: "International Clients" },
             ].map((b, idx) => (
               <li key={b.l} className="inline-flex items-center gap-3">
                 {idx > 0 && <span className="hidden md:inline-block w-px h-3.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}

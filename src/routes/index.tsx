@@ -39,9 +39,10 @@ const DISCIPLINES = [
   { num: "01", t: "Performance", d: "Train and recover with the precision of a serious athlete.", img: cardPerformance },
   { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
   { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
-  { num: "04", t: "Wellness", d: "A vibrant life, designed for you and the people you love.", img: cardWellness },
-  { num: "05", t: "Skin Care", d: "Premium skincare rituals that reflect your standard.", img: cardCosmetic },
+  { num: "04", t: "Precision Wellness", d: "Recovery, resilience and energy — guided by data and biomarkers.", img: cardWellness },
+  { num: "05", t: "Skin Care", d: "Clinical skin optimization rituals that reflect your standard.", img: cardCosmetic },
 ];
+
 
 const PILLARS = [
   {
@@ -82,9 +83,10 @@ const SCIENTIFIC = [
   },
   {
     icon: Shield,
-    title: "Authorized & Transparent",
-    desc: "All supplements in our portfolio are authorized for retail, clearly formulated and selected for purity, bioavailability and real-world effectiveness.",
+    title: "Precision Supplementation",
+    desc: "Authorized supplementation guided by biomarkers, micronutrient context and individual goals. Every product is selected for purity, bioavailability and clear formulation — never proprietary blends.",
   },
+
   {
     icon: Clock,
     title: "Long-Horizon Thinking",
@@ -584,13 +586,14 @@ function Home() {
           </ScaleIn>
 
           <SlideRight>
-            <span className="eyebrow">Authorized Supplements</span>
+            <span className="eyebrow">Precision Supplementation</span>
             <h2 id="products-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
-              Clean ingredients. Disciplined formulations.
+              Cellular health. Disciplined formulations.
             </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              A curated portfolio of authorized proteins, creatine, vitamins, minerals, hydration and recovery essentials — every product selected for purity, transparency and real-world effectiveness. No proprietary blends. No noise.
+              A curated portfolio for micronutrient optimization, cellular health and metabolic resilience — proteins, creatine, vitamins, minerals, hydration and recovery essentials. Every product authorized for retail, selected for purity, bioavailability and transparent formulation. No proprietary blends. No noise.
             </p>
+
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3" aria-label="Product categories">
               {["Whey & Plant Proteins", "Creatine Monohydrate", "Daily Multivitamins", "Essential Minerals", "Hydration Formulas", "Recovery Blends"].map(x => (
                 <li key={x} className="flex items-center gap-2.5 text-sm text-muted-foreground">
