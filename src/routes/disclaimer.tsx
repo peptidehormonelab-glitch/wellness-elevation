@@ -36,7 +36,7 @@ function Disclaimer() {
             Individual results from coaching, nutrition guidance, supplement use and lifestyle programs vary based on individual physiology, adherence, prior fitness level and overall lifestyle. PLC Optimization LLC does not guarantee any specific outcome, and no content on this website should be interpreted as a promise of results.
           </Section>
           <Section title="Product Use">
-            All supplements and cosmetic products sold or recommended by PLC Optimization LLC are authorized for general wellness use. Always read product labels, follow directions for use and consult a healthcare professional if you are pregnant, nursing, have a medical condition, or are taking any medications.
+            All supplements and skin care products sold or recommended by PLC Optimization LLC are authorized for general wellness use. Always read product labels, follow directions for use and consult a healthcare professional if you are pregnant, nursing, have a medical condition, or are taking any medications.
           </Section>
           <Section title="Contact">
             For questions about this disclaimer, please contact us at{" "}

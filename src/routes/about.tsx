@@ -89,7 +89,7 @@ function About() {
             <span className="text-gradient-silver">longevity</span>.
           </h1>
           <p className="mt-9 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            PLC Optimization LLC is a U.S.-registered wellness brand built for individuals who want measured, lifelong results — not trends, not shortcuts, not the next 12-week miracle. We integrate coaching, nutrition guidance, authorized supplementation and premium cosmetic care into one disciplined, evidence-based standard.
+            PLC Optimization LLC is a U.S.-registered wellness brand built for individuals who want measured, lifelong results — not trends, not shortcuts, not the next 12-week miracle. We integrate coaching, nutrition guidance, authorized supplementation and premium skin care into one disciplined, evidence-based standard.
           </p>
         </FadeUp>
       </section>

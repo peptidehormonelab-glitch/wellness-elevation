@@ -13,7 +13,7 @@ import cardPerformance from "@/assets/card-performance.jpg";
 import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
-import cardCosmetic from "@/assets/card-cosmetic.jpg";
+import cardSkin Care from "@/assets/card-skin care.jpg";
 import { FadeUp, FadeIn, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "PLC Optimization LLC delivers premium wellness solutions for sports performance, healthy aging, nutrition, cosmetic care and lifestyle optimization. U.S. registered, science-based, built for the long term.",
+          "PLC Optimization LLC delivers premium wellness solutions for sports performance, healthy aging, nutrition, skin care and lifestyle optimization. U.S. registered, science-based, built for the long term.",
       },
       { property: "og:title", content: "PLC Optimization — Premium Wellness. Elite Performance. Lasting Results." },
       {
@@ -40,7 +40,7 @@ const DISCIPLINES = [
   { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
   { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
   { num: "04", t: "Wellness", d: "A vibrant life, designed for you and the people you love.", img: cardWellness },
-  { num: "05", t: "Cosmetic Care", d: "Premium skincare rituals that reflect your standard.", img: cardCosmetic },
+  { num: "05", t: "Skin Care", d: "Premium skincare rituals that reflect your standard.", img: cardSkin Care },
 ];
 
 const PILLARS = [
@@ -55,7 +55,7 @@ const PILLARS = [
     img: longevityImg,
   },
   {
-    title: "Premium Cosmetic Care",
+    title: "Premium Skin Care",
     desc: "Clean, thoughtfully formulated skincare that elevates your daily ritual without compromise.",
     img: skincareImg,
   },
@@ -133,7 +133,7 @@ const TRUST = [
 const FAQ = [
   {
     q: "What makes PLC Optimization different from other wellness brands?",
-    a: "We combine private 1:1 coaching, nutrition guidance, authorized supplementation and premium cosmetic care under one disciplined standard. Our approach is long-horizon — built to compound over years, not weeks. We also explain everything: the science, the sourcing, the reasoning.",
+    a: "We combine private 1:1 coaching, nutrition guidance, authorized supplementation and premium skin care under one disciplined standard. Our approach is long-horizon — built to compound over years, not weeks. We also explain everything: the science, the sourcing, the reasoning.",
   },
   {
     q: "Are your supplements safe and properly authorized?",
@@ -430,7 +430,7 @@ function Home() {
               A premium standard for body, performance and longevity.
             </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              PLC Optimization LLC is a U.S.-registered wellness brand created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium cosmetic care into one disciplined, evidence-based standard.
+              PLC Optimization LLC is a U.S.-registered wellness brand created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium skin care into one disciplined, evidence-based standard.
             </p>
             <p className="mt-5 text-[11px] uppercase tracking-[0.28em] text-electric-glow/90">
               <span aria-hidden="true" className="mr-1.5">🇺🇸</span>American standards. <span aria-hidden="true" className="mx-1">🇪🇺</span>European partnerships. <span aria-hidden="true" className="mx-1">🌍</span>Global vision.
