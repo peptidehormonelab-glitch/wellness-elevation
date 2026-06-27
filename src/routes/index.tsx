@@ -433,7 +433,7 @@ function Home() {
               PLC Optimization LLC is a U.S.-registered wellness brand created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium cosmetic care into one disciplined, evidence-based standard.
             </p>
             <p className="mt-5 text-[11px] uppercase tracking-[0.28em] text-electric-glow/90">
-              American standards. European partnerships. Global vision.
+              <span aria-hidden="true" className="mr-1.5">🇺🇸</span>American standards. <span aria-hidden="true" className="mx-1">🇪🇺</span>European partnerships. <span aria-hidden="true" className="mx-1">🌍</span>Global vision.
             </p>
             <Link to="/about" className="mt-8 inline-flex btn-ghost-light items-center gap-2">
               Our Story <ArrowRight size={14} aria-hidden="true" />
