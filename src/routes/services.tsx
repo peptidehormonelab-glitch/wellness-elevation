@@ -5,6 +5,8 @@ import longevityImg from "@/assets/longevity.jpg";
 import skincareImg from "@/assets/skincare.jpg";
 import productsImg from "@/assets/products.jpg";
 import lifestyleImg from "@/assets/lifestyle.jpg";
+import diagnosticsImg from "@/assets/card-diagnostics.jpg";
+
 import wellnessBalanceImg from "@/assets/wellness-balance.jpg";
 import coachingConsultImg from "@/assets/coaching-consult.jpg";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Motion";
@@ -69,31 +71,33 @@ const SERVICES = [
     ],
   },
   {
-    tag: "Wellness",
+    tag: "Precision Wellness",
     num: "04",
-    title: "Men's & Women's Wellness",
+    title: "Precision Wellness & Human Optimization",
     img: wellnessBalanceImg,
-    desc: "Programs designed around the distinct performance, hormonal and longevity considerations of men and women at different life stages.",
+    desc: "Recovery, energy, resilience and long-term health — guided by biomarkers, HRV, recovery science and personalized lifestyle strategies. A human performance approach, not a fitness program.",
     bullets: [
-      "Life-stage–specific programming",
-      "Hormonal wellness education",
-      "Body composition guidance",
-      "Lifestyle integration support",
+      "Recovery & HRV-guided protocols",
+      "Cellular health & micronutrient context",
+      "Functional movement assessment",
+      "Lifestyle optimization sessions",
     ],
   },
+
   {
     tag: "Nutrition",
     num: "05",
-    title: "Nutrition & Supplement Guidance",
+    title: "Nutrition & Precision Supplementation",
     img: productsImg,
-    desc: "Evidence-led nutrition strategy and authorized supplementation guidance — from macro planning to product curation, explained clearly and without marketing noise.",
+    desc: "Evidence-led nutrition strategy and precision supplementation guidance — from macro planning to micronutrient optimization and authorized product curation, explained clearly and without marketing noise.",
     bullets: [
       "Macro & micronutrient strategy",
       "Authorized supplement curation",
-      "Elimination & reintroduction",
+      "Biomarker-aware planning",
       "Performance nutrition timing",
     ],
   },
+
   {
     tag: "Skin Care",
     num: "06",
