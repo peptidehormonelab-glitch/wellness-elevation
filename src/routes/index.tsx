@@ -645,10 +645,11 @@ function Home() {
           <FadeUp>
             <div className="mt-12 surface-glass rounded-2xl p-7 border border-white/[0.06] flex flex-col md:flex-row md:items-center gap-5">
               <div className="flex-1">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">Our Commitment</p>
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">American Standards · International Partnerships</p>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                  This section will grow as PLC Optimization does — adding verified credentials, documented partnerships and genuine client outcomes as they are earned. We believe a company that is honest about being new is more trustworthy than one that fabricates a history it does not have.
+                  PLC Optimization is a U.S.-registered LLC headquartered in the United States, collaborating with carefully selected European partners who share our commitment to quality, transparency and long-term excellence. Our international partner network combines American standards with trusted European expertise — serving clients worldwide through relationships built on substance, not slogans.
                 </p>
+
               </div>
               <Link to="/about" className="btn-ghost-light shrink-0 whitespace-nowrap">
                 Our Philosophy
