@@ -81,16 +81,16 @@ export function NewsletterSection() {
 
   return (
     <section
-      className="py-16 md:py-20 border-y border-white/[0.06] relative overflow-hidden"
+      className="py-14 md:py-16 border-y border-white/[0.06] relative overflow-hidden"
       aria-labelledby="newsletter-heading"
     >
-      {/* Ambient glow */}
+      {/* Ambient glow — softened */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-electric/[0.04] blur-[110px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[360px] rounded-full bg-electric/[0.025] blur-[100px]" />
       </div>
 
-      <div className="container-page relative">
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+      <div className="container-page relative max-w-5xl">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-start">
 
           {/* ── LEFT: copy ── */}
           <FadeUp>
