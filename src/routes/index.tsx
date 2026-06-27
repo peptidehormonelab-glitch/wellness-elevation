@@ -247,7 +247,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
-            <span className="eyebrow"><Flag size={11} strokeWidth={1.5} className="text-[color:var(--gold)] mr-1" aria-hidden="true" />PLC Optimization · U.S. Registered LLC</span>
+            <span className="eyebrow"><span aria-hidden="true" className="mr-1">🇺🇸</span>PLC Optimization · U.S. Registered LLC</span>
           </motion.div>
 
           <motion.h1
@@ -280,16 +280,16 @@ function Home() {
             aria-label="Brand identity"
           >
             {[
-              { label: "U.S. Registered LLC", icon: true },
-              { label: "Global Wellness Brand" },
-              { label: "European Partner Network" },
+              { label: "U.S. Registered LLC", flag: "🇺🇸" },
+              { label: "International Operations", flag: "🌍" },
+              { label: "European Partner Network", flag: "🇪🇺" },
               { label: "Transparency First" },
               { label: "Long-Term Performance" },
             ].map((item, i) => (
               <span key={i} className="inline-flex items-center gap-2">
                 {i > 0 && <span className="w-px h-2.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
-                <span className="inline-flex items-center gap-1.5 text-foreground/75">
-                  {item.icon && <Flag size={10} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-1.5 text-foreground/80">
+                  {item.flag && <span aria-hidden="true" className="text-[12px] leading-none">{item.flag}</span>}
                   {item.label}
                 </span>
               </span>
@@ -433,7 +433,7 @@ function Home() {
               PLC Optimization LLC is a U.S.-registered wellness brand created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium cosmetic care into one disciplined, evidence-based standard.
             </p>
             <p className="mt-5 text-[11px] uppercase tracking-[0.28em] text-electric-glow/90">
-              American standards. European partnerships. Global vision.
+              <span aria-hidden="true" className="mr-1.5">🇺🇸</span>American standards. <span aria-hidden="true" className="mx-1">🇪🇺</span>European partnerships. <span aria-hidden="true" className="mx-1">🌍</span>Global vision.
             </p>
             <Link to="/about" className="mt-8 inline-flex btn-ghost-light items-center gap-2">
               Our Story <ArrowRight size={14} aria-hidden="true" />
@@ -615,7 +615,7 @@ function Home() {
           <FadeUp>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
               <div className="max-w-2xl">
-                <span className="eyebrow"><Flag size={11} strokeWidth={1.5} className="text-[color:var(--gold)] mr-1" aria-hidden="true" />Built on Transparency</span>
+                <span className="eyebrow"><span aria-hidden="true" className="mr-1">🇺🇸</span>Built on Transparency</span>
                 <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
                   Honesty, first.{" "}
                   <span className="text-gradient-silver">Always.</span>
@@ -652,7 +652,7 @@ function Home() {
           <FadeUp>
             <div className="mt-12 surface-glass rounded-2xl p-7 border border-white/[0.06] flex flex-col md:flex-row md:items-center gap-5">
               <div className="flex-1">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">American Standards · International Partnerships</p>
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2"><span aria-hidden="true" className="mr-1.5">🇺🇸</span>American Standards <span className="text-muted-foreground/40 mx-1">·</span> <span aria-hidden="true" className="mr-1.5">🇪🇺</span>European Partnerships <span className="text-muted-foreground/40 mx-1">·</span> <span aria-hidden="true" className="mr-1.5">🌍</span>Worldwide</p>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
                   PLC Optimization is a U.S.-registered LLC headquartered in the United States, collaborating with carefully selected European partners who share our commitment to quality, transparency and long-term excellence. Our international partner network combines American standards with trusted European expertise — serving clients worldwide through relationships built on substance, not slogans.
                 </p>

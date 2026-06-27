@@ -347,8 +347,8 @@ function Footer() {
               <ul className="space-y-5">
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Headquarters</span>
-                  <span className="text-sm text-foreground inline-flex items-center gap-2"><Flag size={13} className="text-[color:var(--gold)]" strokeWidth={1.5} aria-hidden="true" /> United States</span>
-                  <span className="mt-1 block text-[11px] text-muted-foreground/70">International Partner Network · European Partners</span>
+                  <span className="text-sm text-foreground inline-flex items-center gap-2"><span aria-hidden="true">🇺🇸</span> United States</span>
+                  <span className="mt-1 block text-[11px] text-muted-foreground/70 inline-flex items-center gap-1.5"><span aria-hidden="true">🇪🇺</span> European Partner Network · <span aria-hidden="true">🌍</span> International</span>
                 </li>
 
 
@@ -367,30 +367,36 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/[0.06] relative">
+        <div className="mt-14 pt-10 border-t border-white/[0.06] relative">
           <div
-            className="absolute top-0 left-0 h-px w-32"
+            className="absolute top-0 left-0 h-px w-40"
             style={{ background: "linear-gradient(90deg, var(--gold), transparent)" }}
             aria-hidden="true"
           />
-          <ul className="flex flex-wrap items-center gap-x-8 gap-y-4 text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground/75" aria-label="Trust indicators">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-5">Trust & Standards</p>
+          <ul className="flex flex-wrap items-center gap-x-7 gap-y-5 text-[11px] uppercase tracking-[0.22em]" aria-label="Trust indicators">
             {[
-              { Icon: Flag, l: "U.S. Registered LLC" },
-              { Icon: Globe, l: "International Operations" },
-              { Icon: Handshake, l: "European Partner Network" },
+              { Icon: Flag, l: "U.S. Registered LLC", emoji: "🇺🇸" },
+              { Icon: Globe, l: "International Operations", emoji: "🌍" },
+              { Icon: Handshake, l: "European Partner Network", emoji: "🇪🇺" },
               { Icon: Lock, l: "Secure Payments" },
               { Icon: Package, l: "Worldwide Distribution" },
             ].map((b, idx) => (
               <li key={b.l} className="inline-flex items-center gap-3">
-                {idx > 0 && <span className="hidden md:inline-block w-px h-3 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
-                <span className="inline-flex items-center gap-2 text-foreground/85">
-                  <b.Icon size={13} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />
+                {idx > 0 && <span className="hidden md:inline-block w-px h-3.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-2 text-foreground/95">
+                  {b.emoji ? (
+                    <span aria-hidden="true" className="text-[13px] leading-none">{b.emoji}</span>
+                  ) : (
+                    <b.Icon size={13} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />
+                  )}
                   {b.l}
                 </span>
               </li>
             ))}
           </ul>
         </div>
+
 
 
         <div className="mt-10 pt-8 border-t border-white/[0.06]">
