@@ -182,14 +182,14 @@ function Header() {
           : "bg-background/20 backdrop-blur-md"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[72px] md:h-[80px]">
+      <div className="container-page flex items-center justify-between h-[68px] md:h-[76px]">
         <Link
           to="/"
-          className="flex items-center shrink-0 -my-6"
+          className="flex items-center shrink-0 -my-8"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[140px] md:h-[156px] w-auto" />
+          <PLCLogo className="h-[160px] md:h-[180px] w-auto" />
         </Link>
 
 
@@ -366,7 +366,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/[0.06]">
+        <div className="mt-14 pt-8 border-t border-white/[0.06] relative">
+          <div
+            className="absolute top-0 left-0 h-px w-24"
+            style={{ background: "linear-gradient(90deg, var(--gold-soft), transparent)" }}
+            aria-hidden="true"
+          />
           <ul className="flex flex-wrap items-center gap-x-7 gap-y-3 text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground/75" aria-label="Trust indicators">
             {[
               { i: "🇺🇸", l: "U.S. Registered LLC" },
@@ -404,7 +409,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[72px] md:pt-[80px]">
+      <main id="main-content" className="pt-[68px] md:pt-[76px]">
         <Outlet />
       </main>
       <Footer />
