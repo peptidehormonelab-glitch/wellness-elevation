@@ -366,7 +366,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/[0.06]">
+        <div className="mt-14 pt-8 border-t border-white/[0.06] relative">
+          <div
+            className="absolute top-0 left-0 h-px w-24"
+            style={{ background: "linear-gradient(90deg, var(--gold-soft), transparent)" }}
+            aria-hidden="true"
+          />
           <ul className="flex flex-wrap items-center gap-x-7 gap-y-3 text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground/75" aria-label="Trust indicators">
             {[
               { i: "🇺🇸", l: "U.S. Registered LLC" },
