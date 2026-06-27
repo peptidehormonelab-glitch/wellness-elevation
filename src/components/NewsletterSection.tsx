@@ -4,13 +4,6 @@ import { FadeUp } from "@/components/Motion";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-const BENEFITS = [
-  "Evidence-based wellness education",
-  "Sports performance strategies",
-  "Longevity and healthy aging insights",
-  "Nutrition and supplementation articles",
-  "Company updates and new content",
-];
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
