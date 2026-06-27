@@ -224,14 +224,14 @@ function Home() {
             width={1600}
             height={1104}
             className="w-full h-full object-cover object-center"
-            style={{ opacity: 0.2, mixBlendMode: "luminosity" }}
+            style={{ opacity: 0.32 }}
             fetchPriority="high"
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, oklch(0.10 0.012 240 / 0) 0%, oklch(0.10 0.012 240 / 0.55) 65%, oklch(0.10 0.012 240) 100%)",
+                "linear-gradient(180deg, oklch(0.10 0.012 240 / 0.20) 0%, oklch(0.10 0.012 240 / 0.55) 65%, oklch(0.10 0.012 240) 100%)",
             }}
           />
         </div>
