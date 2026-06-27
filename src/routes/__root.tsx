@@ -182,14 +182,14 @@ function Header() {
           : ""
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[72px]">
+      <div className="container-page flex items-center justify-between h-16 md:h-20">
         <Link
           to="/"
           className="flex items-center shrink-0"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-10 md:h-12 w-auto" />
+          <PLCLogo className="h-12 md:h-14 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Primary navigation">
@@ -384,7 +384,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[72px]">
+      <main id="main-content" className="pt-16 md:pt-20">
         <Outlet />
       </main>
       <Footer />

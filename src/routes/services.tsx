@@ -3,8 +3,10 @@ import { ArrowRight } from "lucide-react";
 import performanceImg from "@/assets/performance.jpg";
 import longevityImg from "@/assets/longevity.jpg";
 import skincareImg from "@/assets/skincare.jpg";
-import coachingImg from "@/assets/coaching.jpg";
 import productsImg from "@/assets/products.jpg";
+import lifestyleImg from "@/assets/lifestyle.jpg";
+import wellnessBalanceImg from "@/assets/wellness-balance.jpg";
+import coachingConsultImg from "@/assets/coaching-consult.jpg";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Motion";
 
 export const Route = createFileRoute("/services")({
@@ -57,7 +59,7 @@ const SERVICES = [
     tag: "Lifestyle",
     num: "03",
     title: "Longevity Lifestyle",
-    img: longevityImg,
+    img: lifestyleImg,
     desc: "A comprehensive approach to sleep, stress, training and nutrition — built to compound quietly over years and adapt as your life and priorities evolve.",
     bullets: [
       "Sleep optimization frameworks",
@@ -70,7 +72,7 @@ const SERVICES = [
     tag: "Wellness",
     num: "04",
     title: "Men's & Women's Wellness",
-    img: coachingImg,
+    img: wellnessBalanceImg,
     desc: "Programs designed around the distinct performance, hormonal and longevity considerations of men and women at different life stages.",
     bullets: [
       "Life-stage–specific programming",
@@ -109,7 +111,7 @@ const SERVICES = [
     tag: "Coaching",
     num: "07",
     title: "Private Coaching & Lifestyle Optimization",
-    img: coachingImg,
+    img: coachingConsultImg,
     desc: "1:1 coaching that integrates training, nutrition, recovery and habit design into one cohesive lifestyle blueprint — refined continuously as you grow.",
     bullets: [
       "Private intake consultation",
