@@ -11,7 +11,7 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "Authorized premium supplements including proteins, creatine, vitamins, minerals, hydration and recovery essentials. Plus premium skin care care. All authorized, all transparent.",
+          "Authorized premium supplements including proteins, creatine, vitamins, minerals, hydration and recovery essentials. Plus premium skin care. All authorized, all transparent.",
       },
       { property: "og:title", content: "Products — PLC Optimization" },
       {
@@ -198,7 +198,7 @@ function Products() {
             <div className="rounded-2xl overflow-hidden border border-white/[0.07] aspect-[4/3] relative">
               <img
                 src={skincareImg}
-                alt="Premium luxury skincare and skin care products"
+                alt="Premium luxury luxury skin care products"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
