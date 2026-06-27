@@ -337,7 +337,42 @@ function Home() {
         </div>
       </div>
 
+      {/* ── THE PLC STANDARD ── */}
+      <section className="container-page py-28" aria-labelledby="plc-standard-heading">
+        <FadeUp>
+          <div className="max-w-3xl">
+            <span className="eyebrow">The PLC Standard</span>
+            <h2 id="plc-standard-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
+              Five principles that define{" "}
+              <span className="text-gradient-silver">everything we do.</span>
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+              The institutional standard behind every program, product and partnership — American rigor, international vision, long-term thinking.
+            </p>
+          </div>
+        </FadeUp>
+
+        <StaggerContainer className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {[
+            { t: "Evidence First", d: "Every recommendation is grounded in science and continuous learning." },
+            { t: "Transparency Always", d: "No exaggerated promises. No fabricated credibility." },
+            { t: "Premium Quality", d: "We work only with carefully selected products, services and partners." },
+            { t: "Long-Term Thinking", d: "We prioritize sustainable health, performance and longevity." },
+            { t: "Continuous Improvement", d: "Optimization is a lifelong process, never a destination." },
+          ].map((p, i) => (
+            <StaggerItem key={p.t}>
+              <div className="surface-glass rounded-2xl p-6 h-full border border-white/[0.06] card-hover">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">0{i + 1}</p>
+                <h3 className="mt-4 text-lg md:text-xl font-display leading-snug">{p.t}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </section>
+
       {/* ── DISCIPLINES ── */}
+
       <section className="container-page py-28" aria-labelledby="disciplines-heading">
         <FadeUp>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
