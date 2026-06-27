@@ -663,16 +663,21 @@ function Home() {
       </section>
 
       {/* ── PLC QUALITY STANDARD ── */}
-      <section className="container-page py-28" aria-labelledby="quality-heading">
+      <section className="container-page py-28 relative" aria-labelledby="quality-heading">
+        <div
+          className="absolute top-20 left-6 md:left-10 h-px w-16"
+          style={{ background: "linear-gradient(90deg, var(--gold-soft), transparent)" }}
+          aria-hidden="true"
+        />
         <FadeUp>
           <div className="max-w-3xl">
             <span className="eyebrow">The PLC Quality Standard</span>
             <h2 id="quality-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
               Quality is not a marketing claim.{" "}
-              <span className="text-gradient-silver">It is a commitment.</span>
+              <span className="text-gradient-silver">It is a process.</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed max-w-2xl">
-              PLC Optimization prioritizes rigorous supplier qualification, responsible sourcing and continuous quality review across every product and partnership. Our standard is a disciplined process — not a guarantee, not a slogan.
+              PLC Optimization prioritizes rigorous supplier qualification, responsible sourcing and continuous quality review across every product and partnership. American standards, international operations — a disciplined process, not a slogan.
             </p>
           </div>
         </FadeUp>
