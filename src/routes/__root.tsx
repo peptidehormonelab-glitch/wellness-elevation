@@ -182,15 +182,17 @@ function Header() {
           : "bg-background/20 backdrop-blur-md"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[68px] md:h-[76px]">
+      <div className="container-page flex items-center justify-between h-[176px] md:h-[196px]">
         <Link
           to="/"
-          className="flex items-center shrink-0 -my-8"
+          className="flex items-center shrink-0"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
           <PLCLogo className="h-[160px] md:h-[180px] w-auto" />
         </Link>
+
+
 
 
         <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Primary navigation">
@@ -420,7 +422,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[68px] md:pt-[76px]">
+      <main id="main-content" className="pt-[176px] md:pt-[196px]">
         <Outlet />
       </main>
       <Footer />
