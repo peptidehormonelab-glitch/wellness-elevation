@@ -400,7 +400,7 @@ function Home() {
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ background: "linear-gradient(180deg, transparent 25%, oklch(0.08 0.012 240 / 0.65) 60%, oklch(0.08 0.012 240 / 0.97) 100%)" }}
+                  style={{ background: "linear-gradient(180deg, transparent 35%, oklch(0.08 0.012 240 / 0.50) 65%, oklch(0.08 0.012 240 / 0.94) 100%)" }}
                   aria-hidden="true"
                 />
                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
