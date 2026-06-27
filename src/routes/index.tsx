@@ -390,7 +390,7 @@ function Home() {
           </div>
         </FadeUp>
 
-        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4">
+        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
           {DISCIPLINES.map((c, i) => (
             <StaggerItem key={c.t}>
               <article
