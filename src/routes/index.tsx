@@ -400,7 +400,7 @@ function Home() {
                   src={c.img}
                   alt={c.t}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover img-premium transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
                   className="absolute inset-0"
@@ -481,7 +481,7 @@ function Home() {
                   src={p.img}
                   alt={p.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover opacity-65 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover img-premium opacity-65 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
                 />
                 <div
                   className="absolute inset-0"
@@ -538,7 +538,7 @@ function Home() {
       {/* ── LONGEVITY BAND ── */}
       <section className="relative py-28 overflow-hidden" aria-labelledby="longevity-heading">
         <div className="absolute inset-0" aria-hidden="true">
-          <img src={longevityImg} alt="" className="w-full h-full object-cover" style={{ opacity: 0.16 }} loading="lazy" />
+          <img src={longevityImg} alt="" className="w-full h-full object-cover img-premium" style={{ opacity: 0.16 }} loading="lazy" />
           <div
             className="absolute inset-0"
             style={{
@@ -573,7 +573,7 @@ function Home() {
                 src={productsImg}
                 alt="Premium supplement portfolio on dark surface"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover img-premium"
               />
               <div
                 className="absolute inset-0"
