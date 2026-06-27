@@ -264,7 +264,7 @@ function Home() {
           </motion.h1>
 
           <motion.p
-            className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
+            className="mt-8 max-w-xl text-base md:text-lg text-foreground/85 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.42 }}
@@ -662,8 +662,53 @@ function Home() {
         </div>
       </section>
 
+      {/* ── PLC QUALITY STANDARD ── */}
+      <section className="container-page py-28" aria-labelledby="quality-heading">
+        <FadeUp>
+          <div className="max-w-3xl">
+            <span className="eyebrow">The PLC Quality Standard</span>
+            <h2 id="quality-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
+              Quality is not a marketing claim.{" "}
+              <span className="text-gradient-silver">It is a commitment.</span>
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-2xl">
+              PLC Optimization prioritizes rigorous supplier qualification, responsible sourcing and continuous quality review across every product and partnership. Our standard is a disciplined process — not a guarantee, not a slogan.
+            </p>
+          </div>
+        </FadeUp>
+
+        <StaggerContainer className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { t: "Rigorous Supplier Qualification", d: "Every manufacturing partner is evaluated against documented quality, transparency and traceability criteria before inclusion." },
+            { t: "International Manufacturing Standards", d: "We prioritize suppliers operating under recognized international quality frameworks and good manufacturing practices." },
+            { t: "Certificates of Analysis", d: "Where applicable, Certificates of Analysis (COAs) and batch documentation are available on request to verify composition." },
+            { t: "Batch Traceability", d: "Where applicable, products can be traced back to their production batch, supporting accountability across the supply chain." },
+            { t: "Premium Ingredient Sourcing", d: "Raw materials are selected for purity, bioavailability and credible origin — never for price alone." },
+            { t: "Continuous Quality Review", d: "Our portfolio is reviewed continuously. Products that no longer meet our standard are removed without hesitation." },
+            { t: "Carefully Selected Partners", d: "We work with a small number of vetted manufacturing and distribution partners aligned with our long-term standard." },
+            { t: "Customer Satisfaction Commitment", d: "Every client interaction is treated as a long-term relationship. Concerns are reviewed personally and addressed directly." },
+          ].map((p, i) => (
+            <StaggerItem key={p.t}>
+              <div className="surface-glass rounded-2xl p-6 h-full border border-white/[0.06] card-hover">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">{String(i + 1).padStart(2, "0")}</p>
+                <h3 className="mt-4 text-base md:text-lg font-display leading-snug">{p.t}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
+        <FadeUp>
+          <p className="mt-10 text-xs text-muted-foreground/60 leading-relaxed max-w-3xl">
+            <span className="text-silver/80">Note.</span>{" "}
+            PLC Optimization does not make absolute claims of certification, guaranteed safety or universal outcomes. We communicate a disciplined quality process and recommend that every individual consult a qualified healthcare provider before beginning any new wellness program.
+          </p>
+        </FadeUp>
+      </section>
+
       {/* ── NEWSLETTER ── */}
       <NewsletterSection />
+
 
       {/* ── FAQ ── */}
       <section className="py-28 border-y border-white/[0.06]" aria-labelledby="faq-heading">

@@ -4,13 +4,6 @@ import { FadeUp } from "@/components/Motion";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-const BENEFITS = [
-  "Evidence-based wellness education",
-  "Sports performance strategies",
-  "Longevity and healthy aging insights",
-  "Nutrition and supplementation articles",
-  "Company updates and new content",
-];
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -81,46 +74,34 @@ export function NewsletterSection() {
 
   return (
     <section
-      className="py-16 md:py-20 border-y border-white/[0.06] relative overflow-hidden"
+      className="py-14 md:py-16 border-y border-white/[0.06] relative overflow-hidden"
       aria-labelledby="newsletter-heading"
     >
-      {/* Ambient glow */}
+      {/* Ambient glow — softened */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-electric/[0.04] blur-[110px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[360px] rounded-full bg-electric/[0.025] blur-[100px]" />
       </div>
 
-      <div className="container-page relative">
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+      <div className="container-page relative max-w-5xl">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-start">
 
           {/* ── LEFT: copy ── */}
           <FadeUp>
-            <span className="eyebrow">PLC Optimization Insights</span>
+            <span className="eyebrow">Insights</span>
             <h2
               id="newsletter-heading"
-              className="mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[1.04] tracking-[-0.02em]"
+              className="mt-5 text-2xl md:text-3xl lg:text-4xl leading-[1.1] tracking-[-0.02em]"
             >
               Join the PLC Optimization{" "}
               <span className="text-gradient-electric">Insights</span>.
             </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed max-w-lg">
-              Periodic dispatches covering evidence-based wellness education, performance strategies, longevity research and nutrition science — written without marketing language.
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-md">
+              Periodic dispatches on evidence-based wellness, performance, longevity and nutrition — written without marketing language.
             </p>
 
-            <ul className="mt-8 space-y-3" aria-label="What you receive">
-              {BENEFITS.map(b => (
-                <li key={b} className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <span className="glow-dot shrink-0" aria-hidden="true" />
-                  {b}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-10 pt-8 border-t border-white/[0.06]">
-              <p className="text-[10px] uppercase tracking-[0.28em] text-electric-glow mb-2">Privacy Commitment</p>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed max-w-sm">
-                We never sell or share subscriber data. You will receive a confirmation email to verify your address before any content is sent. You may unsubscribe at any time with a single click.
-              </p>
-            </div>
+            <p className="mt-6 text-[11px] text-muted-foreground/60 leading-relaxed max-w-md">
+              Double opt-in. No spam. Unsubscribe in one click. Your data is never sold or shared.
+            </p>
           </FadeUp>
 
           {/* ── RIGHT: form ── */}
