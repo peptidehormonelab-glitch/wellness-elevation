@@ -247,7 +247,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
-            <span className="eyebrow">PLC Optimization · U.S. Registered LLC</span>
+            <span className="eyebrow"><span aria-hidden="true" className="mr-2">🇺🇸</span>PLC Optimization · U.S. Registered LLC</span>
           </motion.div>
 
           <motion.h1
@@ -271,6 +271,28 @@ function Home() {
           >
             PLC Optimization delivers premium wellness solutions for sports performance, healthy aging, nutrition and lifestyle optimization — built for individuals who refuse to settle for less than their best.
           </motion.p>
+
+          <motion.div
+            className="mt-7 flex flex-wrap items-center gap-x-2 gap-y-2 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/70"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            aria-label="Brand identity"
+          >
+            {[
+              <><span aria-hidden="true" className="mr-1.5">🇺🇸</span>U.S. Registered LLC</>,
+              "Global Wellness Brand",
+              "European Partner Network",
+              "Transparency First",
+              "Long-Term Performance",
+            ].map((label, i) => (
+              <span key={i} className="inline-flex items-center gap-2">
+                {i > 0 && <span className="w-1 h-1 rounded-full bg-electric/60" aria-hidden="true" />}
+                <span className="text-foreground/75">{label}</span>
+              </span>
+            ))}
+          </motion.div>
+
 
           <motion.div
             className="mt-10 flex flex-wrap gap-4"
@@ -315,7 +337,42 @@ function Home() {
         </div>
       </div>
 
+      {/* ── THE PLC STANDARD ── */}
+      <section className="container-page py-28" aria-labelledby="plc-standard-heading">
+        <FadeUp>
+          <div className="max-w-3xl">
+            <span className="eyebrow">The PLC Standard</span>
+            <h2 id="plc-standard-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
+              Five principles that define{" "}
+              <span className="text-gradient-silver">everything we do.</span>
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+              The institutional standard behind every program, product and partnership — American rigor, international vision, long-term thinking.
+            </p>
+          </div>
+        </FadeUp>
+
+        <StaggerContainer className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {[
+            { t: "Evidence First", d: "Every recommendation is grounded in science and continuous learning." },
+            { t: "Transparency Always", d: "No exaggerated promises. No fabricated credibility." },
+            { t: "Premium Quality", d: "We work only with carefully selected products, services and partners." },
+            { t: "Long-Term Thinking", d: "We prioritize sustainable health, performance and longevity." },
+            { t: "Continuous Improvement", d: "Optimization is a lifelong process, never a destination." },
+          ].map((p, i) => (
+            <StaggerItem key={p.t}>
+              <div className="surface-glass rounded-2xl p-6 h-full border border-white/[0.06] card-hover">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">0{i + 1}</p>
+                <h3 className="mt-4 text-lg md:text-xl font-display leading-snug">{p.t}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </section>
+
       {/* ── DISCIPLINES ── */}
+
       <section className="container-page py-28" aria-labelledby="disciplines-heading">
         <FadeUp>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
@@ -551,7 +608,7 @@ function Home() {
           <FadeUp>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
               <div className="max-w-2xl">
-                <span className="eyebrow">Built on Transparency</span>
+                <span className="eyebrow"><span aria-hidden="true" className="mr-2">🇺🇸</span>Built on Transparency</span>
                 <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
                   Honesty, first.{" "}
                   <span className="text-gradient-silver">Always.</span>
@@ -588,10 +645,11 @@ function Home() {
           <FadeUp>
             <div className="mt-12 surface-glass rounded-2xl p-7 border border-white/[0.06] flex flex-col md:flex-row md:items-center gap-5">
               <div className="flex-1">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">Our Commitment</p>
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">American Standards · International Partnerships</p>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                  This section will grow as PLC Optimization does — adding verified credentials, documented partnerships and genuine client outcomes as they are earned. We believe a company that is honest about being new is more trustworthy than one that fabricates a history it does not have.
+                  PLC Optimization is a U.S.-registered LLC headquartered in the United States, collaborating with carefully selected European partners who share our commitment to quality, transparency and long-term excellence. Our international partner network combines American standards with trusted European expertise — serving clients worldwide through relationships built on substance, not slogans.
                 </p>
+
               </div>
               <Link to="/about" className="btn-ghost-light shrink-0 whitespace-nowrap">
                 Our Philosophy
