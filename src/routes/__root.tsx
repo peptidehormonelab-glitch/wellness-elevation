@@ -385,7 +385,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[84px] md:pt-20">
+      <main id="main-content" className="pt-[72px] md:pt-[76px]">
         <Outlet />
       </main>
       <Footer />
