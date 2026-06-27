@@ -20,7 +20,7 @@ function Disclaimer() {
         <FadeUp>
           <span className="eyebrow">Legal</span>
           <h1 className="mt-7 text-5xl md:text-6xl lg:text-7xl">Disclaimer</h1>
-          <p className="mt-4 text-sm text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
+          <p className="mt-4 text-sm text-muted-foreground">Last updated: June 27, 2026</p>
         </FadeUp>
       </section>
 
@@ -33,7 +33,7 @@ function Disclaimer() {
             Information provided on this website — including articles, coaching materials, product descriptions and educational content — is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the guidance of a qualified healthcare provider with any questions you may have regarding a medical condition or before starting any new exercise, nutrition, or supplement program.
           </Section>
           <Section title="No Guarantees">
-            Individual results from coaching, nutrition guidance, supplement use and lifestyle programs vary. PLC Optimization LLC does not guarantee any specific outcome, and testimonials or examples should not be interpreted as promises of similar results.
+            Individual results from coaching, nutrition guidance, supplement use and lifestyle programs vary based on individual physiology, adherence, prior fitness level and overall lifestyle. PLC Optimization LLC does not guarantee any specific outcome, and no content on this website should be interpreted as a promise of results.
           </Section>
           <Section title="Product Use">
             All supplements and cosmetic products sold or recommended by PLC Optimization LLC are authorized for general wellness use. Always read product labels, follow directions for use and consult a healthcare professional if you are pregnant, nursing, have a medical condition, or are taking any medications.

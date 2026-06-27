@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Twitter, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -280,7 +280,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="mt-32 border-t border-white/[0.06] bg-background relative overflow-hidden" role="contentinfo">
+    <footer className="border-t border-white/[0.06] bg-background relative overflow-hidden" role="contentinfo">
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-electric/[0.03] blur-3xl" />
       </div>
@@ -292,23 +292,14 @@ function Footer() {
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xs">
               A U.S.-registered premium wellness brand built for individuals who take the long view on their health, performance and longevity.
             </p>
-            <div className="mt-8 flex items-center gap-3">
-              {[
-                { href: "https://instagram.com/plcoptimization", icon: Instagram, label: "PLC Optimization on Instagram" },
-                { href: "https://linkedin.com/company/plcoptimization", icon: Linkedin, label: "PLC Optimization on LinkedIn" },
-                { href: "https://x.com/plcoptimization", icon: Twitter, label: "PLC Optimization on X" },
-              ].map(({ href, icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="grid place-items-center w-9 h-9 rounded-full border border-white/10 text-muted-foreground hover:text-electric hover:border-electric/40 hover:bg-electric/[0.06] transition-all duration-300"
-                >
-                  <Icon size={14} strokeWidth={1.5} aria-hidden="true" />
-                </a>
-              ))}
+            <div className="mt-8">
+              <a
+                href="mailto:contact@plcoptimization.com"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-electric-glow transition-colors duration-200"
+              >
+                contact@plcoptimization.com
+                <ArrowUpRight size={13} className="opacity-50" aria-hidden="true" />
+              </a>
             </div>
           </div>
 

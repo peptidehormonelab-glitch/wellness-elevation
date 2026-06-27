@@ -168,7 +168,7 @@ function Coaching() {
                 {p.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[9px] uppercase tracking-[0.28em] font-medium bg-gradient-to-r from-electric/90 to-electric-glow/90 text-background shadow-[var(--shadow-glow)]">
-                      Most Selected
+                      Most Comprehensive
                     </span>
                   </div>
                 )}

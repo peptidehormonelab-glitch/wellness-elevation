@@ -61,13 +61,34 @@ function Contact() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSent(true);
-    }, 900);
+    const data = new FormData(e.currentTarget);
+    const firstName = (data.get("firstName") as string || "").trim();
+    const lastName = (data.get("lastName") as string || "").trim();
+    const email = (data.get("email") as string || "").trim();
+    const phone = (data.get("phone") as string || "").trim();
+    const interest = (data.get("interest") as string || "General Inquiry").trim();
+    const message = (data.get("message") as string || "").trim();
+
+    const subject = encodeURIComponent(`PLC Optimization Inquiry — ${interest}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${firstName} ${lastName}`.trim(),
+        `Email: ${email}`,
+        phone ? `Phone: ${phone}` : null,
+        `Area of Interest: ${interest}`,
+        "",
+        message,
+      ]
+        .filter(line => line !== null)
+        .join("\n")
+    );
+
+    window.location.href = `mailto:contact@plcoptimization.com?subject=${subject}&body=${body}`;
+    setLoading(false);
+    setSent(true);
   }
 
   return (
@@ -127,10 +148,16 @@ function Contact() {
                       <CheckCircle size={28} className="text-electric-glow" aria-hidden="true" />
                     </div>
                   </div>
-                  <p className="text-[10px] uppercase tracking-[0.35em] text-electric-glow mb-3">Received</p>
-                  <h2 className="text-3xl md:text-4xl font-display">Thank you.</h2>
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-electric-glow mb-3">Almost There</p>
+                  <h2 className="text-3xl md:text-4xl font-display">Your email client has opened.</h2>
                   <p className="mt-4 text-muted-foreground leading-relaxed max-w-sm mx-auto text-sm">
-                    Our team will review your inquiry and be in touch within one business day.
+                    Your inquiry details have been pre-filled. Please send the email from your mail app and our team will respond within one business day.
+                  </p>
+                  <p className="mt-5 text-xs text-muted-foreground/50 max-w-xs mx-auto">
+                    If your email client didn't open, email us directly at{" "}
+                    <a href="mailto:contact@plcoptimization.com" className="text-electric-glow hover:underline">
+                      contact@plcoptimization.com
+                    </a>
                   </p>
                 </motion.div>
               ) : (
@@ -265,6 +292,13 @@ function Contact() {
   );
 }
 
+const AUTOCOMPLETE_MAP: Record<string, string> = {
+  firstName: "given-name",
+  lastName: "family-name",
+  email: "email",
+  phone: "tel",
+};
+
 function Field({
   label,
   name,
@@ -289,6 +323,7 @@ function Field({
         type={type}
         required={required}
         aria-required={required}
+        autoComplete={AUTOCOMPLETE_MAP[name] ?? "off"}
         className="w-full bg-transparent border border-white/[0.14] rounded-xl px-4 py-3.5 text-sm text-foreground focus:outline-none focus:border-electric/60 focus:ring-1 focus:ring-electric/30 transition-all duration-200 placeholder:text-muted-foreground/40"
       />
     </div>
