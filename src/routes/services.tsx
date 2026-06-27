@@ -75,7 +75,7 @@ const SERVICES = [
     num: "04",
     title: "Precision Wellness & Human Optimization",
     img: wellnessBalanceImg,
-    desc: "Recovery, energy, resilience and long-term health — guided by biomarkers, HRV, recovery science and personalized lifestyle strategies. A human performance approach, not a fitness program.",
+    desc: "Recovery, energy, resilience and long-term health — evidence-guided, science-informed and supported by personalized lifestyle strategies. A human optimization approach, not a fitness program.",
     bullets: [
       "Recovery & HRV-guided protocols",
       "Cellular health & micronutrient context",
@@ -130,10 +130,10 @@ const SERVICES = [
     num: "08",
     title: "Advanced Diagnostics",
     img: diagnosticsImg,
-    desc: "Comprehensive assessments that translate data into action — body composition, biomarkers, cardiorespiratory and metabolic testing reviewed through a long-horizon optimization lens.",
+    desc: "Comprehensive assessments that translate data into action — body composition, wellness markers, cardiorespiratory and metabolic testing reviewed through a long-horizon optimization lens.",
     bullets: [
       "Body composition & DEXA review",
-      "Blood biomarker interpretation",
+      "Wellness marker interpretation",
       "VO₂ Max & metabolic testing",
       "Personalized health dashboards",
     ],
