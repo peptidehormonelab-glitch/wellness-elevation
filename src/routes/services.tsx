@@ -101,16 +101,17 @@ const SERVICES = [
   {
     tag: "Skin Care",
     num: "06",
-    title: "Premium Skin Care",
+    title: "Premium Skin Care & Clinical Aesthetics",
     img: skincareImg,
-    desc: "Curated skin care solutions that bring the same disciplined standard to your daily ritual — clean ingredients, considered formulations, quietly luxurious results.",
+    desc: "Professional skin care optimization — clinical aesthetic treatments, premium daily rituals and science-led anti-aging strategies designed around your skin, not a generic product line.",
     bullets: [
-      "Clean ingredient formulations",
-      "Daily ritual design",
-      "Antioxidant & barrier care",
-      "Hydration & long-term health",
+      "Clinical skin diagnostics",
+      "Microneedling & facial rejuvenation",
+      "Daily ritual & barrier care",
+      "Anti-aging skin optimization",
     ],
   },
+
   {
     tag: "Coaching",
     num: "07",
@@ -124,7 +125,21 @@ const SERVICES = [
       "Direct coaching access",
     ],
   },
+  {
+    tag: "Diagnostics",
+    num: "08",
+    title: "Advanced Diagnostics",
+    img: diagnosticsImg,
+    desc: "Comprehensive assessments that translate data into action — body composition, biomarkers, cardiorespiratory and metabolic testing reviewed through a long-horizon optimization lens.",
+    bullets: [
+      "Body composition & DEXA review",
+      "Blood biomarker interpretation",
+      "VO₂ Max & metabolic testing",
+      "Personalized health dashboards",
+    ],
+  },
 ];
+
 
 function Services() {
   return (
