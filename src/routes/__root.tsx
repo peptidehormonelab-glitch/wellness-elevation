@@ -178,18 +178,18 @@ function Header() {
       role="banner"
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-2xl bg-background/88 border-b border-white/[0.06] shadow-[0_1px_40px_oklch(0_0_0/0.3)]"
-          : ""
+          ? "backdrop-blur-2xl bg-background/70 border-b border-white/[0.06] shadow-[0_1px_40px_oklch(0_0_0/0.3)]"
+          : "bg-background/35 backdrop-blur-xl"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[72px] md:h-[76px]">
+      <div className="container-page flex items-center justify-between h-[68px] md:h-[72px]">
         <Link
           to="/"
-          className="flex items-center shrink-0 -my-2"
+          className="flex items-center shrink-0 -my-3"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[84px] md:h-[88px] w-auto" />
+          <PLCLogo className="h-[112px] md:h-[120px] w-auto" />
         </Link>
 
 
