@@ -247,7 +247,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
-            <span className="eyebrow"><Flag size={11} strokeWidth={1.5} className="text-[color:var(--gold)] mr-1" aria-hidden="true" />PLC Optimization · U.S. Registered LLC</span>
+            <span className="eyebrow"><span aria-hidden="true" className="mr-1">🇺🇸</span>PLC Optimization · U.S. Registered LLC</span>
           </motion.div>
 
           <motion.h1
