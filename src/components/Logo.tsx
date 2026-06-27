@@ -1,4 +1,4 @@
-import logoAsset from "../assets/plc-logo-v2.png.asset.json";
+import logoAsset from "../assets/plc-logo-transparent.png.asset.json";
 
 export const PLC_LOGO_URL = logoAsset.url;
 

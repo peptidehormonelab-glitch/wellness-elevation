@@ -36,7 +36,7 @@ function Terms() {
             Coaching, programming and lifestyle guidance provided by PLC are educational and motivational in nature. Results vary by individual and depend on adherence, prior fitness level, nutrition and overall lifestyle. PLC does not guarantee specific outcomes.
           </Section>
           <Section title="4. Products">
-            PLC offers authorized supplements (including proteins, creatine, vitamins, minerals, hydration and recovery products) and premium cosmetic and skincare items intended for general wellness use. Always review product labels and use as directed.
+            PLC offers authorized supplements (including proteins, creatine, vitamins, minerals, hydration and recovery products) and premium skin care items intended for general wellness use. Always review product labels and use as directed.
           </Section>
           <Section title="5. Intellectual Property">
             All content on this website — including text, graphics, logos, images and program materials — is the property of PLC Optimization LLC and is protected by applicable intellectual property laws. You may not reproduce or distribute content without written permission.

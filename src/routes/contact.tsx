@@ -25,7 +25,7 @@ const INTERESTS = [
   "Sports Performance",
   "Healthy Aging & Longevity",
   "Nutrition & Supplements",
-  "Cosmetic & Skincare",
+  "Skin Care",
   "Partnership / Wholesale",
   "General Inquiry",
 ];

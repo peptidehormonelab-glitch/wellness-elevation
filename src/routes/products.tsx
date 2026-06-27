@@ -11,12 +11,12 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "Authorized premium supplements including proteins, creatine, vitamins, minerals, hydration and recovery essentials. Plus premium cosmetic and skincare care. All authorized, all transparent.",
+          "Authorized premium supplements including proteins, creatine, vitamins, minerals, hydration and recovery essentials. Plus premium skin care. All authorized, all transparent.",
       },
       { property: "og:title", content: "Products — PLC Optimization" },
       {
         property: "og:description",
-        content: "A curated portfolio of authorized supplements and premium cosmetic care — selected for purity, transparency and real-world effectiveness.",
+        content: "A curated portfolio of authorized supplements and premium skin care — selected for purity, transparency and real-world effectiveness.",
       },
     ],
   }),
@@ -198,7 +198,7 @@ function Products() {
             <div className="rounded-2xl overflow-hidden border border-white/[0.07] aspect-[4/3] relative">
               <img
                 src={skincareImg}
-                alt="Premium luxury skincare and cosmetic care products"
+                alt="Premium luxury luxury skin care products"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
@@ -211,12 +211,12 @@ function Products() {
           </ScaleIn>
 
           <SlideRight>
-            <span className="eyebrow">Cosmetic & Skincare</span>
+            <span className="eyebrow">Skin Care</span>
             <h2 id="skincare-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
-              Premium cosmetic care, elevated daily.
+              Premium skin care, elevated daily.
             </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              Our cosmetic line brings the same disciplined standard to your skincare ritual — clean, thoughtfully selected ingredients, considered formulations and a quietly luxurious experience that reflects your commitment to excellence in every area of life.
+              Our skin care line brings the same disciplined standard to your skincare ritual — clean, thoughtfully selected ingredients, considered formulations and a quietly luxurious experience that reflects your commitment to excellence in every area of life.
             </p>
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3" aria-label="Skincare categories">
               {SKINCARE.map(x => (

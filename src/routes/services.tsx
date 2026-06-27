@@ -95,11 +95,11 @@ const SERVICES = [
     ],
   },
   {
-    tag: "Cosmetic",
+    tag: "Skin Care",
     num: "06",
-    title: "Premium Cosmetic & Skincare",
+    title: "Premium Skin Care",
     img: skincareImg,
-    desc: "Curated cosmetic and skincare solutions that bring the same disciplined standard to your daily ritual — clean ingredients, considered formulations, quietly luxurious results.",
+    desc: "Curated skin care solutions that bring the same disciplined standard to your daily ritual — clean ingredients, considered formulations, quietly luxurious results.",
     bullets: [
       "Clean ingredient formulations",
       "Daily ritual design",

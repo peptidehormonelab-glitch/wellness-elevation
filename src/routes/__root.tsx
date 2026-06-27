@@ -20,7 +20,7 @@ const STRUCTURED_DATA = {
   "@type": "Organization",
   name: "PLC Optimization LLC",
   url: "https://plcoptimization.com",
-  description: "Premium wellness brand specializing in sports performance coaching, longevity programs, nutrition guidance, authorized supplementation and cosmetic care.",
+  description: "Premium wellness brand specializing in sports performance coaching, longevity programs, nutrition guidance, authorized supplementation and skin care.",
   contactPoint: {
     "@type": "ContactPoint",
     email: "contact@plcoptimization.com",
@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "PLC Optimization LLC is a U.S.-registered premium wellness brand specializing in sports performance, longevity lifestyle, nutrition coaching, authorized supplementation and cosmetic care.",
+          "PLC Optimization LLC is a U.S.-registered premium wellness brand specializing in sports performance, longevity lifestyle, nutrition coaching, authorized supplementation and skin care.",
       },
       { name: "author", content: "PLC Optimization LLC" },
       { name: "robots", content: "index, follow" },
