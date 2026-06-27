@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Eye } from "lucide-react";
+import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Eye, Flag } from "lucide-react";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
@@ -223,7 +223,7 @@ function Home() {
             alt=""
             width={1600}
             height={1104}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center img-premium"
             style={{ opacity: 0.32 }}
             fetchPriority="high"
           />
@@ -247,7 +247,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
-            <span className="eyebrow"><span aria-hidden="true" className="mr-2">🇺🇸</span>PLC Optimization · U.S. Registered LLC</span>
+            <span className="eyebrow"><Flag size={11} strokeWidth={1.5} className="text-[color:var(--gold)] mr-1" aria-hidden="true" />PLC Optimization · U.S. Registered LLC</span>
           </motion.div>
 
           <motion.h1
@@ -280,17 +280,21 @@ function Home() {
             aria-label="Brand identity"
           >
             {[
-              <><span aria-hidden="true" className="mr-1.5">🇺🇸</span>U.S. Registered LLC</>,
-              "Global Wellness Brand",
-              "European Partner Network",
-              "Transparency First",
-              "Long-Term Performance",
-            ].map((label, i) => (
+              { label: "U.S. Registered LLC", icon: true },
+              { label: "Global Wellness Brand" },
+              { label: "European Partner Network" },
+              { label: "Transparency First" },
+              { label: "Long-Term Performance" },
+            ].map((item, i) => (
               <span key={i} className="inline-flex items-center gap-2">
-                {i > 0 && <span className="w-1 h-1 rounded-full bg-electric/60" aria-hidden="true" />}
-                <span className="text-foreground/75">{label}</span>
+                {i > 0 && <span className="w-px h-2.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-1.5 text-foreground/75">
+                  {item.icon && <Flag size={10} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />}
+                  {item.label}
+                </span>
               </span>
             ))}
+
           </motion.div>
 
 
@@ -386,7 +390,7 @@ function Home() {
           </div>
         </FadeUp>
 
-        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4">
+        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
           {DISCIPLINES.map((c, i) => (
             <StaggerItem key={c.t}>
               <article
@@ -396,7 +400,7 @@ function Home() {
                   src={c.img}
                   alt={c.t}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover img-premium transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
                   className="absolute inset-0"
@@ -477,7 +481,7 @@ function Home() {
                   src={p.img}
                   alt={p.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover opacity-65 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover img-premium opacity-65 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
                 />
                 <div
                   className="absolute inset-0"
@@ -534,7 +538,7 @@ function Home() {
       {/* ── LONGEVITY BAND ── */}
       <section className="relative py-28 overflow-hidden" aria-labelledby="longevity-heading">
         <div className="absolute inset-0" aria-hidden="true">
-          <img src={longevityImg} alt="" className="w-full h-full object-cover" style={{ opacity: 0.16 }} loading="lazy" />
+          <img src={longevityImg} alt="" className="w-full h-full object-cover img-premium" style={{ opacity: 0.16 }} loading="lazy" />
           <div
             className="absolute inset-0"
             style={{
@@ -569,7 +573,7 @@ function Home() {
                 src={productsImg}
                 alt="Premium supplement portfolio on dark surface"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover img-premium"
               />
               <div
                 className="absolute inset-0"
@@ -611,7 +615,7 @@ function Home() {
           <FadeUp>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
               <div className="max-w-2xl">
-                <span className="eyebrow"><span aria-hidden="true" className="mr-2">🇺🇸</span>Built on Transparency</span>
+                <span className="eyebrow"><Flag size={11} strokeWidth={1.5} className="text-[color:var(--gold)] mr-1" aria-hidden="true" />Built on Transparency</span>
                 <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
                   Honesty, first.{" "}
                   <span className="text-gradient-silver">Always.</span>

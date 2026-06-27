@@ -193,16 +193,17 @@
   color: oklch(0.06 0.008 240);
   background: var(--gradient-accent);
   border-radius: 999px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   box-shadow: var(--shadow-glow);
   white-space: nowrap;
   text-decoration: none;
   user-select: none;
   &:hover {
     transform: translateY(-2px) scale(1.015);
-    box-shadow: var(--shadow-glow-lg);
+    box-shadow: var(--shadow-glow-lg), 0 0 0 1px var(--gold-soft);
+    border-color: var(--gold-soft);
   }
   &:active {
     transform: translateY(0) scale(0.99);
@@ -234,10 +235,11 @@
   text-decoration: none;
   user-select: none;
   &:hover {
-    border-color: oklch(0.66 0.22 250 / 0.55);
-    color: var(--electric-glow);
-    background: oklch(0.66 0.22 250 / 0.06);
+    border-color: var(--gold-soft);
+    color: var(--foreground);
+    background: oklch(0.82 0.09 88 / 0.04);
   }
+
   &:active {
     background: oklch(0.66 0.22 250 / 0.04);
   }
@@ -273,12 +275,18 @@
 }
 
 @utility card-hover {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, border-color 0.4s ease;
   &:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-card), 0 0 0 1px oklch(1 0 0 / 0.10);
+    box-shadow: var(--shadow-card), 0 0 0 1px var(--gold-soft);
+    border-color: var(--gold-soft);
   }
 }
+
+@utility img-premium {
+  filter: brightness(1.08) contrast(1.06) saturate(1.04);
+}
+
 
 @utility glow-dot {
   width: 5px;

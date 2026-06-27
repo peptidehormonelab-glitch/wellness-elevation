@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Flag, Globe, Handshake, Lock, Package } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -347,9 +347,10 @@ function Footer() {
               <ul className="space-y-5">
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Headquarters</span>
-                  <span className="text-sm text-foreground inline-flex items-center gap-2"><span aria-hidden="true">🇺🇸</span> United States</span>
+                  <span className="text-sm text-foreground inline-flex items-center gap-2"><Flag size={13} className="text-[color:var(--gold)]" strokeWidth={1.5} aria-hidden="true" /> United States</span>
                   <span className="mt-1 block text-[11px] text-muted-foreground/70">International Partner Network · European Partners</span>
                 </li>
+
 
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Email</span>
@@ -368,25 +369,29 @@ function Footer() {
 
         <div className="mt-14 pt-8 border-t border-white/[0.06] relative">
           <div
-            className="absolute top-0 left-0 h-px w-24"
-            style={{ background: "linear-gradient(90deg, var(--gold-soft), transparent)" }}
+            className="absolute top-0 left-0 h-px w-32"
+            style={{ background: "linear-gradient(90deg, var(--gold), transparent)" }}
             aria-hidden="true"
           />
-          <ul className="flex flex-wrap items-center gap-x-7 gap-y-3 text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground/75" aria-label="Trust indicators">
+          <ul className="flex flex-wrap items-center gap-x-8 gap-y-4 text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground/75" aria-label="Trust indicators">
             {[
-              { i: "🇺🇸", l: "U.S. Registered LLC" },
-              { i: "🌍", l: "International Operations" },
-              { i: "🤝", l: "European Partner Network" },
-              { i: "🔒", l: "Secure Payments" },
-              { i: "📦", l: "Worldwide Distribution" },
+              { Icon: Flag, l: "U.S. Registered LLC" },
+              { Icon: Globe, l: "International Operations" },
+              { Icon: Handshake, l: "European Partner Network" },
+              { Icon: Lock, l: "Secure Payments" },
+              { Icon: Package, l: "Worldwide Distribution" },
             ].map((b, idx) => (
               <li key={b.l} className="inline-flex items-center gap-3">
-                {idx > 0 && <span className="hidden md:inline-block w-1 h-1 rounded-full bg-electric/50" aria-hidden="true" />}
-                <span className="inline-flex items-center gap-2 text-foreground/85"><span aria-hidden="true" className="text-sm leading-none">{b.i}</span>{b.l}</span>
+                {idx > 0 && <span className="hidden md:inline-block w-px h-3 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-2 text-foreground/85">
+                  <b.Icon size={13} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />
+                  {b.l}
+                </span>
               </li>
             ))}
           </ul>
         </div>
+
 
         <div className="mt-10 pt-8 border-t border-white/[0.06]">
           <div className="flex flex-col lg:flex-row gap-4 lg:items-center justify-between">
