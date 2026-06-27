@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Eye, Flag } from "lucide-react";
+import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Eye } from "lucide-react";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
@@ -67,12 +67,8 @@ const PILLARS = [
   },
 ];
 
-const STATS = [
-  { value: "U.S. LLC", label: "Registered Entity" },
-  { value: "1:1", label: "Private Coaching" },
-  { value: "5+", label: "Wellness Disciplines" },
-  { value: "100%", label: "Authorized Products" },
-];
+
+
 
 
 const SCIENTIFIC = [
