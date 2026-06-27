@@ -273,6 +273,28 @@ function Home() {
           </motion.p>
 
           <motion.div
+            className="mt-7 flex flex-wrap items-center gap-x-2 gap-y-2 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/70"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            aria-label="Brand identity"
+          >
+            {[
+              <><span aria-hidden="true" className="mr-1.5">🇺🇸</span>U.S. Registered LLC</>,
+              "Global Wellness Brand",
+              "European Partner Network",
+              "Transparency First",
+              "Long-Term Performance",
+            ].map((label, i) => (
+              <span key={i} className="inline-flex items-center gap-2">
+                {i > 0 && <span className="w-1 h-1 rounded-full bg-electric/60" aria-hidden="true" />}
+                <span className="text-foreground/75">{label}</span>
+              </span>
+            ))}
+          </motion.div>
+
+
+          <motion.div
             className="mt-10 flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
