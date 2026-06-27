@@ -182,14 +182,14 @@ function Header() {
           : "bg-background/20 backdrop-blur-md"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[72px] md:h-[80px]">
+      <div className="container-page flex items-center justify-between h-[68px] md:h-[76px]">
         <Link
           to="/"
-          className="flex items-center shrink-0 -my-6"
+          className="flex items-center shrink-0 -my-8"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[140px] md:h-[156px] w-auto" />
+          <PLCLogo className="h-[160px] md:h-[180px] w-auto" />
         </Link>
 
 
