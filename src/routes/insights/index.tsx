@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ArrowRight, Clock } from "lucide-react";
 import { ARTICLES, CATEGORIES, getArticlesByCategory, type Article } from "@/lib/articles";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Motion";
+import { NewsletterSection } from "@/components/NewsletterSection";
 
 export const Route = createFileRoute("/insights/")({
   head: () => ({
@@ -265,6 +266,9 @@ function InsightsIndex() {
           </div>
         </div>
       </section>
+
+      {/* ── NEWSLETTER ── */}
+      <NewsletterSection />
 
       {/* ── CTA ── */}
       <section className="container-page pb-28" aria-labelledby="insights-cta-heading">

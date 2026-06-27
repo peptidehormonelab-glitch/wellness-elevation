@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Globe } from "lucide-react";
+import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Eye } from "lucide-react";
+import { NewsletterSection } from "@/components/NewsletterSection";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
 import productsImg from "@/assets/products.jpg";
@@ -72,36 +73,6 @@ const STATS = [
   { value: "100%", label: "Authorized Products" },
 ];
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "After three months of working with PLC, my lifts improved, my sleep quality went up noticeably, and I actually understand what I'm eating and why. It's the first program that's felt sustainable.",
-    author: "M.R.",
-    role: "Competitive Triathlete · Southwest U.S.",
-    rating: 5,
-  },
-  {
-    quote:
-      "I came in looking for structure. What I got was a complete shift in how I think about my health. The attention to detail — from nutrition timing to recovery windows — is on another level.",
-    author: "S.K.",
-    role: "Senior Executive · New York",
-    rating: 5,
-  },
-  {
-    quote:
-      "As someone in healthcare, I'm critical of wellness claims. PLC operates differently. Everything is referenced, explained and built around what the evidence actually supports. That's rare.",
-    author: "J.T.",
-    role: "Healthcare Professional · California",
-    rating: 5,
-  },
-  {
-    quote:
-      "The longevity program changed my relationship with training entirely. I stopped chasing short-term metrics and started building systems that work for where I want to be in 15 years.",
-    author: "A.L.",
-    role: "Longevity Enthusiast · Florida",
-    rating: 5,
-  },
-];
 
 const SCIENTIFIC = [
   {
@@ -127,14 +98,36 @@ const SCIENTIFIC = [
 ];
 
 const TRUST = [
-  { icon: Award, label: "U.S. Registered LLC", desc: "Formally incorporated in the United States — a verifiable, accountable business entity." },
-  { icon: BookOpen, label: "Science-Based Approach", desc: "Every recommendation traces back to peer-reviewed research, not marketing language." },
-  { icon: Shield, label: "100% Authorized Products", desc: "Our entire supplement portfolio is authorized for general wellness retail sale." },
-  { icon: HeartPulse, label: "Educational Philosophy", desc: "We explain the why behind everything — so you can make informed decisions independently." },
-  { icon: Zap, label: "Full Transparency", desc: "Clear formulations, clear coaching, clear sourcing. We do not use proprietary blends or inflated claims." },
-  { icon: Clock, label: "Responsive Support", desc: "All inquiries are answered within one business day. Coaching clients have direct access during hours." },
-  { icon: Globe, label: "International Vision", desc: "Built in the U.S., serving clients with a global wellness perspective and evidence-based outlook." },
-  { icon: Users, label: "Long-Term Commitment", desc: "We measure our success by your progress over years — not the number of programs sold." },
+  {
+    icon: Award,
+    label: "U.S. Registered LLC",
+    desc: "PLC Optimization is a formally incorporated U.S. limited liability company — a verifiable, legally accountable entity with transparent business registration.",
+  },
+  {
+    icon: BookOpen,
+    label: "Education First",
+    desc: "Every article, protocol and recommendation is grounded in established science and clearly explained. We believe informed individuals make better long-term decisions.",
+  },
+  {
+    icon: Eye,
+    label: "Transparent Communication",
+    desc: "We do not use proprietary blends, inflated outcome claims or anonymous endorsements. What we say, we can substantiate. What we do not know, we say so.",
+  },
+  {
+    icon: Shield,
+    label: "Premium Quality Standards",
+    desc: "Our supplement portfolio is curated for purity, bioavailability and authorised retail status. Every product in our range meets the standards we would apply to ourselves.",
+  },
+  {
+    icon: HeartPulse,
+    label: "Responsible Wellness Positioning",
+    desc: "We make no medical claims, do not promote prescription substances and always direct clients to qualified healthcare professionals for clinical decisions.",
+  },
+  {
+    icon: Clock,
+    label: "Long-Term Trust",
+    desc: "Trust is built through consistency, not campaigns. We are building a company for the long term — measured by sustained client outcomes, not quarterly growth targets.",
+  },
 ];
 
 const FAQ = [
@@ -214,20 +207,6 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   );
 }
 
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex items-center gap-0.5" aria-label={`${count} out of 5 stars`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-          <path
-            d="M6 1l1.236 2.506L10 3.882l-2 1.944.472 2.744L6 7.25l-2.472 1.32L4 5.826 2 3.882l2.764-.376L6 1z"
-            fill="oklch(0.72 0.20 245)"
-          />
-        </svg>
-      ))}
-    </div>
-  );
-}
 
 function Home() {
   return (
@@ -563,77 +542,67 @@ function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden" aria-labelledby="testimonials-heading">
+      {/* ── BUILT ON TRANSPARENCY ── */}
+      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden" aria-labelledby="trust-heading">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-electric/[0.04] blur-[80px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-electric/[0.03] blur-[100px]" />
         </div>
         <div className="container-page relative">
           <FadeUp>
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
-              <div>
-                <span className="eyebrow">Client Experiences</span>
-                <h2 id="testimonials-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl max-w-xl">
-                  What our clients experience.
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+              <div className="max-w-2xl">
+                <span className="eyebrow">Built on Transparency</span>
+                <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
+                  Honesty, first.{" "}
+                  <span className="text-gradient-silver">Always.</span>
                 </h2>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-                Testimonials shared voluntarily by clients. Individual results vary based on adherence, lifestyle and individual physiology.
+              <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
+                PLC Optimization is a newly launched company. We have no fabricated testimonials, no inflated track records and no invented credentials. What we do have is a clear standard — and the discipline to keep it.
               </p>
             </div>
           </FadeUp>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {TESTIMONIALS.map((t) => (
-              <StaggerItem key={t.author}>
-                <figure className="surface-glass rounded-2xl p-7 h-full flex flex-col card-hover">
-                  <StarRating count={t.rating} />
-                  <blockquote className="mt-5 text-sm text-muted-foreground leading-relaxed flex-1">
-                    "{t.quote}"
-                  </blockquote>
-                  <figcaption className="mt-6 pt-5 border-t border-white/[0.07]">
-                    <p className="text-sm font-display text-foreground">{t.author}</p>
-                    <p className="text-[11px] text-muted-foreground/70 mt-1 leading-relaxed">{t.role}</p>
-                  </figcaption>
-                </figure>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {TRUST.map((t, i) => (
+              <StaggerItem key={t.label}>
+                <div className="surface-glass rounded-2xl p-7 h-full card-hover group border border-white/[0.06]">
+                  <div className="flex items-start justify-between mb-5">
+                    <div
+                      className="w-10 h-10 rounded-xl bg-electric/[0.08] border border-electric/[0.15] flex items-center justify-center group-hover:bg-electric/[0.13] transition-colors duration-300"
+                      aria-hidden="true"
+                    >
+                      <t.icon size={18} className="text-electric-glow" strokeWidth={1.5} />
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground/30 font-medium">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-display text-foreground mb-3 leading-snug">{t.label}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          <FadeUp>
+            <div className="mt-12 surface-glass rounded-2xl p-7 border border-white/[0.06] flex flex-col md:flex-row md:items-center gap-5">
+              <div className="flex-1">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">Our Commitment</p>
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+                  This section will grow as PLC Optimization does — adding verified credentials, documented partnerships and genuine client outcomes as they are earned. We believe a company that is honest about being new is more trustworthy than one that fabricates a history it does not have.
+                </p>
+              </div>
+              <Link to="/about" className="btn-ghost-light shrink-0 whitespace-nowrap">
+                Our Philosophy
+              </Link>
+            </div>
+          </FadeUp>
         </div>
       </section>
 
-      {/* ── TRUST SECTION ── */}
-      <section className="container-page py-28" aria-labelledby="trust-heading">
-        <FadeUp>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="eyebrow justify-center">Why PLC Optimization</span>
-            <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
-              Built on accountability. Designed for trust.
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              We hold ourselves to a verifiable standard in everything we do — from legal registration to product sourcing to the way we communicate with clients.
-            </p>
-          </div>
-        </FadeUp>
-
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {TRUST.map((t, i) => (
-            <StaggerItem key={t.label}>
-              <div className="surface-glass rounded-2xl p-6 h-full card-hover group">
-                <div
-                  className="w-9 h-9 rounded-lg bg-electric/[0.08] border border-electric/[0.15] flex items-center justify-center mb-4 group-hover:bg-electric/[0.14] transition-colors duration-300"
-                  aria-hidden="true"
-                >
-                  <t.icon size={16} className="text-electric-glow" strokeWidth={1.5} />
-                </div>
-                <p className="text-[9px] uppercase tracking-[0.3em] text-electric-glow mb-2">0{i + 1}</p>
-                <h3 className="text-base font-display text-foreground mb-2">{t.label}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{t.desc}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
+      {/* ── NEWSLETTER ── */}
+      <NewsletterSection />
 
       {/* ── FAQ ── */}
       <section className="py-28 border-y border-white/[0.06]" aria-labelledby="faq-heading">
