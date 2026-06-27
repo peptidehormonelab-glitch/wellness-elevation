@@ -223,7 +223,7 @@ function Home() {
             alt=""
             width={1600}
             height={1104}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center img-premium"
             style={{ opacity: 0.32 }}
             fetchPriority="high"
           />
