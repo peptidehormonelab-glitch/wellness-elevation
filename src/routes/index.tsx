@@ -615,7 +615,7 @@ function Home() {
           <FadeUp>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
               <div className="max-w-2xl">
-                <span className="eyebrow"><span aria-hidden="true" className="mr-2">🇺🇸</span>Built on Transparency</span>
+                <span className="eyebrow"><Flag size={11} strokeWidth={1.5} className="text-[color:var(--gold)] mr-1" aria-hidden="true" />Built on Transparency</span>
                 <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
                   Honesty, first.{" "}
                   <span className="text-gradient-silver">Always.</span>
