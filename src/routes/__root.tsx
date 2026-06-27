@@ -347,8 +347,8 @@ function Footer() {
               <ul className="space-y-5">
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Headquarters</span>
-                  <span className="text-sm text-foreground inline-flex items-center gap-2"><Flag size={13} className="text-[color:var(--gold)]" strokeWidth={1.5} aria-hidden="true" /> United States</span>
-                  <span className="mt-1 block text-[11px] text-muted-foreground/70">International Partner Network · European Partners</span>
+                  <span className="text-sm text-foreground inline-flex items-center gap-2"><span aria-hidden="true">🇺🇸</span> United States</span>
+                  <span className="mt-1 block text-[11px] text-muted-foreground/70 inline-flex items-center gap-1.5"><span aria-hidden="true">🇪🇺</span> European Partner Network · <span aria-hidden="true">🌍</span> International</span>
                 </li>
 
 
