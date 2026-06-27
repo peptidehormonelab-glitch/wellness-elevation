@@ -359,8 +359,8 @@ function Footer() {
               <ul className="space-y-5">
                 <li>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Headquarters</span>
-                  <span className="text-sm text-foreground inline-flex items-center gap-2"><span aria-hidden="true">🇺🇸</span> United States</span>
-                  <span className="mt-1 block text-[11px] text-muted-foreground/70 inline-flex items-center gap-1.5"><span aria-hidden="true">🇪🇺</span> European Partner Network · <span aria-hidden="true">🌍</span> International</span>
+                  <span className="text-sm text-foreground inline-flex items-center gap-2">United States</span>
+                  <span className="mt-1 block text-[11px] text-muted-foreground/70">European Partner Network · International</span>
                 </li>
 
 
@@ -388,20 +388,16 @@ function Footer() {
           <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-5">Trust & Standards</p>
           <ul className="flex flex-wrap items-center gap-x-7 gap-y-5 text-[11px] uppercase tracking-[0.22em]" aria-label="Trust indicators">
             {[
-              { Icon: Flag, l: "U.S. Registered LLC", emoji: "🇺🇸" },
-              { Icon: Globe, l: "International Operations", emoji: "🌍" },
-              { Icon: Handshake, l: "European Partner Network", emoji: "🇪🇺" },
+              { Icon: Flag, l: "US Registered LLC" },
+              { Icon: Globe, l: "Global Reach" },
+              { Icon: Handshake, l: "European Partner Network" },
               { Icon: Lock, l: "Secure Payments" },
               { Icon: Package, l: "International Clients" },
             ].map((b, idx) => (
               <li key={b.l} className="inline-flex items-center gap-3">
                 {idx > 0 && <span className="hidden md:inline-block w-px h-3.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
                 <span className="inline-flex items-center gap-2 text-foreground/95">
-                  {b.emoji ? (
-                    <span aria-hidden="true" className="text-[13px] leading-none">{b.emoji}</span>
-                  ) : (
-                    <b.Icon size={13} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />
-                  )}
+                  <b.Icon size={13} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />
                   {b.l}
                 </span>
               </li>
