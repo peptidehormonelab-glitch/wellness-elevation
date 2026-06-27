@@ -280,16 +280,16 @@ function Home() {
             aria-label="Brand identity"
           >
             {[
-              { label: "U.S. Registered LLC", icon: true },
-              { label: "Global Wellness Brand" },
-              { label: "European Partner Network" },
+              { label: "U.S. Registered LLC", flag: "🇺🇸" },
+              { label: "International Operations", flag: "🌍" },
+              { label: "European Partner Network", flag: "🇪🇺" },
               { label: "Transparency First" },
               { label: "Long-Term Performance" },
             ].map((item, i) => (
               <span key={i} className="inline-flex items-center gap-2">
                 {i > 0 && <span className="w-px h-2.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
-                <span className="inline-flex items-center gap-1.5 text-foreground/75">
-                  {item.icon && <Flag size={10} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />}
+                <span className="inline-flex items-center gap-1.5 text-foreground/80">
+                  {item.flag && <span aria-hidden="true" className="text-[12px] leading-none">{item.flag}</span>}
                   {item.label}
                 </span>
               </span>
