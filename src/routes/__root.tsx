@@ -178,18 +178,18 @@ function Header() {
       role="banner"
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-2xl bg-background/70 border-b border-white/[0.06] shadow-[0_1px_40px_oklch(0_0_0/0.3)]"
-          : "bg-background/35 backdrop-blur-xl"
+          ? "backdrop-blur-2xl bg-background/55 border-b border-white/[0.08] shadow-[0_2px_60px_oklch(0_0_0/0.45)]"
+          : "bg-background/20 backdrop-blur-md"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-[68px] md:h-[72px]">
+      <div className="container-page flex items-center justify-between h-[72px] md:h-[80px]">
         <Link
           to="/"
-          className="flex items-center shrink-0 -my-3"
+          className="flex items-center shrink-0 -my-6"
           onClick={() => setOpen(false)}
           aria-label="PLC Optimization — Home"
         >
-          <PLCLogo className="h-[112px] md:h-[120px] w-auto" />
+          <PLCLogo className="h-[140px] md:h-[156px] w-auto" />
         </Link>
 
 
@@ -404,7 +404,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
-      <main id="main-content" className="pt-[68px] md:pt-[72px]">
+      <main id="main-content" className="pt-[72px] md:pt-[80px]">
         <Outlet />
       </main>
       <Footer />
