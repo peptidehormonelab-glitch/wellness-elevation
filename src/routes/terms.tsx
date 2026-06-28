@@ -29,34 +29,37 @@ function Terms() {
           <Section title="1. Acceptance of Terms">
             By accessing or using the website, products or services of PLC Optimization LLC ("PLC"), you agree to be bound by these Terms & Conditions. If you do not agree, do not use the website or services.
           </Section>
-          <Section title="2. Wellness Disclaimer">
+          <Section title="2. Eligibility">
+            You must be at least 18 years of age to use this website or purchase any products or services from PLC Optimization LLC. By using the website, you represent that you meet this eligibility requirement and have the legal capacity to enter into these Terms.
+          </Section>
+          <Section title="3. Wellness Disclaimer">
             Products and services are intended for general wellness and lifestyle support only. They are not intended to diagnose, treat, cure, or prevent any disease. Information provided on this website is for educational and informational purposes only and is not a substitute for professional medical advice. Always consult a qualified healthcare provider before beginning any new training, nutrition or supplementation program.
           </Section>
-          <Section title="3. Coaching Services">
+          <Section title="4. Coaching Services">
             Coaching, programming and lifestyle guidance provided by PLC are educational and motivational in nature. Results vary by individual and depend on adherence, prior fitness level, nutrition and overall lifestyle. PLC does not guarantee specific outcomes.
           </Section>
-          <Section title="4. Products">
+          <Section title="5. Products">
             PLC offers authorized supplements (including proteins, creatine, vitamins, minerals, hydration and recovery products) and premium skin care items intended for general wellness use. Always review product labels and use as directed.
           </Section>
-          <Section title="5. Intellectual Property">
+          <Section title="6. Intellectual Property">
             All content on this website — including text, graphics, logos, images and program materials — is the property of PLC Optimization LLC and is protected by applicable intellectual property laws. You may not reproduce or distribute content without written permission.
           </Section>
-          <Section title="6. User Conduct">
+          <Section title="7. User Conduct">
             You agree not to use the website or services for any unlawful purpose, to infringe on the rights of others, or to interfere with the operation of the website.
           </Section>
-          <Section title="7. Payments & Refunds">
+          <Section title="8. Payments & Refunds">
             Coaching programs and product orders are subject to the specific pricing, billing and refund terms communicated at the time of purchase. Unless explicitly stated, services rendered are non-refundable.
           </Section>
-          <Section title="8. Limitation of Liability">
+          <Section title="9. Limitation of Liability">
             To the maximum extent permitted by law, PLC Optimization LLC shall not be liable for any indirect, incidental, special or consequential damages arising from your use of the website, products or services.
           </Section>
-          <Section title="9. Governing Law">
-            These Terms are governed by the laws of the United States and the state in which PLC Optimization LLC is registered, without regard to conflict-of-law principles.
+          <Section title="10. Governing Law">
+            These Terms shall be governed by and construed in accordance with the laws of the State of Wyoming, United States, without regard to its conflict of law principles.
           </Section>
-          <Section title="10. Changes to Terms">
+          <Section title="11. Changes to Terms">
             PLC may update these Terms at any time. Continued use of the website or services after changes constitutes acceptance of the updated Terms.
           </Section>
-          <Section title="11. Contact">
+          <Section title="12. Contact">
             For questions about these Terms, contact PLC Optimization LLC at{" "}
             <a href="mailto:contact@plcoptimization.com" className="text-electric-glow hover:underline">contact@plcoptimization.com</a>.
           </Section>
