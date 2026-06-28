@@ -7,21 +7,33 @@ import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn }
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — PLC Optimization LLC" },
+      { title: "About PLC Optimization — Evidence-Based Wellness & Longevity" },
       {
         name: "description",
         content:
-          "PLC Optimization LLC is a U.S.-registered premium wellness brand founded on the belief that lasting health is built through discipline, education and evidence-based practice.",
+          "PLC Optimization LLC is a U.S.-registered premium wellness company focused on evidence-based wellness, precision supplementation, longevity, performance optimization, skin health and science-driven lifestyle optimization.",
       },
-      { property: "og:title", content: "About — PLC Optimization LLC" },
+      { property: "og:title", content: "About PLC Optimization — Evidence-Based Wellness & Longevity" },
       {
         property: "og:description",
-        content: "The story, philosophy and mission behind PLC Optimization LLC — a premium wellness brand built for the long term.",
+        content:
+          "A U.S.-registered premium wellness company built on evidence, precision supplementation, longevity, performance optimization, skin health and science-driven lifestyle optimization.",
       },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/about" }],
   }),
   component: About,
 });
+
+const FOCUS_AREAS = [
+  { t: "Evidence-Based Wellness", d: "Programs and recommendations grounded in established science and current literature." },
+  { t: "Precision Supplementation", d: "Authorized, transparently sourced formulations selected for purpose, not trends." },
+  { t: "Longevity", d: "A long-horizon practice designed to preserve strength, mobility and vitality across decades." },
+  { t: "Performance Optimization", d: "Structured training, recovery and lifestyle protocols built around individual physiology." },
+  { t: "Skin Health", d: "Premium skin care rituals that reflect the same standard of rigour and quality." },
+  { t: "Science-Driven Lifestyle", d: "Sleep, nutrition, stress and recovery refined into a sustainable daily practice." },
+];
 
 const VALUES = [
   {
