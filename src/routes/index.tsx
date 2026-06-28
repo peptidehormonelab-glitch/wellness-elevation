@@ -10,7 +10,7 @@ import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
 import cardCosmetic from "@/assets/card-cosmetic.jpg";
-import coachingImg from "@/assets/coaching.jpg";
+
 import pillarPerformance from "@/assets/performance.jpg";
 import pillarLongevity from "@/assets/longevity.jpg";
 import pillarSkincare from "@/assets/skincare.jpg";
