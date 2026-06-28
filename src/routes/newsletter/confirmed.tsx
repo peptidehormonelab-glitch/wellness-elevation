@@ -51,7 +51,7 @@ const COPY = {
 
 function NewsletterConfirmed() {
   const { status } = Route.useSearch();
-  const state = COPY[status];
+  const state = COPY[status as keyof typeof COPY] ?? COPY.success;
   const Icon = state.icon;
 
   return (

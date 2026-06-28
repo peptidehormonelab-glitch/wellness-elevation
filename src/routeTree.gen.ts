@@ -21,6 +21,7 @@ import { Route as CoachingRouteImport } from './routes/coaching'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as InsightsIndexRouteImport } from './routes/insights/index'
+import { Route as NewsletterConfirmedRouteImport } from './routes/newsletter/confirmed'
 import { Route as InsightsSlugRouteImport } from './routes/insights/$slug'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
 import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/email/suppression'
@@ -90,6 +91,11 @@ const InsightsIndexRoute = InsightsIndexRouteImport.update({
   path: '/insights/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsletterConfirmedRoute = NewsletterConfirmedRouteImport.update({
+  id: '/newsletter/confirmed',
+  path: '/newsletter/confirmed',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InsightsSlugRoute = InsightsSlugRouteImport.update({
   id: '/insights/$slug',
   path: '/insights/$slug',
@@ -149,6 +155,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/insights/$slug': typeof InsightsSlugRoute
+  '/newsletter/confirmed': typeof NewsletterConfirmedRoute
   '/insights/': typeof InsightsIndexRoute
   '/api/public/newsletter': typeof ApiPublicNewsletterRouteWithChildren
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -171,6 +178,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/insights/$slug': typeof InsightsSlugRoute
+  '/newsletter/confirmed': typeof NewsletterConfirmedRoute
   '/insights': typeof InsightsIndexRoute
   '/api/public/newsletter': typeof ApiPublicNewsletterRouteWithChildren
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -194,6 +202,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/insights/$slug': typeof InsightsSlugRoute
+  '/newsletter/confirmed': typeof NewsletterConfirmedRoute
   '/insights/': typeof InsightsIndexRoute
   '/api/public/newsletter': typeof ApiPublicNewsletterRouteWithChildren
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -218,6 +227,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/email/unsubscribe'
     | '/insights/$slug'
+    | '/newsletter/confirmed'
     | '/insights/'
     | '/api/public/newsletter'
     | '/lovable/email/suppression'
@@ -240,6 +250,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/email/unsubscribe'
     | '/insights/$slug'
+    | '/newsletter/confirmed'
     | '/insights'
     | '/api/public/newsletter'
     | '/lovable/email/suppression'
@@ -262,6 +273,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/email/unsubscribe'
     | '/insights/$slug'
+    | '/newsletter/confirmed'
     | '/insights/'
     | '/api/public/newsletter'
     | '/lovable/email/suppression'
@@ -285,6 +297,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   InsightsSlugRoute: typeof InsightsSlugRoute
+  NewsletterConfirmedRoute: typeof NewsletterConfirmedRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
   ApiPublicNewsletterRoute: typeof ApiPublicNewsletterRouteWithChildren
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
@@ -379,6 +392,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InsightsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/newsletter/confirmed': {
+      id: '/newsletter/confirmed'
+      path: '/newsletter/confirmed'
+      fullPath: '/newsletter/confirmed'
+      preLoaderRoute: typeof NewsletterConfirmedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/insights/$slug': {
       id: '/insights/$slug'
       path: '/insights/$slug'
@@ -463,6 +483,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   InsightsSlugRoute: InsightsSlugRoute,
+  NewsletterConfirmedRoute: NewsletterConfirmedRoute,
   InsightsIndexRoute: InsightsIndexRoute,
   ApiPublicNewsletterRoute: ApiPublicNewsletterRouteWithChildren,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
