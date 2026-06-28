@@ -27,7 +27,7 @@ function Terms() {
       <section className="container-page pb-28 max-w-4xl">
         <div className="surface-glass rounded-3xl border border-white/[0.08] p-8 md:p-12 space-y-10">
           <Section title="1. Acceptance of Terms">
-            By accessing or using the website, products or services of PLC Optimization LLC ("PLC"), you agree to be bound by these Terms & Conditions. If you do not agree, do not use the website or services.
+            By accessing or using the website, products or services of PLC Optimization LLC, a Wyoming limited liability company registered in the United States ("PLC", "we", "our", or "us"), you agree to be bound by these Terms &amp; Conditions. If you do not agree, please do not use the website or services.
           </Section>
           <Section title="2. Eligibility">
             You must be at least 18 years of age to use this website or purchase any products or services from PLC Optimization LLC. By using the website, you represent that you meet this eligibility requirement and have the legal capacity to enter into these Terms.
