@@ -51,37 +51,37 @@
   --popover: oklch(0.14 0.013 240);
   --popover-foreground: oklch(0.97 0.005 240);
 
-  --primary: oklch(0.66 0.22 250);
+  --primary: oklch(0.68 0.09 75);
   --primary-foreground: oklch(0.06 0.008 240);
   --secondary: oklch(0.20 0.013 240);
   --secondary-foreground: oklch(0.97 0.005 240);
   --muted: oklch(0.18 0.011 240);
   --muted-foreground: oklch(0.82 0.012 240);
-  --accent: oklch(0.66 0.22 250);
+  --accent: oklch(0.68 0.09 75);
   --accent-foreground: oklch(0.06 0.008 240);
   --destructive: oklch(0.62 0.22 25);
   --destructive-foreground: oklch(0.97 0.005 240);
   --border: oklch(1 0 0 / 7%);
   --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.66 0.22 250);
+  --ring: oklch(0.68 0.09 75);
 
   --silver: oklch(0.80 0.006 240);
-  --electric: oklch(0.66 0.22 250);
-  --electric-glow: oklch(0.72 0.20 245);
-  --electric-dim: oklch(0.55 0.18 252);
+  --electric: oklch(0.68 0.09 75);
+  --electric-glow: oklch(0.76 0.09 80);
+  --electric-dim: oklch(0.55 0.07 70);
 
-  /* Subtle champagne gold — luxury micro-accent, used at very low opacity */
-  --gold: oklch(0.82 0.09 88);
-  --gold-soft: oklch(0.82 0.09 88 / 0.35);
-  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.07 90), oklch(0.72 0.10 80));
+  /* Champagne gold — primary brand accent (#b89660) */
+  --gold: oklch(0.68 0.09 75);
+  --gold-soft: oklch(0.68 0.09 75 / 0.35);
+  --gradient-gold: linear-gradient(135deg, oklch(0.78 0.09 80), oklch(0.60 0.08 70));
 
-  --gradient-hero: radial-gradient(ellipse 80% 50% at 20% -10%, oklch(0.66 0.22 250 / 0.20), transparent 65%),
-                   radial-gradient(ellipse 60% 40% at 85% 110%, oklch(0.55 0.20 255 / 0.15), transparent 60%),
+  --gradient-hero: radial-gradient(ellipse 80% 50% at 20% -10%, oklch(0.68 0.09 75 / 0.20), transparent 65%),
+                   radial-gradient(ellipse 60% 40% at 85% 110%, oklch(0.55 0.08 70 / 0.15), transparent 60%),
                    linear-gradient(180deg, oklch(0.10 0.012 240), oklch(0.12 0.013 240));
-  --gradient-accent: linear-gradient(135deg, oklch(0.72 0.22 248), oklch(0.60 0.22 254));
+  --gradient-accent: linear-gradient(135deg, oklch(0.76 0.09 80), oklch(0.60 0.08 70));
   --gradient-silver: linear-gradient(135deg, oklch(0.94 0.004 240), oklch(0.58 0.008 240));
-  --shadow-glow: 0 6px 24px -10px oklch(0.66 0.22 250 / 0.32);
-  --shadow-glow-lg: 0 14px 44px -14px oklch(0.66 0.22 250 / 0.34);
+  --shadow-glow: 0 6px 24px -10px oklch(0.68 0.09 75 / 0.32);
+  --shadow-glow-lg: 0 14px 44px -14px oklch(0.68 0.09 75 / 0.34);
   --shadow-elevated: 0 32px 80px -20px oklch(0 0 0 / 0.75);
   --shadow-card: 0 4px 24px -4px oklch(0 0 0 / 0.4);
 }
