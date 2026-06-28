@@ -168,7 +168,10 @@ function InsightsIndex() {
             <span className="text-gradient-electric">explained clearly</span>.
           </h1>
           <p className="mt-7 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Educational articles on sports performance, longevity, nutrition, recovery and lifestyle optimization — grounded in established science and written without marketing language.
+            PLC Optimization regularly publishes educational content on wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle — grounded in established science and written without marketing language.
+          </p>
+          <p className="mt-5 max-w-2xl text-sm text-muted-foreground/80 leading-relaxed">
+            New articles are in preparation and will be published here. Subscribe below to be notified as each piece is released.
           </p>
         </FadeUp>
       </section>
