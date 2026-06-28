@@ -1,20 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
 import productsImg from "@/assets/products.jpg";
-import longevityImg from "@/assets/longevity.jpg";
-import skincareImg from "@/assets/skincare.jpg";
-import performanceImg from "@/assets/performance.jpg";
-import coachingImg from "@/assets/coaching.jpg";
 import cardPerformance from "@/assets/card-performance.jpg";
 import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
 import cardCosmetic from "@/assets/card-cosmetic.jpg";
-import { FadeUp, FadeIn, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
+import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({
