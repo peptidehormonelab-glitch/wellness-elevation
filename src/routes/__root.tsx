@@ -1,4 +1,4 @@
-import { ArrowUpRight, Flag, Handshake } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -302,17 +302,8 @@ function Footer() {
           <div className="lg:col-span-5">
             <PLCLogo className="w-[260px] md:w-[300px] h-auto" />
             <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              A U.S.-registered premium wellness brand built for individuals who take the long view on their health, performance and longevity.
+              Premium wellness brand built for individuals who take the long view on their health, performance and longevity.
             </p>
-            <div className="mt-8">
-              <a
-                href="mailto:contact@plcoptimization.com"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-electric-glow transition-colors duration-200"
-              >
-                contact@plcoptimization.com
-                <ArrowUpRight size={13} className="opacity-50" aria-hidden="true" />
-              </a>
-            </div>
           </div>
 
           <div className="lg:col-span-2">
@@ -357,54 +348,18 @@ function Footer() {
             <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-6">Contact</p>
             <address className="not-italic">
               <ul className="space-y-5">
+                <li className="text-sm text-foreground">United States</li>
                 <li>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-2">Headquarters</span>
-                  <span className="block text-sm text-foreground">United States</span>
-                  <span className="block text-[12px] text-muted-foreground/75 mt-1">US Registered LLC</span>
-                  <span className="block text-[12px] text-muted-foreground/75">Established 2026</span>
-                  <span className="block text-[12px] text-muted-foreground/75">European Partner Network</span>
-                </li>
-
-
-
-                <li>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Email</span>
                   <a href="mailto:contact@plcoptimization.com" className="text-sm text-foreground hover:text-electric transition-colors duration-200">
                     contact@plcoptimization.com
                   </a>
                 </li>
-                <li>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Hours</span>
-                  <span className="text-sm text-foreground">Mon – Fri · 9:00 AM – 6:00 PM ET</span>
-                </li>
+                <li className="text-sm text-foreground">Mon – Fri · 9:00 AM – 6:00 PM ET</li>
               </ul>
             </address>
           </div>
         </div>
 
-        <div className="mt-14 pt-10 border-t border-white/[0.06] relative">
-          <div
-            className="absolute top-0 left-0 h-px w-40"
-            style={{ background: "linear-gradient(90deg, var(--gold), transparent)" }}
-            aria-hidden="true"
-          />
-          <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-5">Company Information</p>
-          <ul className="flex flex-wrap items-center gap-x-7 gap-y-5 text-[11px] uppercase tracking-[0.22em]" aria-label="Company information">
-            {[
-              { Icon: Flag, l: "US Registered LLC" },
-              { Icon: Handshake, l: "Established 2026" },
-            ].map((b, idx) => (
-              <li key={b.l} className="inline-flex items-center gap-3">
-                {idx > 0 && <span className="hidden md:inline-block w-px h-3.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
-                <span className="inline-flex items-center gap-2 text-foreground/95">
-                  <b.Icon size={13} strokeWidth={1.5} className="text-[color:var(--gold)]" aria-hidden="true" />
-                  {b.l}
-                </span>
-              </li>
-            ))}
-          </ul>
-
-        </div>
 
 
 
@@ -415,7 +370,7 @@ function Footer() {
               Products and services are intended for general wellness and educational purposes only. They are not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare provider before beginning any new wellness program.
             </p>
             <p className="text-xs text-muted-foreground/35 shrink-0">
-              © {new Date().getFullYear()} PLC Optimization LLC. All Rights Reserved.
+              © {new Date().getFullYear()} PLC Optimization LLC · US Registered LLC
             </p>
           </div>
         </div>
