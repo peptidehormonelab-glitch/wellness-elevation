@@ -7,15 +7,17 @@ import { FadeUp, SlideLeft, SlideRight } from "@/components/Motion";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — PLC Optimization" },
+      { title: "Contact PLC Optimization — Premium Wellness & Coaching" },
       {
         name: "description",
         content:
-          "Contact PLC Optimization LLC for private coaching, services, product information or partnership inquiries. We respond within one business day.",
+          "Contact PLC Optimization LLC for private coaching, services, product information or partnership inquiries. U.S.-registered premium wellness company — we respond within one business day.",
       },
-      { property: "og:title", content: "Contact — PLC Optimization" },
+      { property: "og:title", content: "Contact PLC Optimization — Premium Wellness & Coaching" },
       { property: "og:description", content: "Speak with the PLC Optimization team. We respond within one business day." },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/contact" }],
   }),
   component: Contact,
 });
