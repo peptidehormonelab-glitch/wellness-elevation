@@ -333,6 +333,7 @@ function Footer() {
                   { to: "/privacy", label: "Privacy Policy" },
                   { to: "/terms", label: "Terms & Conditions" },
                   { to: "/disclaimer", label: "Disclaimer" },
+                  { to: "/cookies", label: "Cookie Policy" },
                 ].map(l => (
                   <li key={l.to}>
                     <Link to={l.to as "/privacy"} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
@@ -370,7 +371,7 @@ function Footer() {
               Products and services are intended for general wellness and educational purposes only. They are not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare provider before beginning any new wellness program.
             </p>
             <p className="text-xs text-muted-foreground/35 shrink-0">
-              © {new Date().getFullYear()} PLC Optimization LLC · US Registered LLC
+              © 2026 PLC Optimization LLC. All Rights Reserved.
             </p>
           </div>
         </div>
