@@ -19,9 +19,9 @@ export const Route = createFileRoute("/about")({
         content:
           "A Wyoming-based wellness company focused on lifestyle optimization, performance coaching, nutrition guidance and evidence-informed wellness practices.",
       },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/about" },
+      { property: "og:url", content: "https://plcoptimization.com/about" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/about" }],
   }),
   component: About,
 });

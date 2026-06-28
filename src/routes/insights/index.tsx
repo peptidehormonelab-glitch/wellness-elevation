@@ -20,9 +20,9 @@ export const Route = createFileRoute("/insights/")({
         content:
           "Educational content on wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle from PLC Optimization.",
       },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/insights" },
+      { property: "og:url", content: "https://plcoptimization.com/insights" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/insights" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/insights" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -31,18 +31,18 @@ export const Route = createFileRoute("/insights/")({
           "@type": "Blog",
           name: "PLC Optimization Insights",
           description: "Educational wellness content covering wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle.",
-          url: "https://plc-elevate-life.lovable.app/insights",
+          url: "https://plcoptimization.com/insights",
           publisher: {
             "@type": "Organization",
             name: "PLC Optimization LLC",
-            url: "https://plc-elevate-life.lovable.app",
+            url: "https://plcoptimization.com",
           },
           blogPost: ARTICLES.map(a => ({
             "@type": "BlogPosting",
             headline: a.title,
             description: a.metaDescription,
             datePublished: a.publishedAt,
-            url: `https://plc-elevate-life.lovable.app/insights/${a.slug}`,
+            url: `https://plcoptimization.com/insights/${a.slug}`,
           })),
         }),
       },

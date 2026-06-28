@@ -15,9 +15,9 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:title", content: "Contact PLC Optimization — Premium Wellness & Coaching" },
       { property: "og:description", content: "Speak with the PLC Optimization team. We respond within one business day." },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/contact" },
+      { property: "og:url", content: "https://plcoptimization.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/contact" }],
   }),
   component: Contact,
 });

@@ -8,9 +8,9 @@ export const Route = createFileRoute("/privacy")({
       { name: "description", content: "How PLC Optimization LLC collects, uses, stores and protects your personal information, including cookie use and international visitor rights." },
       { property: "og:title", content: "Privacy Policy — PLC Optimization LLC" },
       { property: "og:description", content: "How PLC Optimization LLC collects, uses and protects your personal information." },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/privacy" },
+      { property: "og:url", content: "https://plcoptimization.com/privacy" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/privacy" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/privacy" }],
   }),
   component: Privacy,
 });

@@ -18,9 +18,9 @@ export const Route = createFileRoute("/coaching")({
         property: "og:description",
         content: "Private coaching for performance, longevity and lifestyle optimization. A disciplined, evidence-based approach built for the long term.",
       },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/coaching" },
+      { property: "og:url", content: "https://plcoptimization.com/coaching" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/coaching" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/coaching" }],
   }),
   component: Coaching,
 });

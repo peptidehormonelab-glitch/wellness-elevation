@@ -8,9 +8,9 @@ export const Route = createFileRoute("/disclaimer")({
       { name: "description", content: "General wellness disclaimer for PLC Optimization LLC products, services and educational content. Not intended to diagnose, treat, cure or prevent any disease." },
       { property: "og:title", content: "Wellness Disclaimer — PLC Optimization LLC" },
       { property: "og:description", content: "General wellness disclaimer for PLC Optimization LLC products, services and educational content." },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/disclaimer" },
+      { property: "og:url", content: "https://plcoptimization.com/disclaimer" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/disclaimer" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/disclaimer" }],
   }),
   component: Disclaimer,
 });

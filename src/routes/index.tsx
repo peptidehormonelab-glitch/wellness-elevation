@@ -31,9 +31,9 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Premium wellness brand for individuals who take the long view on their health. Sports performance, longevity, nutrition and authorized supplementation.",
       },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/" },
+      { property: "og:url", content: "https://plcoptimization.com/" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/" }],
   }),
   component: Home,
 });

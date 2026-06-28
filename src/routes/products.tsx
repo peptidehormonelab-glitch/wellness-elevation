@@ -18,9 +18,9 @@ export const Route = createFileRoute("/products")({
         property: "og:description",
         content: "A curated portfolio of authorized supplements and premium skin care — selected for purity, transparency and real-world effectiveness.",
       },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/products" },
+      { property: "og:url", content: "https://plcoptimization.com/products" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/products" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/products" }],
   }),
   component: Products,
 });

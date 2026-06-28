@@ -15,7 +15,7 @@ import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
 import { PLCLogo, PLC_LOGO_URL } from "../components/Logo";
 
-const SITE_URL = "https://plc-elevate-life.lovable.app";
+const SITE_URL = "https://plcoptimization.com";
 
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
