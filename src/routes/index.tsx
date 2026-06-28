@@ -40,57 +40,6 @@ const DISCIPLINES = [
 ];
 
 
-const PILLARS = [
-  {
-    title: "Sports Performance",
-    desc: "Periodized programming, recovery science and performance nutrition for athletes who train with purpose — not just frequency.",
-    img: performanceImg,
-  },
-  {
-    title: "Healthy Aging",
-    desc: "A measured, evidence-led approach to mobility, strength and sustained energy through every decade of life.",
-    img: longevityImg,
-  },
-  {
-    title: "Premium Skin Care",
-    desc: "Clean, thoughtfully formulated skincare that elevates your daily ritual without compromise.",
-    img: skincareImg,
-  },
-  {
-    title: "Coaching & Lifestyle",
-    desc: "Private 1:1 coaching that aligns training, nutrition and habit design with the life you actually live.",
-    img: coachingImg,
-  },
-];
-
-
-
-
-
-const SCIENTIFIC = [
-  {
-    icon: Zap,
-    title: "Evidence-Led Protocols",
-    desc: "Every program and product recommendation is grounded in established exercise physiology, nutrition science and lifestyle medicine research — not trends.",
-  },
-  {
-    icon: Shield,
-    title: "Precision Supplementation",
-    desc: "Evidence-guided, science-informed supplementation built around micronutrient context and individual goals. Every product is selected for purity, bioavailability and clear formulation — never proprietary blends.",
-  },
-
-  {
-    icon: Clock,
-    title: "Long-Horizon Thinking",
-    desc: "We optimize for the body you'll inhabit in 20 years — not just the next 12 weeks. Compounding results require compounding systems, built patiently.",
-  },
-  {
-    icon: Users,
-    title: "Personalized Systems",
-    desc: "No pre-built templates. Every coaching blueprint is designed around your physiology, schedule, history and goals — then refined continuously.",
-  },
-];
-
 
 const FAQ = [
   {
