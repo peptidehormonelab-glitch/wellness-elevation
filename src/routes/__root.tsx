@@ -390,7 +390,6 @@ function Footer() {
             {[
               { Icon: Flag, l: "US Registered LLC" },
               { Icon: Handshake, l: "Established 2026" },
-              { Icon: Globe, l: "European Partner Network" },
             ].map((b, idx) => (
               <li key={b.l} className="inline-flex items-center gap-3">
                 {idx > 0 && <span className="hidden md:inline-block w-px h-3.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
