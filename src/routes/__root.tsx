@@ -385,14 +385,12 @@ function Footer() {
             style={{ background: "linear-gradient(90deg, var(--gold), transparent)" }}
             aria-hidden="true"
           />
-          <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-5">Trust & Standards</p>
-          <ul className="flex flex-wrap items-center gap-x-7 gap-y-5 text-[11px] uppercase tracking-[0.22em]" aria-label="Trust indicators">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-silver mb-5">Company Information</p>
+          <ul className="flex flex-wrap items-center gap-x-7 gap-y-5 text-[11px] uppercase tracking-[0.22em]" aria-label="Company information">
             {[
               { Icon: Flag, l: "US Registered LLC" },
-              { Icon: Globe, l: "Global Reach" },
-              { Icon: Handshake, l: "European Partner Network" },
-              { Icon: Lock, l: "Secure Payments" },
-              { Icon: Package, l: "International Clients" },
+              { Icon: Handshake, l: "Established 2026" },
+              { Icon: Globe, l: "European Partner Network" },
             ].map((b, idx) => (
               <li key={b.l} className="inline-flex items-center gap-3">
                 {idx > 0 && <span className="hidden md:inline-block w-px h-3.5 bg-[color:var(--gold-soft)]" aria-hidden="true" />}
@@ -403,6 +401,7 @@ function Footer() {
               </li>
             ))}
           </ul>
+
         </div>
 
 
