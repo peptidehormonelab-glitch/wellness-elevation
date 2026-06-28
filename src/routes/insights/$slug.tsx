@@ -135,7 +135,7 @@ function SectionBlock({ section }: { section: ArticleSection }) {
         >
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{ background: "linear-gradient(135deg, oklch(0.66 0.22 250 / 0.06), transparent 70%)" }}
+            style={{ background: "linear-gradient(135deg, oklch(0.68 0.09 75 / 0.06), transparent 70%)" }}
             aria-hidden="true"
           />
           <p className="relative text-sm text-foreground leading-relaxed font-medium">{section.text}</p>

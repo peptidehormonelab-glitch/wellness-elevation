@@ -119,7 +119,7 @@
     max-width: 100%;
   }
   ::selection {
-    background: oklch(0.66 0.22 250 / 0.28);
+    background: oklch(0.68 0.09 75 / 0.28);
     color: oklch(0.97 0.005 240);
   }
   :focus-visible {
@@ -241,7 +241,7 @@
   }
 
   &:active {
-    background: oklch(0.66 0.22 250 / 0.04);
+    background: oklch(0.68 0.09 75 / 0.04);
   }
   &:focus-visible {
     outline: 2px solid var(--electric);
@@ -293,7 +293,7 @@
   height: 5px;
   border-radius: 50%;
   background: var(--gradient-accent);
-  box-shadow: 0 0 6px oklch(0.66 0.22 250 / 0.65);
+  box-shadow: 0 0 6px oklch(0.68 0.09 75 / 0.65);
   flex-shrink: 0;
   display: inline-block;
 }
@@ -309,8 +309,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px oklch(0.66 0.22 250 / 0.25); }
-  50% { box-shadow: 0 0 40px oklch(0.66 0.22 250 / 0.55); }
+  0%, 100% { box-shadow: 0 0 20px oklch(0.68 0.09 75 / 0.25); }
+  50% { box-shadow: 0 0 40px oklch(0.68 0.09 75 / 0.55); }
 }
 
 .pulse-glow {
