@@ -51,7 +51,7 @@ export function NewsletterSection() {
        * ─────────────────────────────────────────────────────────────────
        */
 
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("/api/public/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, consent: true, source: "website" }),
