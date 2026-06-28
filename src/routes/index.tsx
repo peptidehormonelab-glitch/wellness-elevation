@@ -36,7 +36,7 @@ const DISCIPLINES = [
   { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
   { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
   { num: "04", t: "Precision Wellness", d: "Recovery, resilience and energy — evidence-guided, science-informed.", img: cardWellness },
-  { num: "05", t: "Skin Care", d: "Clinical skin optimization rituals that reflect your standard.", img: cardCosmetic },
+  { num: "05", t: "Skin Care", d: "Premium skin care rituals that reflect your standard.", img: cardCosmetic },
 ];
 
 
