@@ -134,6 +134,32 @@ export const Route = createFileRoute("/api/public/newsletter")({
           return Response.json({ message: "Something went wrong. Please try again." }, { status: 500 });
         }
 
+        // Get or create a one-click unsubscribe token (required by Lovable Email API)
+        let unsubscribeToken: string;
+        const { data: existingUnsub } = await supabase
+          .from("email_unsubscribe_tokens")
+          .select("token, used_at")
+          .eq("email", email)
+          .maybeSingle();
+
+        if (existingUnsub && !existingUnsub.used_at) {
+          unsubscribeToken = existingUnsub.token;
+        } else {
+          unsubscribeToken = generateToken();
+          await supabase
+            .from("email_unsubscribe_tokens")
+            .upsert(
+              { email, token: unsubscribeToken },
+              { onConflict: "email", ignoreDuplicates: true },
+            );
+          const { data: stored } = await supabase
+            .from("email_unsubscribe_tokens")
+            .select("token")
+            .eq("email", email)
+            .maybeSingle();
+          if (stored?.token) unsubscribeToken = stored.token;
+        }
+
         // Build confirmation URL from request origin
         const origin = new URL(request.url).origin;
         const confirmUrl = `${origin}/api/public/newsletter/confirm?token=${encodeURIComponent(confirmToken)}`;
@@ -163,6 +189,7 @@ export const Route = createFileRoute("/api/public/newsletter")({
             purpose: "transactional",
             label: "newsletter_confirmation",
             idempotency_key: messageId,
+            unsubscribe_token: unsubscribeToken,
             queued_at: new Date().toISOString(),
           },
         });
