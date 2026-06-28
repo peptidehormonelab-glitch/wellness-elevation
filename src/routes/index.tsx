@@ -410,12 +410,10 @@ function Home() {
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
               PLC Optimization LLC is a U.S.-registered wellness company created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium skin care into one disciplined, evidence-guided standard.
             </p>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-electric-glow/90 leading-relaxed">
-              American Standards <span className="text-muted-foreground/40 mx-2">·</span> European Partnerships <span className="text-muted-foreground/40 mx-2">·</span> Global Vision
-            </p>
             <Link to="/about" className="mt-8 inline-flex btn-ghost-light items-center gap-2">
               Our Story <ArrowRight size={14} aria-hidden="true" />
             </Link>
+
           </SlideLeft>
 
           <SlideRight>
