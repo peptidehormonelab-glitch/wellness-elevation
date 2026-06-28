@@ -27,7 +27,7 @@ function Disclaimer() {
       <section className="container-page pb-28 max-w-4xl">
         <div className="surface-glass rounded-3xl border border-white/[0.08] p-8 md:p-12 space-y-10">
           <Section title="1. General Wellness Notice">
-            Products and services offered by PLC Optimization LLC, a Wyoming limited liability company registered in the United States, are intended for general wellness and lifestyle support only. They are not intended to diagnose, treat, cure, or prevent any disease or medical condition.
+            Products and services offered by PLC Optimization LLC, a Wyoming limited liability company, are intended solely for general wellness and lifestyle support. They are not intended to diagnose, treat, cure, or prevent any disease or medical condition.
           </Section>
           <Section title="2. Not Medical Advice">
             Information provided on this website — including articles, coaching materials, product descriptions and educational content — is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the guidance of a qualified healthcare provider with any questions you may have regarding a medical condition or before starting any new exercise, nutrition, or supplement program.
@@ -51,7 +51,7 @@ function Disclaimer() {
             To the maximum extent permitted by applicable law, PLC Optimization LLC shall not be liable for any indirect, incidental, special or consequential damages arising from your use of this website, its content, products, coaching, or services. This limitation of liability is consistent with the Terms &amp; Conditions governing use of this website.
           </Section>
           <Section title="9. Governing Law">
-            This Disclaimer is governed by the laws of the State of Wyoming, United States, and is operated in compliance with applicable U.S. laws. Any legal matters arising from your use of this website shall be resolved under Wyoming law.
+            This Disclaimer shall be governed by and construed in accordance with the laws of the State of Wyoming, United States, without regard to its conflict of law principles.
           </Section>
           <Section title="10. Contact">
             For questions about this disclaimer, please contact us at{" "}
