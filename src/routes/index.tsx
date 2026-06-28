@@ -10,7 +10,11 @@ import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
 import cardCosmetic from "@/assets/card-cosmetic.jpg";
-import coachingImg from "@/assets/coaching.jpg";
+
+import pillarPerformance from "@/assets/performance.jpg";
+import pillarLongevity from "@/assets/longevity.jpg";
+import pillarSkincare from "@/assets/skincare.jpg";
+import pillarCoaching from "@/assets/coaching-consult.jpg";
 import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
@@ -373,10 +377,10 @@ function Home() {
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {[
-            { t: "Performance", d: "Train and recover with the precision of a serious athlete.", img: cardPerformance },
-            { t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
-            { t: "Premium Skin Care", d: "Premium skin care rituals that reflect your standard.", img: cardCosmetic },
-            { t: "Coaching", d: "Private 1:1 guidance refined continuously over the long term.", img: coachingImg },
+            { t: "Performance", d: "Train and recover with the precision of a serious athlete.", img: pillarPerformance },
+            { t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: pillarLongevity },
+            { t: "Premium Skin Care", d: "Premium skin care rituals that reflect your standard.", img: pillarSkincare },
+            { t: "Coaching", d: "Private 1:1 guidance refined continuously over the long term.", img: pillarCoaching },
           ].map((p) => (
             <StaggerItem key={p.t}>
               <article className="group relative overflow-hidden rounded-2xl border border-white/[0.07] aspect-[4/3] card-hover">

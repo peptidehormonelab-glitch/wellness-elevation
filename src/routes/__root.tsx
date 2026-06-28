@@ -358,10 +358,13 @@ function Footer() {
             <address className="not-italic">
               <ul className="space-y-5">
                 <li>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-1">Headquarters</span>
-                  <span className="text-sm text-foreground inline-flex items-center gap-2">United States</span>
-                  <span className="mt-1 block text-[11px] text-muted-foreground/70">European Partner Network · International</span>
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 block mb-2">Headquarters</span>
+                  <span className="block text-sm text-foreground">United States</span>
+                  <span className="block text-[12px] text-muted-foreground/75 mt-1">US Registered LLC</span>
+                  <span className="block text-[12px] text-muted-foreground/75">Established 2026</span>
+                  <span className="block text-[12px] text-muted-foreground/75">European Partner Network</span>
                 </li>
+
 
 
                 <li>
