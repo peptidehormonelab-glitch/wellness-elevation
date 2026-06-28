@@ -107,7 +107,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   return (
     <div className="border-b border-white/[0.06] pb-10 last:border-0 last:pb-0">
       <h2 className="text-xl md:text-2xl font-display text-foreground mb-3">{title}</h2>
-      <p className="text-sm text-muted-foreground leading-relaxed">{children}</p>
+      <div className="text-sm text-muted-foreground leading-relaxed space-y-3">{children}</div>
     </div>
   );
 }
