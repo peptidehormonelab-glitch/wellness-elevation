@@ -109,7 +109,7 @@ export function NewsletterSection() {
             <div className="surface-glass rounded-3xl border border-white/[0.09] p-8 md:p-10 relative overflow-hidden">
               <div
                 className="absolute inset-0 pointer-events-none rounded-3xl"
-                style={{ background: "radial-gradient(ellipse 80% 60% at top right, oklch(0.66 0.22 250 / 0.06), transparent 70%)" }}
+                style={{ background: "radial-gradient(ellipse 80% 60% at top right, oklch(0.68 0.09 75 / 0.06), transparent 70%)" }}
                 aria-hidden="true"
               />
 

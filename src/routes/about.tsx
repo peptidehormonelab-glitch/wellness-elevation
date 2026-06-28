@@ -307,7 +307,7 @@ function About() {
         <FadeUp>
           <div
             className="surface-glass rounded-3xl border border-white/[0.09] p-10 md:p-16 text-center relative overflow-hidden"
-            style={{ background: "radial-gradient(ellipse 80% 60% at center, oklch(0.66 0.22 250 / 0.08), transparent 70%)" }}
+            style={{ background: "radial-gradient(ellipse 80% 60% at center, oklch(0.68 0.09 75 / 0.08), transparent 70%)" }}
           >
             <div className="absolute inset-0 border border-electric/[0.08] rounded-3xl pointer-events-none" aria-hidden="true" />
             <h2 id="about-cta-heading" className="text-3xl md:text-5xl max-w-3xl mx-auto">

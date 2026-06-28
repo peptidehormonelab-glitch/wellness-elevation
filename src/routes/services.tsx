@@ -217,7 +217,7 @@ function Services() {
         <FadeUp>
           <div
             className="surface-glass rounded-3xl p-10 md:p-16 text-center relative overflow-hidden"
-            style={{ background: "radial-gradient(ellipse 80% 60% at center, oklch(0.66 0.22 250 / 0.10), transparent 70%)" }}
+            style={{ background: "radial-gradient(ellipse 80% 60% at center, oklch(0.68 0.09 75 / 0.10), transparent 70%)" }}
           >
             <div className="absolute inset-0 border border-electric/[0.08] rounded-3xl pointer-events-none" aria-hidden="true" />
             <span className="eyebrow justify-center mb-6">Begin Here</span>
