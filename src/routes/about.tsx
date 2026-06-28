@@ -101,9 +101,25 @@ function About() {
             <span className="text-gradient-silver">longevity</span>.
           </h1>
           <p className="mt-9 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            PLC Optimization LLC is a U.S.-registered wellness brand built for individuals who want measured, lifelong results — not trends, not shortcuts, not the next 12-week miracle. We integrate coaching, nutrition guidance, authorized supplementation and premium skin care into one disciplined, evidence-based standard.
+            PLC Optimization LLC is a U.S.-registered premium wellness company built for individuals who want measured, lifelong results. We integrate evidence-based wellness, precision supplementation, longevity practice, performance optimization, skin health and science-driven lifestyle optimization into one disciplined standard — designed to compound across decades, not seasons.
           </p>
         </FadeUp>
+      </section>
+
+      {/* ── AREAS OF FOCUS ── */}
+      <section className="container-page pb-8" aria-labelledby="focus-heading">
+        <h2 id="focus-heading" className="sr-only">Areas of focus</h2>
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {FOCUS_AREAS.map((f, i) => (
+            <StaggerItem key={f.t}>
+              <div className="surface-glass rounded-2xl p-6 h-full card-hover">
+                <p className="text-[9px] tracking-[0.35em] uppercase text-electric-glow">0{i + 1}</p>
+                <h3 className="mt-3 text-lg font-display">{f.t}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.d}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
       </section>
 
       {/* ── STATS BAND ── */}
