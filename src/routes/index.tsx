@@ -318,32 +318,32 @@ function Home() {
         </div>
       </div>
 
-      {/* ── OUR PRINCIPLES ── */}
-      <section className="container-page py-32 lg:py-40" aria-labelledby="principles-heading">
+      {/* ── WHY PLC OPTIMIZATION ── */}
+      <section className="container-page py-32 lg:py-40" aria-labelledby="why-heading">
         <FadeUp>
           <div className="max-w-3xl">
-            <span className="eyebrow">Our Principles</span>
-            <h2 id="principles-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
-              Five principles that define{" "}
-              <span className="text-gradient-silver">everything we do.</span>
+            <span className="eyebrow">Why PLC Optimization</span>
+            <h2 id="why-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
+              A single standard,{" "}
+              <span className="text-gradient-silver">applied without exception.</span>
             </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-xl">
-              The operating standard behind every program, product and partnership — applied without exception.
+              Five commitments that define every program, product and partnership we put our name on.
             </p>
           </div>
         </FadeUp>
 
         <StaggerContainer className="mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {[
-            { t: "Evidence First", d: "Every recommendation is grounded in established science and continuous learning." },
-            { t: "Transparency", d: "Clear sourcing, clear formulations, clear reasoning. No inflated claims." },
-            { t: "Quality Without Compromise", d: "Carefully selected products, services and partners. Nothing less." },
-            { t: "Long-Term Optimization", d: "We design for sustained performance and longevity, not short cycles." },
-            { t: "Continuous Improvement", d: "Optimization is a lifelong practice, never a destination." },
+            { t: "Evidence First", d: "Every recommendation is guided by scientific evidence and continuous research." },
+            { t: "Transparent Standards", d: "Clear documentation, responsible sourcing and quality-focused processes." },
+            { t: "Premium Quality", d: "Identity verification, third-party testing where applicable, and continuous quality review." },
+            { t: "Long-Term Optimization", d: "Focused on sustainable wellness and long-term performance rather than short-term trends." },
+            { t: "Global Perspective", d: "US-based company with an international outlook and trusted European partnerships." },
           ].map((p, i) => (
             <StaggerItem key={p.t}>
               <div className="surface-glass rounded-2xl p-7 h-full border border-white/[0.06] card-hover">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">0{i + 1}</p>
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-5 text-lg md:text-xl font-display leading-snug">{p.t}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
               </div>
@@ -351,6 +351,7 @@ function Home() {
           ))}
         </StaggerContainer>
       </section>
+
 
       {/* ── DISCIPLINES ── */}
 
