@@ -10,6 +10,7 @@ import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
 import cardCosmetic from "@/assets/card-cosmetic.jpg";
+import coachingImg from "@/assets/coaching.jpg";
 import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
@@ -36,7 +37,7 @@ const DISCIPLINES = [
   { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
   { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
   { num: "04", t: "Precision Wellness", d: "Recovery, resilience and energy — evidence-guided, science-informed.", img: cardWellness },
-  { num: "05", t: "Skin Care", d: "Clinical skin optimization rituals that reflect your standard.", img: cardCosmetic },
+  { num: "05", t: "Skin Care", d: "Premium skin care rituals that reflect your standard.", img: cardCosmetic },
 ];
 
 
@@ -355,6 +356,50 @@ function Home() {
       </section>
 
 
+
+      {/* ── FOUR PILLARS ── */}
+      <section className="container-page py-28" aria-labelledby="pillars-heading">
+        <FadeUp>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+            <div className="max-w-2xl">
+              <span className="eyebrow">Four Pillars</span>
+              <h2 id="pillars-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">The PLC framework.</h2>
+            </div>
+            <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
+              Four integrated domains where premium standards translate into measurable, lasting results.
+            </p>
+          </div>
+        </FadeUp>
+
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+          {[
+            { t: "Performance", d: "Train and recover with the precision of a serious athlete.", img: cardPerformance },
+            { t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
+            { t: "Premium Skin Care", d: "Premium skin care rituals that reflect your standard.", img: cardCosmetic },
+            { t: "Coaching", d: "Private 1:1 guidance refined continuously over the long term.", img: coachingImg },
+          ].map((p) => (
+            <StaggerItem key={p.t}>
+              <article className="group relative overflow-hidden rounded-2xl border border-white/[0.07] aspect-[4/3] card-hover">
+                <img
+                  src={p.img}
+                  alt={p.t}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover img-premium transition-transform duration-700 group-hover:scale-105"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(180deg, transparent 35%, oklch(0.08 0.012 240 / 0.55) 70%, oklch(0.08 0.012 240 / 0.95) 100%)" }}
+                  aria-hidden="true"
+                />
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                  <h3 className="text-2xl md:text-3xl font-display">{p.t}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-md">{p.d}</p>
+                </div>
+              </article>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </section>
 
       {/* ── PRODUCTS PREVIEW ── */}
       <section className="container-page py-28" aria-labelledby="products-heading">
