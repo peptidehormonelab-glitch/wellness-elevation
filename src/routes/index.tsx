@@ -95,38 +95,6 @@ const SCIENTIFIC = [
   },
 ];
 
-const TRUST = [
-  {
-    icon: Award,
-    label: "U.S. Registered LLC",
-    desc: "PLC Optimization is a formally incorporated U.S. limited liability company — a verifiable, legally accountable entity with transparent business registration.",
-  },
-  {
-    icon: BookOpen,
-    label: "Education First",
-    desc: "Every article, protocol and recommendation is grounded in established science and clearly explained. We believe informed individuals make better long-term decisions.",
-  },
-  {
-    icon: Eye,
-    label: "Transparent Communication",
-    desc: "We do not use proprietary blends, inflated outcome claims or anonymous endorsements. What we say, we can substantiate. What we do not know, we say so.",
-  },
-  {
-    icon: Shield,
-    label: "Premium Quality Standards",
-    desc: "Our supplement portfolio is curated for purity, bioavailability and authorised retail status. Every product in our range meets the standards we would apply to ourselves.",
-  },
-  {
-    icon: HeartPulse,
-    label: "Responsible Wellness Positioning",
-    desc: "We make no medical claims, do not promote prescription substances and always direct clients to qualified healthcare professionals for clinical decisions.",
-  },
-  {
-    icon: Clock,
-    label: "Long-Term Trust",
-    desc: "Trust is built through consistency, not campaigns. We are building a company for the long term — measured by sustained client outcomes, not quarterly growth targets.",
-  },
-];
 
 const FAQ = [
   {
