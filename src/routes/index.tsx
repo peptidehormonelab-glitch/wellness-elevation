@@ -11,6 +11,10 @@ import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
 import cardCosmetic from "@/assets/card-cosmetic.jpg";
 import coachingImg from "@/assets/coaching.jpg";
+import pillarPerformance from "@/assets/performance.jpg";
+import pillarLongevity from "@/assets/longevity.jpg";
+import pillarSkincare from "@/assets/skincare.jpg";
+import pillarCoaching from "@/assets/coaching-consult.jpg";
 import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
