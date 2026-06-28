@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users, Award, BookOpen, HeartPulse, Eye } from "lucide-react";
+import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users } from "lucide-react";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
@@ -95,38 +95,6 @@ const SCIENTIFIC = [
   },
 ];
 
-const TRUST = [
-  {
-    icon: Award,
-    label: "U.S. Registered LLC",
-    desc: "PLC Optimization is a formally incorporated U.S. limited liability company — a verifiable, legally accountable entity with transparent business registration.",
-  },
-  {
-    icon: BookOpen,
-    label: "Education First",
-    desc: "Every article, protocol and recommendation is grounded in established science and clearly explained. We believe informed individuals make better long-term decisions.",
-  },
-  {
-    icon: Eye,
-    label: "Transparent Communication",
-    desc: "We do not use proprietary blends, inflated outcome claims or anonymous endorsements. What we say, we can substantiate. What we do not know, we say so.",
-  },
-  {
-    icon: Shield,
-    label: "Premium Quality Standards",
-    desc: "Our supplement portfolio is curated for purity, bioavailability and authorised retail status. Every product in our range meets the standards we would apply to ourselves.",
-  },
-  {
-    icon: HeartPulse,
-    label: "Responsible Wellness Positioning",
-    desc: "We make no medical claims, do not promote prescription substances and always direct clients to qualified healthcare professionals for clinical decisions.",
-  },
-  {
-    icon: Clock,
-    label: "Long-Term Trust",
-    desc: "Trust is built through consistency, not campaigns. We are building a company for the long term — measured by sustained client outcomes, not quarterly growth targets.",
-  },
-];
 
 const FAQ = [
   {
@@ -318,32 +286,32 @@ function Home() {
         </div>
       </div>
 
-      {/* ── OUR PRINCIPLES ── */}
-      <section className="container-page py-32 lg:py-40" aria-labelledby="principles-heading">
+      {/* ── WHY PLC OPTIMIZATION ── */}
+      <section className="container-page py-32 lg:py-40" aria-labelledby="why-heading">
         <FadeUp>
           <div className="max-w-3xl">
-            <span className="eyebrow">Our Principles</span>
-            <h2 id="principles-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
-              Five principles that define{" "}
-              <span className="text-gradient-silver">everything we do.</span>
+            <span className="eyebrow">Why PLC Optimization</span>
+            <h2 id="why-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
+              A single standard,{" "}
+              <span className="text-gradient-silver">applied without exception.</span>
             </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-xl">
-              The operating standard behind every program, product and partnership — applied without exception.
+              Five commitments that define every program, product and partnership we put our name on.
             </p>
           </div>
         </FadeUp>
 
         <StaggerContainer className="mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {[
-            { t: "Evidence First", d: "Every recommendation is grounded in established science and continuous learning." },
-            { t: "Transparency", d: "Clear sourcing, clear formulations, clear reasoning. No inflated claims." },
-            { t: "Quality Without Compromise", d: "Carefully selected products, services and partners. Nothing less." },
-            { t: "Long-Term Optimization", d: "We design for sustained performance and longevity, not short cycles." },
-            { t: "Continuous Improvement", d: "Optimization is a lifelong practice, never a destination." },
+            { t: "Evidence First", d: "Every recommendation is guided by scientific evidence and continuous research." },
+            { t: "Transparent Standards", d: "Clear documentation, responsible sourcing and quality-focused processes." },
+            { t: "Premium Quality", d: "Identity verification, third-party testing where applicable, and continuous quality review." },
+            { t: "Long-Term Optimization", d: "Focused on sustainable wellness and long-term performance rather than short-term trends." },
+            { t: "Global Perspective", d: "US-based company with an international outlook and trusted European partnerships." },
           ].map((p, i) => (
             <StaggerItem key={p.t}>
               <div className="surface-glass rounded-2xl p-7 h-full border border-white/[0.06] card-hover">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">0{i + 1}</p>
+                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-5 text-lg md:text-xl font-display leading-snug">{p.t}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
               </div>
@@ -351,6 +319,7 @@ function Home() {
           ))}
         </StaggerContainer>
       </section>
+
 
       {/* ── DISCIPLINES ── */}
 
@@ -409,12 +378,10 @@ function Home() {
             <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
               PLC Optimization LLC is a U.S.-registered wellness company created for individuals who want measured, lifelong results — not trends. We integrate coaching, nutrition guidance, authorized supplementation and premium skin care into one disciplined, evidence-guided standard.
             </p>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-electric-glow/90 leading-relaxed">
-              American Standards <span className="text-muted-foreground/40 mx-2">·</span> European Partnerships <span className="text-muted-foreground/40 mx-2">·</span> Global Vision
-            </p>
             <Link to="/about" className="mt-8 inline-flex btn-ghost-light items-center gap-2">
               Our Story <ArrowRight size={14} aria-hidden="true" />
             </Link>
+
           </SlideLeft>
 
           <SlideRight>
@@ -590,111 +557,8 @@ function Home() {
         </div>
       </section>
 
-      {/* ── BUILT ON TRANSPARENCY ── */}
-      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden" aria-labelledby="trust-heading">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-electric/[0.03] blur-[100px]" />
-        </div>
-        <div className="container-page relative">
-          <FadeUp>
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
-              <div className="max-w-2xl">
-                <span className="eyebrow">Built on Transparency</span>
-                <h2 id="trust-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">
-                  Honesty, first.{" "}
-                  <span className="text-gradient-silver">Always.</span>
-                </h2>
-              </div>
-              <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-                PLC Optimization is a newly launched company. We have no fabricated testimonials, no inflated track records and no invented credentials. What we do have is a clear standard — and the discipline to keep it.
-              </p>
-            </div>
-          </FadeUp>
 
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {TRUST.map((t, i) => (
-              <StaggerItem key={t.label}>
-                <div className="surface-glass rounded-2xl p-7 h-full card-hover group border border-white/[0.06]">
-                  <div className="flex items-start justify-between mb-5">
-                    <div
-                      className="w-10 h-10 rounded-xl bg-electric/[0.08] border border-electric/[0.15] flex items-center justify-center group-hover:bg-electric/[0.13] transition-colors duration-300"
-                      aria-hidden="true"
-                    >
-                      <t.icon size={18} className="text-electric-glow" strokeWidth={1.5} />
-                    </div>
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground/30 font-medium">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <h3 className="text-lg md:text-xl font-display text-foreground mb-3 leading-snug">{t.label}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
 
-          <FadeUp>
-            <div className="mt-12 surface-glass rounded-2xl p-7 border border-white/[0.06] flex flex-col md:flex-row md:items-center gap-5">
-              <div className="flex-1">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow mb-2">American Standards <span className="text-muted-foreground/40 mx-2">·</span> European Partnerships <span className="text-muted-foreground/40 mx-2">·</span> Global Reach</p>
-                <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-                  PLC Optimization is a U.S.-registered LLC headquartered in the United States, collaborating with carefully selected European partners who share our commitment to quality, transparency and long-term excellence. Our international partner network combines American standards with trusted European expertise — serving clients worldwide through relationships built on substance, not slogans.
-                </p>
-
-              </div>
-              <Link to="/about" className="btn-ghost-light shrink-0 whitespace-nowrap">
-                Our Philosophy
-              </Link>
-            </div>
-          </FadeUp>
-        </div>
-      </section>
-
-      {/* ── PLC QUALITY STANDARD ── */}
-      <section className="container-page py-32 lg:py-40 relative" aria-labelledby="quality-heading">
-        <div
-          className="absolute top-24 left-6 md:left-10 h-px w-16"
-          style={{ background: "linear-gradient(90deg, var(--gold-soft), transparent)" }}
-          aria-hidden="true"
-        />
-        <FadeUp>
-          <div className="max-w-3xl">
-            <span className="eyebrow">PLC Quality Standard</span>
-            <h2 id="quality-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.04]">
-              Quality is not a claim.{" "}
-              <span className="text-gradient-silver">It is a process.</span>
-            </h2>
-            <p className="mt-7 text-muted-foreground leading-relaxed max-w-2xl">
-              Five quality commitments applied across every product, supplier and partnership in the PLC portfolio.
-            </p>
-          </div>
-        </FadeUp>
-
-        <StaggerContainer className="mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          {[
-            { t: "Identity Verification", d: "Suppliers, manufacturers and ingredient origins are verified before any product enters the portfolio." },
-            { t: "Third-Party Testing", d: "Independent laboratory testing is required for product categories where it is the relevant standard." },
-            { t: "Transparent Documentation", d: "Certificates of Analysis and batch documentation are available on request to verify composition." },
-            { t: "Responsible Sourcing", d: "Raw materials are selected for purity, bioavailability and credible origin — never for price alone." },
-            { t: "Continuous Quality Review", d: "Our portfolio is reviewed continuously. Products that no longer meet the PLC standard are removed." },
-          ].map((p, i) => (
-            <StaggerItem key={p.t}>
-              <div className="surface-glass rounded-2xl p-7 h-full border border-white/[0.06] card-hover">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">{String(i + 1).padStart(2, "0")}</p>
-                <h3 className="mt-5 text-lg font-display leading-snug">{p.t}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-
-        <FadeUp>
-          <p className="mt-12 text-xs text-muted-foreground/60 leading-relaxed max-w-3xl">
-            <span className="text-silver/80">Note.</span>{" "}
-            PLC Optimization communicates a disciplined quality process, not absolute claims of certification or universal outcomes. We recommend consulting a qualified healthcare provider before beginning any new wellness program.
-          </p>
-        </FadeUp>
-      </section>
 
       {/* ── NEWSLETTER ── */}
       <NewsletterSection />
