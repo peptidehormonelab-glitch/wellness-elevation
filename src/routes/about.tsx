@@ -7,17 +7,17 @@ import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn }
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About PLC Optimization — Evidence-Based Wellness & Longevity" },
+      { title: "About PLC Optimization — Premium Wellness & Lifestyle Optimization" },
       {
         name: "description",
         content:
-          "PLC Optimization LLC is a U.S.-registered premium wellness company focused on evidence-based wellness, precision supplementation, longevity, performance optimization, skin health and science-driven lifestyle optimization.",
+          "PLC Optimization LLC is a Wyoming-based wellness company offering performance coaching, nutrition guidance, recovery optimization, educational resources and evidence-informed wellness practices.",
       },
-      { property: "og:title", content: "About PLC Optimization — Evidence-Based Wellness & Longevity" },
+      { property: "og:title", content: "About PLC Optimization — Premium Wellness & Lifestyle Optimization" },
       {
         property: "og:description",
         content:
-          "A U.S.-registered premium wellness company built on evidence, precision supplementation, longevity, performance optimization, skin health and science-driven lifestyle optimization.",
+          "A Wyoming-based wellness company focused on lifestyle optimization, performance coaching, nutrition guidance and evidence-informed wellness practices.",
       },
       { property: "og:url", content: "https://plc-elevate-life.lovable.app/about" },
     ],
@@ -26,61 +26,45 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-const FOCUS_AREAS = [
-  { t: "Evidence-Based Wellness", d: "Programs and recommendations grounded in established science and current literature." },
-  { t: "Precision Supplementation", d: "Authorized, transparently sourced formulations selected for purpose, not trends." },
-  { t: "Longevity", d: "A long-horizon practice designed to preserve strength, mobility and vitality across decades." },
-  { t: "Performance Optimization", d: "Structured training, recovery and lifestyle protocols built around individual physiology." },
-  { t: "Skin Health", d: "Premium skin care rituals that reflect the same standard of rigour and quality." },
-  { t: "Science-Driven Lifestyle", d: "Sleep, nutrition, stress and recovery refined into a sustainable daily practice." },
-];
-
 const VALUES = [
   {
-    t: "Discipline",
-    d: "Lasting outcomes are never accidental. They come from systems — structured, consistent and built to compound. Every program, every product, every coaching engagement reflects this principle.",
+    t: "Integrity",
+    d: "We operate with honesty, clarity and respect in every client interaction, product recommendation and coaching conversation.",
+  },
+  {
+    t: "Education",
+    d: "We believe informed clients make better decisions. Every recommendation is paired with explanation, context and practical guidance.",
   },
   {
     t: "Transparency",
-    d: "We explain everything: the science behind our protocols, the sourcing behind our products, the reasoning behind every recommendation. You will never encounter vague claims or hidden formulations.",
+    d: "From sourcing standards to communication practices, we disclose what matters so clients can engage with confidence.",
   },
   {
-    t: "Longevity",
-    d: "We optimize for the body you'll inhabit in 20 years, not just the next season. True wellness is a long-horizon practice — and every decision we make is filtered through that lens.",
-  },
-  {
-    t: "Elevation",
-    d: "Wellness should feel premium — from the products you use to the coaching conversations you have. We hold every touchpoint to a standard that reflects the seriousness of your commitment.",
+    t: "Continuous Improvement",
+    d: "Wellness is an evolving field. We review new research, refine our protocols and improve our services so clients benefit from current thinking.",
   },
 ];
 
-const MILESTONES = [
-  { year: "U.S. LLC", label: "Formally Registered" },
-  { year: "5+", label: "Wellness Disciplines" },
-  { year: "100%", label: "Authorized Products" },
-  { year: "1:1", label: "Private Coaching" },
-];
-
-const COMMITMENTS = [
+const STANDARDS = [
   {
-    num: "01",
-    title: "We educate before we sell.",
-    desc: "Every product recommendation, every coaching decision is preceded by an explanation. We want you to understand the why — so you can make informed choices long after our engagement ends.",
+    title: "Ethical Business Practices",
+    desc: "We conduct business according to clear principles: honest marketing, fair pricing, respect for client autonomy and responsible wellness communication.",
   },
   {
-    num: "02",
-    title: "We cite our sources.",
-    desc: "Our protocols are grounded in peer-reviewed research on exercise physiology, nutrition science and lifestyle medicine. We do not follow trends. We follow evidence.",
+    title: "Customer Privacy",
+    desc: "Personal information is handled with care. We limit data collection, protect communications and honor the privacy expectations of our clients.",
   },
   {
-    num: "03",
-    title: "We operate within clear boundaries.",
-    desc: "PLC Optimization occupies a precise position: premium wellness and educational support. We make no medical claims. We recommend no prescription substances. We always encourage consulting a qualified healthcare provider.",
+    title: "Transparent Communication",
+    desc: "We explain the reasoning behind our recommendations, disclose relevant limitations and welcome questions about any product, protocol or service.",
   },
   {
-    num: "04",
-    title: "We commit to the long term.",
-    desc: "We measure our success not by programs sold but by the progress our clients make over years. A client who achieves lasting results is our most important outcome.",
+    title: "Responsible Wellness Education",
+    desc: "All content, coaching and product information is educational and intended for general wellness. We do not provide medical advice or promise specific health outcomes.",
+  },
+  {
+    title: "Continuous Improvement",
+    desc: "We regularly evaluate our offerings, incorporate client feedback and refine our approach to maintain a high standard of service and education.",
   },
 ];
 
@@ -95,134 +79,53 @@ function About() {
             id="about-hero-heading"
             className="mt-7 text-5xl md:text-7xl lg:text-[88px] max-w-5xl leading-[1.03]"
           >
-            A premium standard for{" "}
-            <span className="text-gradient-electric">body, performance</span>{" "}
-            and{" "}
-            <span className="text-gradient-silver">longevity</span>.
+            A Wyoming-based company for{" "}
+            <span className="text-gradient-electric">wellness</span>,{" "}
+            <span className="text-gradient-silver">performance</span>{" "}
+            and lifestyle optimization.
           </h1>
           <p className="mt-9 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            PLC Optimization LLC is a U.S.-registered premium wellness company built for individuals who want measured, lifelong results. We integrate evidence-based wellness, precision supplementation, longevity practice, performance optimization, skin health and science-driven lifestyle optimization into one disciplined standard — designed to compound across decades, not seasons.
+            PLC Optimization LLC is a U.S. Registered LLC based in Wyoming, focused on helping individuals improve their health, performance and daily lifestyle through education, responsible coaching and evidence-informed wellness practices. We offer guidance in general wellness, performance coaching, nutrition, recovery optimization and educational resources — always grounded in integrity and transparency.
           </p>
         </FadeUp>
       </section>
 
-      {/* ── AREAS OF FOCUS ── */}
-      <section className="container-page pb-8" aria-labelledby="focus-heading">
-        <h2 id="focus-heading" className="sr-only">Areas of focus</h2>
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {FOCUS_AREAS.map((f, i) => (
-            <StaggerItem key={f.t}>
-              <div className="surface-glass rounded-2xl p-6 h-full card-hover">
-                <p className="text-[9px] tracking-[0.35em] uppercase text-electric-glow">0{i + 1}</p>
-                <h3 className="mt-3 text-lg font-display">{f.t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.d}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* ── STATS BAND ── */}
-      <section className="border-y border-white/[0.06]" aria-label="Company highlights">
-        <div className="container-page py-14">
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-px">
-            {MILESTONES.map(m => (
-              <StaggerItem key={m.year}>
-                <div className="text-center py-8 px-4">
-                  <p className="text-3xl md:text-4xl font-display text-gradient-electric">{m.year}</p>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground/70 mt-3">{m.label}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* ── BRAND STORY / WHY WE EXIST ── */}
-      <section className="relative border-b border-white/[0.06] overflow-hidden py-28" aria-labelledby="story-heading">
+      {/* ── MISSION ── */}
+      <section className="border-y border-white/[0.06] relative overflow-hidden py-28" aria-labelledby="mission-heading">
         <div className="absolute inset-0" aria-hidden="true">
-          <img src={longevityImg} alt="" className="w-full h-full object-cover" style={{ opacity: 0.10 }} loading="lazy" />
+          <img src={longevityImg} alt="" className="w-full h-full object-cover" style={{ opacity: 0.08 }} loading="lazy" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.10 0.012 240 / 0.95), oklch(0.10 0.012 240 / 0.7))" }} />
         </div>
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-electric/[0.04] blur-[80px] -translate-y-1/2" />
         </div>
 
-        <div className="container-page relative grid lg:grid-cols-2 gap-16 items-start">
-          <SlideLeft>
-            <span className="eyebrow">Why We Exist</span>
-            <h2 id="story-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Built for a specific kind of person.
-            </h2>
-            <p className="mt-7 text-muted-foreground leading-relaxed text-lg">
-              PLC Optimization was created for individuals who look at the wellness industry and see noise — exaggerated claims, unverifiable results, products built for marketing budgets rather than real physiology.
-            </p>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              We exist to be the alternative. A premium wellness resource that operates with integrity — where every recommendation is defensible, every product is authorized, and every coaching relationship is built on honest, educational conversation.
-            </p>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              We are not here to sell you a 30-day reset. We are here to help you build a body and lifestyle that compound — that serve you with increasing strength, mobility and clarity through every decade ahead.
-            </p>
-          </SlideLeft>
-
-          <SlideRight>
-            <div className="space-y-8 pt-2 lg:pt-16">
-              {[
-                {
-                  heading: "The problem we saw",
-                  body: "A wellness industry saturated with short-horizon thinking: aggressive promises, proprietary blends, coaching programs built around convenience rather than science. People deserved better.",
-                },
-                {
-                  heading: "The standard we set",
-                  body: "Every decision at PLC Optimization — product selection, coaching design, content creation — passes through a single filter: is this grounded in evidence, and does it genuinely serve our client's long-term health?",
-                },
-                {
-                  heading: "The vision we hold",
-                  body: "A global wellness brand trusted by serious individuals who understand that exceptional health is built through discipline and compounding systems — not purchased in a subscription box.",
-                },
-              ].map(item => (
-                <div key={item.heading} className="surface-glass rounded-xl p-7 card-hover">
-                  <h3 className="text-lg font-display text-foreground mb-3">{item.heading}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
-                </div>
-              ))}
-            </div>
-          </SlideRight>
-        </div>
-      </section>
-
-      {/* ── MISSION ── */}
-      <section className="container-page py-28" aria-labelledby="mission-heading">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="container-page relative max-w-4xl mx-auto text-center">
           <FadeUp>
             <span className="eyebrow justify-center">Our Mission</span>
             <h2 id="mission-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Help you build a body and lifestyle that compound.
+              Help individuals optimize their health, performance and daily lifestyle.
             </h2>
             <p className="mt-7 text-muted-foreground text-lg leading-relaxed">
-              Optimization is not a program you complete. It is a practice you build — intelligent training, intentional recovery, clean nutrition and considered supplementation, sustained across decades. Our role is to give you the structure, products and guidance to live that practice with clarity and confidence.
+              Our mission is to help individuals optimize their health, performance and daily lifestyle through education, responsible coaching and evidence-informed wellness strategies. We provide the structure, resources and guidance clients need to make informed, sustainable choices — without overpromising, without medical claims, and without compromising on integrity.
             </p>
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link to="/services" className="btn-electric">Explore Services</Link>
-              <Link to="/coaching" className="btn-ghost-light">Private Coaching</Link>
-            </div>
           </FadeUp>
         </div>
       </section>
 
-      {/* ── VALUES ── */}
-      <section className="py-28 border-y border-white/[0.06]" aria-labelledby="values-heading">
+      {/* ── COMPANY VALUES ── */}
+      <section className="py-28 border-b border-white/[0.06]" aria-labelledby="values-heading">
         <div className="container-page">
           <FadeUp>
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
               <div>
                 <span className="eyebrow">Our Values</span>
                 <h2 id="values-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl max-w-2xl">
-                  Four principles that shape everything.
+                  Four principles that guide our work.
                 </h2>
               </div>
               <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-                These are not marketing language. They are the operating principles behind every decision we make — from product curation to coaching design.
+                These values shape how we communicate, how we coach and how we build trust with every client.
               </p>
             </div>
           </FadeUp>
@@ -241,42 +144,46 @@ function About() {
         </div>
       </section>
 
-      {/* ── COMMITMENTS ── */}
-      <section className="container-page py-28" aria-labelledby="commitments-heading">
-        <FadeUp>
-          <span className="eyebrow">Our Commitments</span>
-          <h2 id="commitments-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl max-w-3xl mb-14">
-            How we hold ourselves accountable.
-          </h2>
-        </FadeUp>
+      {/* ── PROFESSIONAL STANDARDS ── */}
+      <section className="container-page py-28" aria-labelledby="standards-heading">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <SlideLeft>
+            <span className="eyebrow">Professional Standards</span>
+            <h2 id="standards-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
+              Committed to doing things the right way.
+            </h2>
+            <p className="mt-7 text-muted-foreground leading-relaxed">
+              PLC Optimization LLC is committed to ethical business practices, customer privacy, transparent communication, responsible wellness education and continuous improvement. These standards define how we operate and how we serve our clients.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              We do not diagnose, treat or prescribe. We provide educational information, coaching and premium wellness products for general lifestyle support, and we encourage every client to consult a qualified healthcare provider for personal medical questions.
+            </p>
+          </SlideLeft>
 
-        <StaggerContainer className="grid md:grid-cols-2 gap-5">
-          {COMMITMENTS.map((c) => (
-            <StaggerItem key={c.num}>
-              <div className="surface-glass rounded-2xl p-8 h-full card-hover relative overflow-hidden">
-                <div
-                  className="absolute top-4 right-6 text-[52px] font-display text-white/[0.03] select-none leading-none"
-                  aria-hidden="true"
-                >
-                  {c.num}
-                </div>
-                <p className="text-[9px] tracking-[0.35em] uppercase text-electric-glow mb-4">{c.num}</p>
-                <h3 className="text-xl md:text-2xl font-display mb-4">{c.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+          <SlideRight>
+            <StaggerContainer className="space-y-5">
+              {STANDARDS.map((s, i) => (
+                <StaggerItem key={s.title}>
+                  <div className="surface-glass rounded-xl p-7 card-hover">
+                    <p className="text-[9px] tracking-[0.35em] uppercase text-electric-glow mb-3">0{i + 1}</p>
+                    <h3 className="text-lg font-display text-foreground mb-3">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </SlideRight>
+        </div>
       </section>
 
-      {/* ── PHILOSOPHY ── */}
+      {/* ── PHILOSOPHY / FOCUS AREAS ── */}
       <section className="container-page pb-28" aria-labelledby="philosophy-heading">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScaleIn>
             <div className="rounded-2xl overflow-hidden border border-white/[0.07] aspect-[4/3]">
               <img
                 src={performanceImg}
-                alt="Athletic performance and premium wellness training"
+                alt="Performance coaching and lifestyle optimization environment"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
@@ -284,18 +191,18 @@ function About() {
           </ScaleIn>
 
           <SlideRight>
-            <span className="eyebrow">Our Philosophy</span>
+            <span className="eyebrow">What We Focus On</span>
             <h2 id="philosophy-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
-              Built for individuals who refuse to compromise.
+              Wellness education and lifestyle support.
             </h2>
             <p className="mt-7 text-muted-foreground leading-relaxed">
-              We exist for a specific kind of person: someone who takes their health seriously, demands quality and transparency, and understands that lasting results come from consistent, disciplined systems — not shortcuts, supplements alone, or programs designed for the masses.
+              Our work centers on general wellness, lifestyle optimization, performance coaching, nutrition guidance, recovery optimization and educational resources. Every service is designed to help clients build better habits, make informed decisions and pursue long-term health with confidence.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              That is the standard we hold ourselves to. And it is the standard we bring to every product, every program and every client relationship we build.
+              We emphasize evidence-informed practices, responsible communication and practical strategies that fit into real life. We never make disease-related claims, never promise specific outcomes, and always present wellness as a long-term discipline rather than a quick fix.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/coaching" className="btn-electric">Explore Coaching</Link>
+              <Link to="/services" className="btn-electric">Explore Services</Link>
               <Link to="/contact" className="btn-ghost-light">Get in Touch</Link>
             </div>
           </SlideRight>
@@ -311,10 +218,10 @@ function About() {
           >
             <div className="absolute inset-0 border border-electric/[0.08] rounded-3xl pointer-events-none" aria-hidden="true" />
             <h2 id="about-cta-heading" className="text-3xl md:text-5xl max-w-3xl mx-auto">
-              Ready to experience a higher standard of wellness?
+              Ready to learn more about PLC Optimization?
             </h2>
             <p className="mt-6 text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Speak with our team about coaching, nutrition guidance or our authorized product portfolio. We respond within one business day.
+              Speak with our team about coaching, nutrition guidance or our educational resources. We respond within one business day.
             </p>
             <Link to="/contact" className="mt-10 inline-flex btn-electric items-center gap-2">
               Contact PLC <ArrowRight size={14} aria-hidden="true" />
