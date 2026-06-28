@@ -1,4 +1,4 @@
-import { ArrowUpRight, Flag, Globe, Handshake, Lock, Package } from "lucide-react";
+import { ArrowUpRight, Flag, Globe, Handshake } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
