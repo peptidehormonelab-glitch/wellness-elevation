@@ -151,12 +151,12 @@ function Contact() {
                     </div>
                   </div>
                   <p className="text-[10px] uppercase tracking-[0.35em] text-electric-glow mb-3">Almost There</p>
-                  <h2 className="text-3xl md:text-4xl font-display">Your email client has opened.</h2>
+                  <h2 className="text-3xl md:text-4xl font-display">Your inquiry is ready to send.</h2>
                   <p className="mt-4 text-muted-foreground leading-relaxed max-w-sm mx-auto text-sm">
-                    Your inquiry details have been pre-filled. Please send the email from your mail app and our team will respond within one business day.
+                    Please review the pre-filled email and click 'Send' in your email application. We typically respond within one business day.
                   </p>
                   <p className="mt-5 text-xs text-muted-foreground/50 max-w-xs mx-auto">
-                    If your email client didn't open, email us directly at{" "}
+                    If your email application did not open automatically, you can contact us directly at{" "}
                     <a href="mailto:contact@plcoptimization.com" className="text-electric-glow hover:underline">
                       contact@plcoptimization.com
                     </a>
