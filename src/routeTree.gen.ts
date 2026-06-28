@@ -28,6 +28,7 @@ import { Route as ApiPublicNewsletterRouteImport } from './routes/api/public/new
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
+import { Route as ApiPublicNewsletterConfirmRouteImport } from './routes/api/public/newsletter.confirm'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -127,6 +128,12 @@ const LovableEmailQueueProcessRoute =
     path: '/lovable/email/queue/process',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicNewsletterConfirmRoute =
+  ApiPublicNewsletterConfirmRouteImport.update({
+    id: '/confirm',
+    path: '/confirm',
+    getParentRoute: () => ApiPublicNewsletterRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -143,8 +150,9 @@ export interface FileRoutesByFullPath {
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/insights/': typeof InsightsIndexRoute
-  '/api/public/newsletter': typeof ApiPublicNewsletterRoute
+  '/api/public/newsletter': typeof ApiPublicNewsletterRouteWithChildren
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
+  '/api/public/newsletter/confirm': typeof ApiPublicNewsletterConfirmRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -164,8 +172,9 @@ export interface FileRoutesByTo {
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/insights': typeof InsightsIndexRoute
-  '/api/public/newsletter': typeof ApiPublicNewsletterRoute
+  '/api/public/newsletter': typeof ApiPublicNewsletterRouteWithChildren
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
+  '/api/public/newsletter/confirm': typeof ApiPublicNewsletterConfirmRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -186,8 +195,9 @@ export interface FileRoutesById {
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/insights/': typeof InsightsIndexRoute
-  '/api/public/newsletter': typeof ApiPublicNewsletterRoute
+  '/api/public/newsletter': typeof ApiPublicNewsletterRouteWithChildren
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
+  '/api/public/newsletter/confirm': typeof ApiPublicNewsletterConfirmRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -211,6 +221,7 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/api/public/newsletter'
     | '/lovable/email/suppression'
+    | '/api/public/newsletter/confirm'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -232,6 +243,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/api/public/newsletter'
     | '/lovable/email/suppression'
+    | '/api/public/newsletter/confirm'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -253,6 +265,7 @@ export interface FileRouteTypes {
     | '/insights/'
     | '/api/public/newsletter'
     | '/lovable/email/suppression'
+    | '/api/public/newsletter/confirm'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -273,7 +286,7 @@ export interface RootRouteChildren {
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   InsightsSlugRoute: typeof InsightsSlugRoute
   InsightsIndexRoute: typeof InsightsIndexRoute
-  ApiPublicNewsletterRoute: typeof ApiPublicNewsletterRoute
+  ApiPublicNewsletterRoute: typeof ApiPublicNewsletterRouteWithChildren
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
@@ -415,8 +428,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LovableEmailQueueProcessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/newsletter/confirm': {
+      id: '/api/public/newsletter/confirm'
+      path: '/confirm'
+      fullPath: '/api/public/newsletter/confirm'
+      preLoaderRoute: typeof ApiPublicNewsletterConfirmRouteImport
+      parentRoute: typeof ApiPublicNewsletterRoute
+    }
   }
 }
+
+interface ApiPublicNewsletterRouteChildren {
+  ApiPublicNewsletterConfirmRoute: typeof ApiPublicNewsletterConfirmRoute
+}
+
+const ApiPublicNewsletterRouteChildren: ApiPublicNewsletterRouteChildren = {
+  ApiPublicNewsletterConfirmRoute: ApiPublicNewsletterConfirmRoute,
+}
+
+const ApiPublicNewsletterRouteWithChildren =
+  ApiPublicNewsletterRoute._addFileChildren(ApiPublicNewsletterRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -433,7 +464,7 @@ const rootRouteChildren: RootRouteChildren = {
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   InsightsSlugRoute: InsightsSlugRoute,
   InsightsIndexRoute: InsightsIndexRoute,
-  ApiPublicNewsletterRoute: ApiPublicNewsletterRoute,
+  ApiPublicNewsletterRoute: ApiPublicNewsletterRouteWithChildren,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
