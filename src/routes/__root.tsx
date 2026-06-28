@@ -15,7 +15,7 @@ import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
 import { PLCLogo, PLC_LOGO_URL } from "../components/Logo";
 
-const SITE_URL = "https://plc-elevate-life.lovable.app";
+const SITE_URL = "https://plcoptimization.com";
 
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
@@ -128,9 +128,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Premium wellness brand for sports performance, longevity and lifestyle optimization. U.S. Registered LLC.",
       },
       { name: "twitter:image", content: PLC_LOGO_URL },
-      { name: "description", content: "Wellness Elevation offers premium wellness optimization, healthy aging, and sports performance solutions." },
-      { property: "og:description", content: "Wellness Elevation offers premium wellness optimization, healthy aging, and sports performance solutions." },
-      { name: "twitter:description", content: "Wellness Elevation offers premium wellness optimization, healthy aging, and sports performance solutions." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6ebc2193-cd6d-4c7f-a4ae-1a58b3c05e3d/id-preview-9e311cc1--80684338-c9fd-4408-a96c-eaa2564290fb.lovable.app-1782676431806.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6ebc2193-cd6d-4c7f-a4ae-1a58b3c05e3d/id-preview-9e311cc1--80684338-c9fd-4408-a96c-eaa2564290fb.lovable.app-1782676431806.png" },
     ],

@@ -25,9 +25,9 @@ export const Route = createFileRoute("/services")({
         property: "og:description",
         content: "Premium wellness, performance and longevity services from PLC Optimization LLC — built on evidence, refined by experience.",
       },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/services" },
+      { property: "og:url", content: "https://plcoptimization.com/services" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/services" }],
   }),
   component: Services,
 });

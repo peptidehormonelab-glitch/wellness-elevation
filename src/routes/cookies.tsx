@@ -8,9 +8,9 @@ export const Route = createFileRoute("/cookies")({
       { name: "description", content: "How PLC Optimization LLC uses cookies and similar technologies on its website, and how you can manage your cookie preferences." },
       { property: "og:title", content: "Cookie Policy — PLC Optimization LLC" },
       { property: "og:description", content: "How PLC Optimization LLC uses cookies and similar technologies." },
-      { property: "og:url", content: "https://plc-elevate-life.lovable.app/cookies" },
+      { property: "og:url", content: "https://plcoptimization.com/cookies" },
     ],
-    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/cookies" }],
+    links: [{ rel: "canonical", href: "https://plcoptimization.com/cookies" }],
   }),
   component: Cookies,
 });
