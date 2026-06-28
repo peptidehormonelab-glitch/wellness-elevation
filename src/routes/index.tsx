@@ -9,7 +9,7 @@ import cardPerformance from "@/assets/card-performance.jpg";
 import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
-import cardCosmetic from "@/assets/card-cosmetic.jpg";
+import cardSkincare from "@/assets/card-skincare.jpg";
 
 import pillarPerformance from "@/assets/performance.jpg";
 import pillarLongevity from "@/assets/longevity.jpg";
@@ -41,7 +41,7 @@ const DISCIPLINES = [
   { num: "02", t: "Longevity", d: "Build a body that stays strong, mobile and vital for decades.", img: cardLongevity },
   { num: "03", t: "Nutrition", d: "Fuel with intention. Every macro, every meal, every day.", img: cardNutrition },
   { num: "04", t: "Precision Wellness", d: "Recovery, resilience and energy — evidence-guided, science-informed.", img: cardWellness },
-  { num: "05", t: "Skin Care", d: "Premium skin care rituals that reflect your standard.", img: cardCosmetic },
+  { num: "05", t: "Skin Care", d: "Premium skin care rituals that reflect your standard.", img: cardSkincare },
 ];
 
 
