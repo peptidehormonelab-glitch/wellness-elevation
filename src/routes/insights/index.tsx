@@ -8,18 +8,21 @@ import { NewsletterSection } from "@/components/NewsletterSection";
 export const Route = createFileRoute("/insights/")({
   head: () => ({
     meta: [
-      { title: "Insights & Education — PLC Optimization" },
+      { title: "Insights & Education — Wellness, Longevity & Performance | PLC" },
       {
         name: "description",
         content:
-          "Evidence-based articles on sports performance, longevity, nutrition, recovery and lifestyle optimization from PLC Optimization. Educational wellness content for serious individuals.",
+          "Educational articles from PLC Optimization on wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle — grounded in established science.",
       },
       { property: "og:title", content: "Insights & Education — PLC Optimization" },
       {
         property: "og:description",
-        content: "Deep-dive educational content on performance, longevity, nutrition and recovery science from PLC Optimization.",
+        content:
+          "Educational content on wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle from PLC Optimization.",
       },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/insights" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/insights" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -27,19 +30,19 @@ export const Route = createFileRoute("/insights/")({
           "@context": "https://schema.org",
           "@type": "Blog",
           name: "PLC Optimization Insights",
-          description: "Evidence-based wellness education covering sports performance, longevity, nutrition, recovery and lifestyle optimization.",
-          url: "https://plcoptimization.com/insights",
+          description: "Educational wellness content covering wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle.",
+          url: "https://plc-elevate-life.lovable.app/insights",
           publisher: {
             "@type": "Organization",
             name: "PLC Optimization LLC",
-            url: "https://plcoptimization.com",
+            url: "https://plc-elevate-life.lovable.app",
           },
           blogPost: ARTICLES.map(a => ({
             "@type": "BlogPosting",
             headline: a.title,
             description: a.metaDescription,
             datePublished: a.publishedAt,
-            url: `https://plcoptimization.com/insights/${a.slug}`,
+            url: `https://plc-elevate-life.lovable.app/insights/${a.slug}`,
           })),
         }),
       },
@@ -168,7 +171,10 @@ function InsightsIndex() {
             <span className="text-gradient-electric">explained clearly</span>.
           </h1>
           <p className="mt-7 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Educational articles on sports performance, longevity, nutrition, recovery and lifestyle optimization — grounded in established science and written without marketing language.
+            PLC Optimization regularly publishes educational content on wellness, nutrition, recovery, longevity, performance, supplementation and healthy lifestyle — grounded in established science and written without marketing language.
+          </p>
+          <p className="mt-5 max-w-2xl text-sm text-muted-foreground/80 leading-relaxed">
+            New articles are in preparation and will be published here. Subscribe below to be notified as each piece is released.
           </p>
         </FadeUp>
       </section>
