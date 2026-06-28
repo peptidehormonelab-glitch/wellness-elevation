@@ -20,7 +20,7 @@ function Disclaimer() {
         <FadeUp>
           <span className="eyebrow">Legal</span>
           <h1 className="mt-7 text-5xl md:text-6xl lg:text-7xl">Disclaimer</h1>
-          <p className="mt-4 text-sm text-muted-foreground">Last updated: June 27, 2026</p>
+          <p className="mt-4 text-sm text-muted-foreground">Last updated: June 28, 2026</p>
         </FadeUp>
       </section>
 
