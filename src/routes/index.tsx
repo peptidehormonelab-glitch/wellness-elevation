@@ -1,20 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, ArrowRight, Shield, Clock, Zap, Users } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { motion, AnimatePresence } from "framer-motion";
 import heroImg from "@/assets/hero.jpg";
 import productsImg from "@/assets/products.jpg";
-import longevityImg from "@/assets/longevity.jpg";
-import skincareImg from "@/assets/skincare.jpg";
-import performanceImg from "@/assets/performance.jpg";
-import coachingImg from "@/assets/coaching.jpg";
 import cardPerformance from "@/assets/card-performance.jpg";
 import cardLongevity from "@/assets/card-longevity.jpg";
 import cardNutrition from "@/assets/card-nutrition.jpg";
 import cardWellness from "@/assets/card-wellness.jpg";
 import cardCosmetic from "@/assets/card-cosmetic.jpg";
-import { FadeUp, FadeIn, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
+import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn } from "@/components/Motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,57 +39,6 @@ const DISCIPLINES = [
   { num: "05", t: "Skin Care", d: "Clinical skin optimization rituals that reflect your standard.", img: cardCosmetic },
 ];
 
-
-const PILLARS = [
-  {
-    title: "Sports Performance",
-    desc: "Periodized programming, recovery science and performance nutrition for athletes who train with purpose — not just frequency.",
-    img: performanceImg,
-  },
-  {
-    title: "Healthy Aging",
-    desc: "A measured, evidence-led approach to mobility, strength and sustained energy through every decade of life.",
-    img: longevityImg,
-  },
-  {
-    title: "Premium Skin Care",
-    desc: "Clean, thoughtfully formulated skincare that elevates your daily ritual without compromise.",
-    img: skincareImg,
-  },
-  {
-    title: "Coaching & Lifestyle",
-    desc: "Private 1:1 coaching that aligns training, nutrition and habit design with the life you actually live.",
-    img: coachingImg,
-  },
-];
-
-
-
-
-
-const SCIENTIFIC = [
-  {
-    icon: Zap,
-    title: "Evidence-Led Protocols",
-    desc: "Every program and product recommendation is grounded in established exercise physiology, nutrition science and lifestyle medicine research — not trends.",
-  },
-  {
-    icon: Shield,
-    title: "Precision Supplementation",
-    desc: "Evidence-guided, science-informed supplementation built around micronutrient context and individual goals. Every product is selected for purity, bioavailability and clear formulation — never proprietary blends.",
-  },
-
-  {
-    icon: Clock,
-    title: "Long-Horizon Thinking",
-    desc: "We optimize for the body you'll inhabit in 20 years — not just the next 12 weeks. Compounding results require compounding systems, built patiently.",
-  },
-  {
-    icon: Users,
-    title: "Personalized Systems",
-    desc: "No pre-built templates. Every coaching blueprint is designed around your physiology, schedule, history and goals — then refined continuously.",
-  },
-];
 
 
 const FAQ = [
@@ -409,110 +354,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ── PILLARS ── */}
-      <section className="container-page py-28" aria-labelledby="pillars-heading">
-        <FadeUp>
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
-            <div className="max-w-2xl">
-              <span className="eyebrow">The Four Pillars</span>
-              <h2 id="pillars-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">A complete system for the optimized life.</h2>
-            </div>
-            <p className="text-muted-foreground max-w-md text-sm leading-relaxed">
-              Four interlocking disciplines designed to compound over time — each reinforcing the others, all working toward the same outcome.
-            </p>
-          </div>
-        </FadeUp>
 
-        <StaggerContainer className="grid md:grid-cols-2 gap-5">
-          {PILLARS.map((p, i) => (
-            <StaggerItem key={p.title}>
-              <article className="group relative overflow-hidden rounded-2xl border border-white/[0.07] aspect-[5/4] md:aspect-[6/5]">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover img-premium opacity-65 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: "linear-gradient(180deg, transparent 20%, oklch(0.08 0.012 240 / 0.97) 100%)" }}
-                  aria-hidden="true"
-                />
-                <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
-                  <p className="text-[9px] uppercase tracking-[0.35em] text-electric-glow">0{i + 1}</p>
-                  <h3 className="mt-3 text-2xl md:text-3xl font-display">{p.title}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-md leading-relaxed">{p.desc}</p>
-                </div>
-              </article>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
-      {/* ── SCIENTIFIC APPROACH ── */}
-      <section className="py-28 border-y border-white/[0.06] relative overflow-hidden" aria-labelledby="science-heading">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-electric/[0.04] blur-[90px]" />
-        </div>
-        <div className="container-page relative">
-          <FadeUp>
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="eyebrow justify-center">Scientific Approach</span>
-              <h2 id="science-heading" className="mt-5 text-4xl md:text-5xl lg:text-6xl">Built on evidence. Refined by experience.</h2>
-              <p className="mt-6 text-muted-foreground leading-relaxed">
-                Our methodology is grounded in established science — not trends or marketing. Every program, product and protocol reflects a disciplined, evidence-led standard that we can explain and defend.
-              </p>
-            </div>
-          </FadeUp>
-
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {SCIENTIFIC.map((s, i) => (
-              <StaggerItem key={s.title}>
-                <div className="surface-glass rounded-2xl p-7 h-full card-hover">
-                  <div
-                    className="w-10 h-10 rounded-xl bg-electric/[0.10] border border-electric/[0.18] flex items-center justify-center mb-5"
-                    aria-hidden="true"
-                  >
-                    <s.icon size={18} className="text-electric-glow" strokeWidth={1.5} />
-                  </div>
-                  <p className="text-[9px] uppercase tracking-[0.3em] text-electric-glow mb-3">0{i + 1}</p>
-                  <h3 className="text-xl md:text-2xl font-display mb-3">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* ── LONGEVITY BAND ── */}
-      <section className="relative py-28 overflow-hidden" aria-labelledby="longevity-heading">
-        <div className="absolute inset-0" aria-hidden="true">
-          <img src={longevityImg} alt="" className="w-full h-full object-cover img-premium" style={{ opacity: 0.16 }} loading="lazy" />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg, oklch(0.10 0.012 240) 0%, oklch(0.10 0.012 240 / 0.75) 55%, oklch(0.10 0.012 240 / 0.25) 100%)",
-            }}
-          />
-        </div>
-        <div className="container-page relative grid lg:grid-cols-2 gap-12 items-center">
-          <SlideLeft>
-            <span className="eyebrow">Longevity Lifestyle</span>
-            <h2 id="longevity-heading" className="mt-6 text-4xl md:text-5xl lg:text-6xl">
-              Engineered to age with strength, clarity and grace.
-            </h2>
-            <p className="mt-7 text-muted-foreground leading-relaxed max-w-lg">
-              True longevity is not a supplement stack or a biohacking protocol. It is a lifestyle architecture — intelligent training, intentional recovery, clean nutrition and considered supplementation, compounding quietly across decades.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/about" className="btn-ghost-light">Our Philosophy</Link>
-              <Link to="/services" className="btn-electric">View Services</Link>
-            </div>
-          </SlideLeft>
-        </div>
-      </section>
 
       {/* ── PRODUCTS PREVIEW ── */}
       <section className="container-page py-28" aria-labelledby="products-heading">
