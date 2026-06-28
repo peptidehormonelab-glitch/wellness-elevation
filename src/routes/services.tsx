@@ -14,18 +14,20 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/Motion";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — PLC Optimization" },
+      { title: "Services — Performance, Longevity & Coaching | PLC Optimization" },
       {
         name: "description",
         content:
           "Sports performance, healthy aging, longevity lifestyle, nutrition guidance, premium skincare, 1:1 coaching and lifestyle optimization. Every service built on an evidence-based, long-horizon standard.",
       },
-      { property: "og:title", content: "Services — PLC Optimization" },
+      { property: "og:title", content: "Services — Performance, Longevity & Coaching | PLC Optimization" },
       {
         property: "og:description",
         content: "Premium wellness, performance and longevity services from PLC Optimization LLC — built on evidence, refined by experience.",
       },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/services" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/services" }],
   }),
   component: Services,
 });

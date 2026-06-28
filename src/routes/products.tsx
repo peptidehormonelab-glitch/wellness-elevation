@@ -7,18 +7,20 @@ import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn }
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products — PLC Optimization" },
+      { title: "Products — Authorized Supplements & Premium Skin Care | PLC Optimization" },
       {
         name: "description",
         content:
-          "Authorized premium supplements including proteins, creatine, vitamins, minerals, hydration and recovery essentials. Plus premium skin care. All authorized, all transparent.",
+          "Authorized premium supplements including proteins, creatine, vitamins, minerals, hydration and recovery essentials, plus premium skin care. Curated for purity and transparency.",
       },
-      { property: "og:title", content: "Products — PLC Optimization" },
+      { property: "og:title", content: "Products — Authorized Supplements & Premium Skin Care | PLC Optimization" },
       {
         property: "og:description",
         content: "A curated portfolio of authorized supplements and premium skin care — selected for purity, transparency and real-world effectiveness.",
       },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/products" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/products" }],
   }),
   component: Products,
 });

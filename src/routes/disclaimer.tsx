@@ -4,11 +4,13 @@ import { FadeUp } from "@/components/Motion";
 export const Route = createFileRoute("/disclaimer")({
   head: () => ({
     meta: [
-      { title: "Disclaimer — PLC Optimization" },
-      { name: "description", content: "Wellness disclaimer for PLC Optimization LLC products, services and educational content." },
-      { property: "og:title", content: "Disclaimer — PLC Optimization" },
-      { property: "og:description", content: "Wellness disclaimer for PLC Optimization LLC." },
+      { title: "Wellness Disclaimer — PLC Optimization LLC" },
+      { name: "description", content: "General wellness disclaimer for PLC Optimization LLC products, services and educational content. Not intended to diagnose, treat, cure or prevent any disease." },
+      { property: "og:title", content: "Wellness Disclaimer — PLC Optimization LLC" },
+      { property: "og:description", content: "General wellness disclaimer for PLC Optimization LLC products, services and educational content." },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/disclaimer" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/disclaimer" }],
   }),
   component: Disclaimer,
 });
