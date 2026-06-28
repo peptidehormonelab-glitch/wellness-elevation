@@ -31,18 +31,24 @@ const STRUCTURED_DATA = {
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
+    <section className="relative flex min-h-[calc(100vh-140px)] md:min-h-[calc(100vh-168px)] items-center justify-center px-4 overflow-hidden" aria-labelledby="not-found-heading">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-electric/[0.04] blur-[120px]" />
+      </div>
+
+      <div className="relative max-w-lg text-center">
+        <PLCLogo className="w-[180px] md:w-[220px] h-auto mx-auto mb-10" />
+
         <p className="text-xs uppercase tracking-[0.32em] text-electric-glow mb-4">404</p>
-        <h1 className="text-5xl md:text-7xl font-display text-foreground">Not Found</h1>
-        <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-          The page you're looking for doesn't exist or has been moved.
+        <h1 id="not-found-heading" className="text-4xl md:text-6xl font-display text-foreground">404 – Page Not Found</h1>
+        <p className="mt-5 text-sm md:text-base text-muted-foreground leading-relaxed">
+          The page you are looking for doesn't exist or may have been moved.
         </p>
-        <div className="mt-8">
-          <Link to="/" className="btn-electric">Return Home</Link>
+        <div className="mt-10">
+          <Link to="/" className="btn-electric">Return to Home</Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
