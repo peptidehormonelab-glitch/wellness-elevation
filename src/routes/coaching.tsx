@@ -7,18 +7,20 @@ import { FadeUp, SlideLeft, SlideRight, StaggerContainer, StaggerItem, ScaleIn }
 export const Route = createFileRoute("/coaching")({
   head: () => ({
     meta: [
-      { title: "Private Coaching — PLC Optimization" },
+      { title: "Private Coaching — Performance, Nutrition & Longevity | PLC Optimization" },
       {
         name: "description",
         content:
           "Premium 1:1 coaching integrating training, nutrition, recovery and habit design for lasting performance, longevity and lifestyle optimization. Built for serious individuals.",
       },
-      { property: "og:title", content: "Private Coaching — PLC Optimization" },
+      { property: "og:title", content: "Private Coaching — Performance, Nutrition & Longevity | PLC Optimization" },
       {
         property: "og:description",
         content: "Private coaching for performance, longevity and lifestyle optimization. A disciplined, evidence-based approach built for the long term.",
       },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/coaching" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/coaching" }],
   }),
   component: Coaching,
 });

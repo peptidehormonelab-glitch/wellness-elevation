@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://plc-elevate-life.lovable.app/sitemap.xml

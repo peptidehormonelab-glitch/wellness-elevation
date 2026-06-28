@@ -4,11 +4,13 @@ import { FadeUp } from "@/components/Motion";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — PLC Optimization" },
-      { name: "description", content: "Terms and conditions governing use of the PLC Optimization LLC website, products and services." },
-      { property: "og:title", content: "Terms & Conditions — PLC Optimization" },
-      { property: "og:description", content: "Terms and conditions for PLC Optimization LLC." },
+      { title: "Terms & Conditions — PLC Optimization LLC" },
+      { name: "description", content: "Terms and conditions governing use of the PLC Optimization LLC website, products and services, including eligibility and governing Wyoming law." },
+      { property: "og:title", content: "Terms & Conditions — PLC Optimization LLC" },
+      { property: "og:description", content: "Terms and conditions governing the PLC Optimization LLC website, products and services." },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/terms" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/terms" }],
   }),
   component: Terms,
 });

@@ -4,11 +4,13 @@ import { FadeUp } from "@/components/Motion";
 export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
-      { title: "Cookie Policy — PLC Optimization" },
-      { name: "description", content: "How PLC Optimization LLC uses cookies and similar technologies on its website." },
-      { property: "og:title", content: "Cookie Policy — PLC Optimization" },
-      { property: "og:description", content: "Cookie policy for PLC Optimization LLC." },
+      { title: "Cookie Policy — PLC Optimization LLC" },
+      { name: "description", content: "How PLC Optimization LLC uses cookies and similar technologies on its website, and how you can manage your cookie preferences." },
+      { property: "og:title", content: "Cookie Policy — PLC Optimization LLC" },
+      { property: "og:description", content: "How PLC Optimization LLC uses cookies and similar technologies." },
+      { property: "og:url", content: "https://plc-elevate-life.lovable.app/cookies" },
     ],
+    links: [{ rel: "canonical", href: "https://plc-elevate-life.lovable.app/cookies" }],
   }),
   component: Cookies,
 });

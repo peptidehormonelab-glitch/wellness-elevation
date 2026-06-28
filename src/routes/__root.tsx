@@ -15,18 +15,38 @@ import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
 import { PLCLogo, PLC_LOGO_URL } from "../components/Logo";
 
-const STRUCTURED_DATA = {
+const SITE_URL = "https://plc-elevate-life.lovable.app";
+
+const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "PLC Optimization LLC",
-  url: "https://plcoptimization.com",
-  description: "Premium wellness brand specializing in sports performance coaching, longevity programs, nutrition guidance, authorized supplementation and skin care.",
+  legalName: "PLC Optimization LLC",
+  url: SITE_URL,
+  logo: `${SITE_URL}${PLC_LOGO_URL}`,
+  description:
+    "Premium U.S.-registered wellness brand specializing in sports performance coaching, longevity programs, nutrition guidance, authorized supplementation and skin care.",
+  foundingDate: "2026",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "US",
+    addressRegion: "WY",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     email: "contact@plcoptimization.com",
     contactType: "customer service",
     availableLanguage: "English",
   },
+};
+
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "PLC Optimization",
+  url: SITE_URL,
+  publisher: { "@type": "Organization", name: "PLC Optimization LLC" },
+  inLanguage: "en-US",
 };
 
 function NotFoundComponent() {
