@@ -333,6 +333,7 @@ function Footer() {
                   { to: "/privacy", label: "Privacy Policy" },
                   { to: "/terms", label: "Terms & Conditions" },
                   { to: "/disclaimer", label: "Disclaimer" },
+                  { to: "/cookies", label: "Cookie Policy" },
                 ].map(l => (
                   <li key={l.to}>
                     <Link to={l.to as "/privacy"} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
